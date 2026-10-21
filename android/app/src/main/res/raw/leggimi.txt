@@ -1,0 +1,34 @@
+PENSY_DATA
+==========
+
+Questa cartella contiene tutti i dati di PENSY: scadenze, documenti
+(in forma di testo), codici QR e a barre, buste paga e impostazioni.
+
+  pensy.dat     i dati, cifrati con la tua password (AES-256-GCM)
+  pagine/       le foto dei documenti che hai scelto di conservare,
+                una per file, cifrate con la stessa password
+  copie/        com'erano i dati negli ultimi 7 giorni (pensy-AAAA-MM-GG.dat)
+  versione.txt  formato e data dell'ultimo salvataggio
+  LEGGIMI.txt   questo file
+
+Per passare a un nuovo telefono:
+  1. copia l'intera cartella PENSY_DATA sul nuovo telefono
+     (cavo USB, scheda SD, chiavetta, Quick Share, AirDrop...);
+  2. installa PENSY e apri Impostazioni > Importa dati da un altro telefono;
+  3. scegli la cartella PENSY_DATA e inserisci la password.
+
+Senza la password il contenuto di pensy.dat non si può leggere,
+nemmeno da chi ha sviluppato l'app. Se la dimentichi, i dati in questa
+cartella non si possono recuperare.
+
+PENSY non usa internet: questa cartella è l'unica copia dei tuoi dati
+fuori dall'app. Tienine una copia anche fuori dal telefono.
+
+---------------------------------------------------------------------
+
+PENSY_DATA (English)
+
+This folder holds all PENSY data, encrypted with your password.
+To move to a new phone: copy the whole PENSY_DATA folder, install PENSY,
+open Settings > Import, pick the folder and type the password.
+Without the password the data cannot be read or recovered.

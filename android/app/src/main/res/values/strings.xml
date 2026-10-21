@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Testi di PENSY in italiano (lingua predefinita).
+    L'inglese è in values-en/strings.xml, con le stesse chiavi.
+-->
+<resources>
+    <string name="app_name">PENSY</string>
+
+    <!-- Schede -->
+    <string name="tab_today">Oggi</string>
+    <string name="tab_folders">Fascicoli</string>
+    <string name="tab_calendar">Calendario</string>
+    <string name="tab_budget">Bilancio</string>
+    <string name="tab_settings">Impostazioni</string>
+
+    <!-- Comuni -->
+    <string name="ok">OK</string>
+    <string name="cancel">Annulla</string>
+    <string name="save">Salva</string>
+    <string name="delete">Elimina</string>
+    <string name="edit">Modifica</string>
+    <string name="back">Indietro</string>
+    <string name="copy">Copia</string>
+    <string name="copied">Copiato</string>
+    <string name="add">Aggiungi</string>
+    <string name="not_found">Non trovato</string>
+
+    <!-- Date relative -->
+    <string name="rel_today">oggi</string>
+    <string name="rel_tomorrow">domani</string>
+    <string name="rel_yesterday">ieri</string>
+    <plurals name="rel_in_days">
+        <item quantity="one">tra %d giorno</item>
+        <item quantity="other">tra %d giorni</item>
+    </plurals>
+    <plurals name="rel_days_ago">
+        <item quantity="one">%d giorno fa</item>
+        <item quantity="other">%d giorni fa</item>
+    </plurals>
+
+    <!-- Tipi di documento -->
+    <string name="type_bolletta">Bolletta</string>
+    <string name="type_pagopa">Avviso pagoPA</string>
+    <string name="type_bollo">Bollo auto</string>
+    <string name="type_ticket">Ticket sanitario</string>
+    <string name="type_universita">Tasse universitarie</string>
+    <string name="type_rata">Rata</string>
+    <string name="type_f24">F24</string>
+    <string name="type_busta_paga">Busta paga</string>
+    <string name="type_altro">Altro</string>
+    <string name="type_multa">Multa</string>
+    <string name="type_referto">Referto / visita</string>
+    <string name="type_ricetta">Ricetta</string>
+    <string name="type_polizza">Assicurazione</string>
+    <string name="type_documento">Documento personale</string>
+    <string name="type_garanzia">Garanzia / scontrino</string>
+    <string name="short_bolletta">B</string>
+    <string name="short_pagopa">P</string>
+    <string name="short_bollo">A</string>
+    <string name="short_ticket">T</string>
+    <string name="short_universita">U</string>
+    <string name="short_rata">R</string>
+    <string name="short_f24">F</string>
+    <string name="short_busta_paga">€</string>
+    <string name="short_altro">•</string>
+    <string name="short_multa">M</string>
+    <string name="short_referto">Rf</string>
+    <string name="short_ricetta">Rx</string>
+    <string name="short_polizza">As</string>
+    <string name="short_documento">Id</string>
+    <string name="short_garanzia">G</string>
+
+    <!-- Ricorrenze e promemoria -->
+    <string name="every_never">Mai</string>
+    <string name="every_month">Ogni mese</string>
+    <string name="every_year">Ogni anno</string>
+    <string name="every_n_months">Ogni %d mesi</string>
+    <plurals name="days_before">
+        <item quantity="one">%d giorno prima</item>
+        <item quantity="other">%d giorni prima</item>
+    </plurals>
+
+    <!-- Notifiche -->
+    <string name="channel_name">Scadenze</string>
+    <string name="channel_desc">Promemoria dei pagamenti in arrivo</string>
+    <string name="notif_early">Scade %1$s, il %2$s</string>
+    <string name="notif_tomorrow">Scade domani</string>
+    <string name="notif_today">Scade oggi</string>
+    <string name="notif_overdue">Era da pagare entro il %1$s</string>
+    <string name="notif_public">PENSY: hai una scadenza</string>
+
+    <!-- Password -->
+    <string name="password_explain">Questa password cifra la cartella PENSY_DATA e ti servirà per ripristinare i dati su un altro telefono. Se la perdi, nessuno potrà recuperarla.</string>
+    <string name="password_hint">Password (almeno 6 caratteri)</string>
+    <string name="password_repeat">Ripeti la password</string>
+    <string name="password_short">La password deve avere almeno 6 caratteri</string>
+    <string name="password_mismatch">Le due password non coincidono</string>
+    <string name="password_new_title">Scegli una password</string>
+    <string name="password_change_title">Nuova password</string>
+    <string name="password_changed">Password cambiata</string>
+    <string name="password_warning">Se dimentichi la password, i dati nella cartella non si possono recuperare. Conservala in un posto sicuro.</string>
+    <string name="wrong_password">Password sbagliata</string>
+    <string name="tap_to_close">Tocca per chiudere</string>
+
+    <!-- Cartella PENSY_DATA -->
+    <string name="no_picker">Nessuna app disponibile per scegliere i file</string>
+    <string name="folder_error">Non riesco a usare questa cartella. Prova a sceglierne un\'altra.</string>
+    <string name="preparing_folder">Preparo la cartella…</string>
+    <string name="securing">Proteggo i dati…</string>
+    <string name="exporting">Esporto…</string>
+    <string name="export_done">File esportato</string>
+    <string name="export_error">Esportazione non riuscita</string>
+    <string name="import_title">Importa i dati</string>
+    <string name="import_from_folder">Da una cartella PENSY_DATA</string>
+    <string name="import_from_file">Da un file .pensy</string>
+    <string name="import_not_found">Non ho trovato pensy.dat in questa cartella</string>
+    <string name="import_bad_file">Questo non è un file di PENSY, oppure è danneggiato</string>
+    <string name="import_password_title">Password della cartella</string>
+    <string name="import_password_msg">Inserisci la password che hai scelto quando hai creato questa cartella PENSY_DATA.</string>
+    <string name="opening">Apro i dati…</string>
+    <string name="import_newer">Questi dati vengono da una versione più recente di PENSY: aggiorna l\'app</string>
+    <string name="import_confirm_title">Sostituire i dati?</string>
+    <string name="import_confirm_msg">La cartella contiene %1$d documenti, %2$d scadenze e %3$d buste paga. I dati che ci sono ora su questo telefono verranno sostituiti.</string>
+    <plurals name="import_health">
+        <item quantity="one">C\'è anche %d voce della scheda salute (farmaci, visite, patologie).</item>
+        <item quantity="other">Ci sono anche %d voci della scheda salute (farmaci, visite, patologie).</item>
+    </plurals>
+    <string name="import_do">Importa</string>
+    <string name="import_done">Dati importati</string>
+
+    <!-- Acquisizione -->
+    <string name="reading_document">Sto leggendo il documento…</string>
+    <string name="no_camera">Nessuna app fotocamera disponibile</string>
+    <string name="photo_missing">La foto non è arrivata. Riprova.</string>
+    <string name="read_error">Non riesco ad aprire questo file</string>
+    <string name="add_title">Cosa vuoi aggiungere?</string>
+    <string name="add_photo">Fotografa un documento</string>
+    <string name="add_file">Carica un file (PDF o immagine)</string>
+    <string name="add_manual">Inserisci a mano</string>
+
+    <!-- Stati -->
+    <string name="status_paid">pagata</string>
+    <string name="status_projected">prevista</string>
+    <string name="status_estimated">importo stimato</string>
+    <string name="status_done">fatto</string>
+
+    <!-- Oggi -->
+    <string name="hello">Ciao</string>
+    <string name="hello_name">Ciao, %1$s</string>
+    <string name="overdue">Scadute</string>
+    <string name="upcoming">Prossime scadenze</string>
+    <string name="nothing_due">Niente in scadenza</string>
+    <string name="nothing_due_hint">Fotografa o carica una bolletta, un avviso o un referto per iniziare.</string>
+    <string name="left_this_month">Ti restano a %1$s</string>
+    <string name="income_estimated">Entrate stimate dall\'ultima busta paga</string>
+    <string name="add_payslip_hint">Aggiungi la busta paga per sapere quanto ti resta questo mese.</string>
+    <string name="income">Entrate</string>
+    <string name="expenses">Uscite</string>
+    <string name="still_to_pay">Da pagare</string>
+    <string name="add_payslip">Aggiungi busta paga</string>
+    <string name="heavy_this_month">Questo è un mese pesante</string>
+    <string name="heavy_month">%1$s sarà un mese pesante</string>
+    <plurals name="heavy_detail">
+        <item quantity="one">%1$s (%2$s) arriva insieme a un\'altra spesa: %4$s in tutto.</item>
+        <item quantity="other">%1$s (%2$s) arriva insieme ad altre %3$d spese: %4$s in tutto.</item>
+    </plurals>
+    <string name="heavy_single">%1$s (%2$s) da sola si prende gran parte delle entrate del mese.</string>
+    <string name="heavy_share">Le uscite del mese (%1$s) superano il 60%% delle entrate.</string>
+    <string name="folder_card_title">Dove salvo i tuoi dati?</string>
+    <string name="folder_card_msg">Scegli una cartella sul telefono: PENSY ci terrà una copia cifrata di tutto, la cartella PENSY_DATA. Per cambiare telefono basterà copiarla.</string>
+    <string name="folder_choose">Scegli la cartella</string>
+
+    <!-- Scheda -->
+    <string name="card_no_ocr">Versione di prova senza lettura del testo: QR e codici a barre li ho letti, il resto compilalo tu.</string>
+    <string name="card_check">Ecco cosa ho letto. Controlla e correggi prima di salvare.</string>
+    <string name="card_nothing">Non sono riuscito a leggere molto: controlla la foto (luce, messa a fuoco) oppure compila i campi a mano.</string>
+    <string name="title_new_payslip">Nuova busta paga</string>
+    <string name="title_edit_payslip">Busta paga</string>
+    <string name="title_new_deadline">Nuova scadenza</string>
+    <string name="title_edit_deadline">Modifica scadenza</string>
+    <string name="title_new_doc">Nuovo documento</string>
+    <string name="title_edit_doc">Modifica documento</string>
+    <string name="field_type">Tipo</string>
+    <string name="field_issuer">Ente o azienda</string>
+    <string name="field_issuer_hint">Es. SMAT, Enel, Università</string>
+    <string name="field_title">Titolo</string>
+    <string name="field_title_hint">Facoltativo</string>
+    <string name="field_amount">Importo (€)</string>
+    <string name="field_amount_hint">0,00</string>
+    <string name="field_due">Scadenza</string>
+    <string name="field_due_pick">Scegli la data</string>
+    <string name="field_every">Si ripete</string>
+    <string name="field_remind">Avvisami</string>
+    <string name="field_already_paid">Già pagata</string>
+    <string name="field_note">Note</string>
+    <string name="field_note_hint">Aggiungi una nota</string>
+    <string name="field_net">Netto in busta (€)</string>
+    <string name="field_net_hint">0,00</string>
+    <string name="field_month">Mese</string>
+    <string name="field_extra">Mensilità aggiuntiva</string>
+    <string name="field_extra_hint">Tredicesima, quattordicesima o un premio: non verrà usata per stimare i mesi successivi.</string>
+    <string name="notice_code">Codice avviso pagoPA</string>
+    <string name="codes_title">Codici QR e a barre</string>
+    <string name="codes_none">Nessun codice trovato nel documento</string>
+    <string name="doc_text">Testo del documento</string>
+    <string name="bad_amount">L\'importo non è valido</string>
+    <string name="need_net">Inserisci il netto della busta paga</string>
+    <string name="need_due">Scegli la data di scadenza</string>
+    <string name="saved">Salvato</string>
+    <string name="saved_income">Busta paga salvata</string>
+    <string name="saved_updated_estimate">Salvato: ho aggiornato la scadenza che avevo stimato</string>
+    <string name="delete_income_title">Eliminare la busta paga?</string>
+    <string name="delete_income_msg">Le entrate di questo mese verranno ricalcolate.</string>
+
+    <!-- Dettaglio scadenza -->
+    <string name="amount_estimated">Importo stimato dal pagamento precedente</string>
+    <string name="paid_on">Pagata il %1$s</string>
+    <string name="overdue_since">Scaduta il %1$s</string>
+    <string name="due_on">Scade il %1$s, %2$s</string>
+    <string name="mark_paid">Segna come pagata</string>
+    <string name="mark_unpaid">Segna come da pagare</string>
+    <string name="marked_paid">Segnata come pagata</string>
+    <string name="next_created">Pagata. Prossima scadenza: %1$s</string>
+    <string name="pagopa_data">Dati per il pagamento</string>
+    <string name="creditor_cf">Codice fiscale dell\'ente</string>
+    <string name="tap_to_enlarge">tocca per ingrandire</string>
+    <string name="reminder">Promemoria</string>
+    <string name="mark_done">Segna come fatto</string>
+    <string name="done_on">Fatto il %1$s</string>
+    <string name="open_doc">Apri il documento</string>
+    <string name="delete_title">Eliminare la scadenza?</string>
+    <string name="delete_msg">«%1$s» verrà eliminata. Il documento resta nel suo fascicolo.</string>
+
+    <!-- Calendario -->
+    <string name="prev_month">Mese precedente</string>
+    <string name="next_month">Mese successivo</string>
+    <string name="month_expenses">Uscite del mese</string>
+    <string name="heavy_badge">Mese pesante</string>
+    <string name="whole_month">Tutto il mese</string>
+    <string name="show_month">Tutto il mese</string>
+    <string name="nothing_this_day">Niente in questo giorno</string>
+    <string name="nothing_this_month">Niente in questo mese</string>
+
+    <!-- Bilancio -->
+    <string name="projected">previsto</string>
+    <string name="left">Ti restano</string>
+    <string name="missing">Ti mancano</string>
+    <string name="compare_more">%1$d%% di uscite in più rispetto a %2$s</string>
+    <string name="compare_less">%1$d%% di uscite in meno rispetto a %2$s</string>
+    <string name="compare_same">Uscite uguali a %1$s</string>
+    <string name="payslips">Buste paga</string>
+    <string name="payslip_regular">Stipendio</string>
+    <string name="payslip_extra">Mensilità aggiuntiva</string>
+    <string name="no_payslip">Nessuna busta paga inserita</string>
+    <string name="no_payslip_estimate">Nessuna busta paga per questo mese: uso l\'ultima come stima.</string>
+    <string name="by_hand">A mano</string>
+
+    <!-- Impostazioni -->
+    <string name="reminders">Promemoria</string>
+    <string name="default_remind">Avviso predefinito</string>
+    <string name="remind_time">Ora dell\'avviso: %1$s</string>
+    <string name="notifications_off">Le notifiche sono disattivate: attivale nelle impostazioni del telefono per ricevere i promemoria.</string>
+    <string name="data_folder">Cartella PENSY_DATA</string>
+    <string name="data_folder_explain">PENSY non usa internet. Tutto resta sul telefono, e una copia cifrata viene salvata nella cartella che scegli.</string>
+    <string name="folder">Cartella</string>
+    <string name="folder_none">Non ancora scelta</string>
+    <string name="folder_change">Cambia cartella</string>
+    <string name="last_save">Ultimo salvataggio</string>
+    <string name="save_error">Ultimo salvataggio non riuscito: %1$s</string>
+    <string name="save_now">Salva adesso</string>
+    <string name="saved_folder">Salvataggio avviato</string>
+    <string name="export_file">Esporta in un unico file</string>
+    <string name="import_data">Importa dati da un altro telefono</string>
+    <string name="change_password">Cambia password</string>
+    <string name="about">Informazioni</string>
+    <string name="about_offline">PENSY funziona senza internet e non ha nemmeno il permesso di collegarsi: nessun dato lascia il telefono.</string>
+    <string name="ocr_on">Lettura del testo: attiva, direttamente sul telefono (Tesseract, modello italiano). Nessuna foto viene conservata né inviata.</string>
+    <string name="ocr_off">Lettura del testo: assente in questa versione di prova</string>
+    <string name="version">Versione %1$s</string>
+
+    <!-- Fascicoli -->
+    <string name="folder_casa">Casa</string>
+    <string name="folder_auto">Auto</string>
+    <string name="folder_salute">Salute</string>
+    <string name="folder_animali">Animali</string>
+    <string name="folder_scuola">Scuola e università</string>
+    <string name="folder_lavoro">Lavoro</string>
+    <string name="folder_tasse">Tasse e documenti</string>
+    <string name="folder_altro">Altro</string>
+    <string name="note_salute">Gruppo sanguigno:\nMedico di base:\nIn caso di emergenza avvisare:</string>
+    <string name="note_auto">Veicolo e targa:\nAssicurazione:\nProssima revisione:</string>
+    <string name="note_animali">Nome:\nMicrochip:\nVeterinario:</string>
+    <string name="folder_new">Nuovo fascicolo</string>
+    <string name="subfolder_new">Nuovo sottofascicolo</string>
+    <string name="subfolder_new_in">Nuovo sottofascicolo in %1$s</string>
+    <string name="subfolder_here">Crea un nuovo fascicolo qui</string>
+    <string name="folder_name_hint">Nome (es. Cuore, Gamba, Panda)</string>
+    <string name="folder_rename">Rinomina</string>
+    <string name="folder_delete_title">Eliminare il fascicolo?</string>
+    <string name="folder_delete_msg">I documenti e i sottofascicoli di «%1$s» passano in «%2$s». Nessun documento viene eliminato.</string>
+    <string name="folder_summary">Riepilogo</string>
+    <string name="folder_summary_hint">Tocca per scrivere ciò che vuoi avere sempre a portata di mano: patologie, targhe, numeri di polizza…</string>
+    <string name="note_edit_title">Riepilogo · %1$s</string>
+    <string name="folder_subfolders">Sottofascicoli</string>
+    <string name="folder_todo">Da fare</string>
+    <string name="folder_docs">Documenti</string>
+    <string name="folder_empty">Ancora nessun documento qui. Aggiungine uno con il pulsante in basso.</string>
+    <string name="folder_empty_short">Vuoto</string>
+    <string name="folder_choose_title">Scegli il fascicolo</string>
+    <string name="recent_docs">Ultimi documenti</string>
+    <plurals name="docs_count">
+        <item quantity="one">%d documento</item>
+        <item quantity="other">%d documenti</item>
+    </plurals>
+    <plurals name="todo_count">
+        <item quantity="one">%d da fare</item>
+        <item quantity="other">%d da fare</item>
+    </plurals>
+    <string name="field_folder">Fascicolo</string>
+    <string name="field_doc_date">Data del documento</string>
+    <string name="field_date_none">Nessuna data</string>
+    <string name="field_has_deadline">C\'è da pagare o da fare entro una data</string>
+    <string name="change">Cambia</string>
+    <string name="move">Sposta</string>
+    <string name="moved">Spostato in %1$s</string>
+    <string name="followup_title">Controllo · %1$s</string>
+    <string name="followup_found">Nel documento c\'è un controllo da fare il %1$s: l\'ho messo come promemoria.</string>
+    <string name="doc_deadlines">Scadenze e promemoria</string>
+    <string name="add_reminder">Aggiungi un promemoria</string>
+    <string name="delete_doc_title">Eliminare il documento?</string>
+    <string name="delete_doc_msg">«%1$s» verrà eliminato insieme ai suoi codici e alle sue scadenze.</string>
+
+    <!-- Ricerca -->
+    <string name="search_hint">Cerca in tutti i documenti</string>
+    <string name="search_start">Scrivi almeno due lettere: cerco nel testo di tutti i documenti, nei titoli, negli enti, nelle note e nei riepiloghi dei fascicoli.</string>
+    <string name="search_none">Nessun risultato per «%1$s»</string>
+    <string name="search_folders">Fascicoli</string>
+    <string name="search_docs">Documenti</string>
+    <string name="search_deadlines">Scadenze</string>
+
+    <!-- Scadenza senza data -->
+    <string name="field_no_due">Nessuna data di scadenza</string>
+    <string name="field_paid_on">Pagata il</string>
+    <string name="status_no_due">senza scadenza</string>
+    <string name="no_due_list">Da pagare, senza scadenza</string>
+    <string name="no_due_detail">Senza data di scadenza</string>
+    <string name="clear">Togli</string>
+
+    <!-- Salute: scheda -->
+    <string name="home_health">Salute</string>
+    <string name="home_meds_today">Medicine di oggi</string>
+    <string name="show_doctor">Mostra al medico</string>
+    <string name="health_add_any">Aggiungi un farmaco, una visita o una patologia</string>
+    <string name="health_conditions">Patologie e allergie</string>
+    <string name="health_items_empty">Ancora niente. Aggiungi patologie, allergie, interventi e vaccini: dal medico li avrai sempre pronti.</string>
+    <string name="health_add_item">Aggiungi patologia, allergia, intervento o vaccino</string>
+    <string name="kind_condition">Patologia</string>
+    <string name="kind_allergy">Allergia o intolleranza</string>
+    <string name="kind_surgery">Intervento</string>
+    <string name="kind_vaccine">Vaccino</string>
+    <string name="kinds_condition">Patologie</string>
+    <string name="kinds_allergy">Allergie e intolleranze</string>
+    <string name="kinds_surgery">Interventi</string>
+    <string name="kinds_vaccine">Vaccini</string>
+    <string name="conditions_past">Patologie passate</string>
+    <string name="since">dal %1$s</string>
+    <string name="item_past">passata</string>
+    <string name="item_new">Nuova voce</string>
+    <string name="item_edit">Modifica voce</string>
+    <string name="item_name">Nome</string>
+    <string name="item_name_hint_condition">Es. ipertensione, diabete tipo 2</string>
+    <string name="item_name_hint_allergy">Es. penicillina, nichel, lattosio</string>
+    <string name="item_name_hint_surgery">Es. appendicectomia</string>
+    <string name="item_name_hint_vaccine">Es. antitetanica, antinfluenzale</string>
+    <string name="item_date_condition">Da quando</string>
+    <string name="item_date_other">Quando</string>
+    <string name="item_active">In corso</string>
+    <string name="item_need_name">Scrivi il nome</string>
+    <string name="item_delete_title">Eliminare la voce?</string>
+
+    <!-- Salute: farmaci -->
+    <string name="meds">Farmaci</string>
+    <string name="meds_today">Oggi</string>
+    <string name="meds_empty">Nessun farmaco. Aggiungi quelli che prendi: ti ricordo quando prenderli e quando ordinarli.</string>
+    <string name="meds_add">Aggiungi un farmaco</string>
+    <string name="meds_stopped">Farmaci sospesi</string>
+    <string name="med_new">Nuovo farmaco</string>
+    <string name="med_edit">Farmaco</string>
+    <string name="med_name">Nome del farmaco</string>
+    <string name="med_name_hint">Es. Cardioaspirina 100 mg</string>
+    <string name="med_purpose">Per cosa lo prendi</string>
+    <string name="med_purpose_hint">Facoltativo, es. pressione</string>
+    <string name="med_amount">Quanto ogni volta</string>
+    <string name="med_every">Quando</string>
+    <string name="med_every_1">Ogni giorno</string>
+    <string name="med_every_2">Giorni alterni</string>
+    <string name="med_every_7">Ogni settimana</string>
+    <string name="med_every_14">Ogni 2 settimane</string>
+    <string name="med_every_n">Ogni %d giorni</string>
+    <string name="med_as_needed">Al bisogno</string>
+    <string name="med_times">Orari</string>
+    <string name="med_add_time">Aggiungi un orario</string>
+    <string name="med_start">Dal</string>
+    <string name="med_until">Fino al</string>
+    <string name="med_no_end">Senza fine</string>
+    <string name="med_remind">Avvisami all\'ora di prenderlo</string>
+    <string name="med_stock">Scorte e riordino</string>
+    <string name="stock_none">Non tenere il conto</string>
+    <string name="stock_count">Conto una per una</string>
+    <string name="stock_interval">Ordino a intervalli fissi</string>
+    <string name="med_have_now">Quante ne hai adesso</string>
+    <string name="med_pack">Quante in una confezione</string>
+    <string name="med_lead">Avvisami prima che finiscano</string>
+    <string name="med_order_every">Ordino ogni quanti giorni</string>
+    <string name="med_last_order">Ultimo ordine</string>
+    <string name="med_note_hint">Es. a stomaco pieno, lontano dal caffè</string>
+    <string name="med_stop">Ho smesso di prenderlo</string>
+    <string name="med_resume">Riprendi la terapia</string>
+    <string name="med_delete_title">Eliminare il farmaco?</string>
+    <string name="med_delete_msg">«%1$s» verrà eliminato. Se hai solo smesso di prenderlo usa «Ho smesso di prenderlo»: resta nella storia per il medico.</string>
+    <string name="med_need_name">Scrivi il nome del farmaco</string>
+    <string name="med_need_time">Aggiungi almeno un orario</string>
+    <string name="med_next_dose">Prossima dose: %1$s</string>
+    <string name="med_left">Ne restano circa %1$s</string>
+    <string name="med_runs_out">finiscono il %1$s</string>
+    <string name="med_order_by">ordina entro il %1$s</string>
+    <string name="med_order_now">Da ordinare</string>
+    <string name="med_order_on">Prossimo ordine: %1$s</string>
+    <string name="med_last_day">ultimo giorno %1$s</string>
+    <string name="med_bought">Ho comprato una confezione</string>
+    <string name="med_bought_done">Scorte aggiornate: ne hai %1$s</string>
+    <string name="med_ordered">Ho ordinato</string>
+    <string name="exact_needed">Per avvisarti all\'ora esatta serve il permesso «Sveglie e promemoria». Senza, l\'avviso può arrivare fino a un\'ora dopo.</string>
+    <string name="exact_allow">Consenti</string>
+    <plurals name="unit_compressa"><item quantity="one">compressa</item><item quantity="other">compresse</item></plurals>
+    <plurals name="unit_capsula"><item quantity="one">capsula</item><item quantity="other">capsule</item></plurals>
+    <plurals name="unit_goccia"><item quantity="one">goccia</item><item quantity="other">gocce</item></plurals>
+    <plurals name="unit_ml"><item quantity="one">ml</item><item quantity="other">ml</item></plurals>
+    <plurals name="unit_bustina"><item quantity="one">bustina</item><item quantity="other">bustine</item></plurals>
+    <plurals name="unit_puff"><item quantity="one">puff</item><item quantity="other">puff</item></plurals>
+    <plurals name="unit_unita"><item quantity="one">unità</item><item quantity="other">unità</item></plurals>
+    <plurals name="unit_applicazione"><item quantity="one">applicazione</item><item quantity="other">applicazioni</item></plurals>
+    <plurals name="unit_fiala"><item quantity="one">fiala</item><item quantity="other">fiale</item></plurals>
+    <plurals name="unit_cerotto"><item quantity="one">cerotto</item><item quantity="other">cerotti</item></plurals>
+
+    <!-- Salute: visite -->
+    <string name="visits">Visite ed esami</string>
+    <string name="visits_booked">Prenotate</string>
+    <string name="visits_todo">Da prenotare</string>
+    <string name="visits_done">Fatte</string>
+    <string name="visits_empty">Nessuna visita. Aggiungi quelle prenotate o da prenotare: te le ricordo e le metto nel calendario.</string>
+    <string name="visits_add">Aggiungi una visita o un esame</string>
+    <string name="visits_show_all">Mostra tutte (%1$d)</string>
+    <string name="visit_report">referto</string>
+    <string name="visit_new">Nuova visita</string>
+    <string name="visit_edit">Visita</string>
+    <string name="visit_title">Che visita o esame</string>
+    <string name="visit_title_hint">Es. visita cardiologica, esami del sangue</string>
+    <string name="visit_status">Stato</string>
+    <string name="status_todo">Da prenotare</string>
+    <string name="status_booked">Prenotata</string>
+    <string name="status_done_v">Fatta</string>
+    <string name="visit_priority">Priorità scritta sulla ricetta</string>
+    <string name="priority_none">Nessuna</string>
+    <string name="priority_hint">U entro 3 giorni · B entro 10 · D entro 30 (60 per gli esami) · P entro 120</string>
+    <string name="visit_due_by">Da fare entro</string>
+    <string name="visit_remind">Avvisami</string>
+    <string name="visit_date">Giorno</string>
+    <string name="visit_time">Ora</string>
+    <string name="visit_time_none">Nessun orario</string>
+    <string name="visit_doctor">Medico o struttura</string>
+    <string name="visit_doctor_hint">Facoltativo</string>
+    <string name="visit_place">Dove</string>
+    <string name="visit_place_hint">Es. Ospedale Molinette, ambulatorio 3</string>
+    <string name="visit_open_doc">Apri il referto</string>
+    <string name="visit_add_doc">Aggiungi il referto</string>
+    <string name="visit_delete_title">Eliminare la visita?</string>
+    <string name="visit_need_title">Scrivi che visita è</string>
+    <string name="visit_need_date">Scegli il giorno</string>
+    <string name="visit_booked_on">%1$s alle %2$s</string>
+    <string name="visit_by">entro il %1$s</string>
+    <string name="visit_no_date">senza una data</string>
+    <string name="visit_overdue">era da prenotare entro il %1$s</string>
+    <string name="followup_visit">Nel referto c\'è un controllo da fare entro il %1$s: lo metto tra le visite da prenotare.</string>
+    <string name="field_followup">C\'è un controllo da prenotare</string>
+    <string name="followup_by">Entro il</string>
+    <string name="followup_explain">Lo trovi nel fascicolo Salute, tra le visite da prenotare, e nel calendario.</string>
+    <string name="saved_visit">Salvato. Il controllo è tra le visite da prenotare.</string>
+    <string name="add_followup">Aggiungi un controllo da prenotare</string>
+
+    <!-- Salute: per il medico -->
+    <string name="doctor_title">Per il medico</string>
+    <string name="doctor_updated">Aggiornata al %1$s</string>
+    <string name="doctor_meds">Farmaci in uso</string>
+    <string name="doctor_upcoming">Visite prenotate</string>
+    <string name="doctor_last_visits">Ultime visite ed esami</string>
+    <string name="doctor_notes">Altre informazioni</string>
+    <string name="doctor_none">Nessuna</string>
+    <string name="doctor_as_needed">al bisogno</string>
+    <string name="doctor_share">Condividi come testo</string>
+    <string name="doctor_share_title">Scheda salute</string>
+
+    <!-- Salute: notifiche -->
+    <string name="channel_meds">Farmaci</string>
+    <string name="channel_meds_desc">Promemoria all\'ora delle medicine</string>
+    <string name="channel_health">Visite e riordini</string>
+    <string name="channel_health_desc">Visite in arrivo, visite da prenotare, farmaci da ordinare</string>
+    <string name="notif_dose_one">%1$s · %2$s</string>
+    <string name="notif_dose_many">Medicine delle %1$s</string>
+    <string name="notif_dose_public">PENSY: è l\'ora di un promemoria</string>
+    <string name="notif_health_public">PENSY: promemoria salute</string>
+    <string name="notif_visit_today">Oggi</string>
+    <string name="notif_visit_tomorrow">Domani</string>
+    <string name="notif_visit_on">Il %1$s, %2$s</string>
+    <string name="notif_visit_at">" alle %1$s"</string>
+    <string name="notif_book_by">Da prenotare entro il %1$s, %2$s</string>
+    <string name="notif_book_overdue">Da prenotare: era entro il %1$s</string>
+    <string name="notif_order">È ora di ordinare %1$s</string>
+    <string name="notif_order_body">Finisce verso il %1$s. Se serve, chiedi la ricetta al medico.</string>
+    <string name="notif_order_soon">Sta per finire. Se serve, chiedi la ricetta al medico.</string>
+    <string name="notif_order_interval">È passato il tuo intervallo di %1$d giorni.</string>
+
+    <!-- Calendario: salute -->
+    <string name="ev_visit">Visita</string>
+    <string name="ev_to_book">Ultimo giorno per prenotare</string>
+    <string name="ev_reorder">Da ordinare</string>
+    <string name="ev_last_dose">Ultimo giorno di terapia</string>
+
+    <!-- Lingua -->
+    <string name="lang_code">it</string>
+    <string name="language">Lingua</string>
+    <string name="lang_system">Come il telefono</string>
+    <string name="lang_it">Italiano</string>
+    <string name="lang_en">English</string>
+    <string name="language_note">I nomi dei fascicoli predefiniti cambiano lingua; i tuoi documenti restano come sono.</string>
+
+    <!-- Guida e tour -->
+    <string name="help">Guida e domande</string>
+    <string name="help_sub">Come funziona PENSY e dove andare per fare le cose</string>
+    <string name="help_and_tour">Aiuto</string>
+    <string name="help_search">Cerca nella guida (es. bollo, ricetta, password)</string>
+    <string name="help_none">Nessuna risposta per «%1$s». Prova con un\'altra parola.</string>
+    <string name="help_intro">Come funziona PENSY e dove andare per fare le cose. Le informazioni pratiche sono generali e possono cambiare da regione a regione: per i casi particolari chiedi all\'ufficio competente.</string>
+    <string name="tour_again">Rivedi il tour</string>
+    <string name="tour_sub">Le cose principali in un minuto</string>
+    <string name="tour_skip">Salta</string>
+    <string name="tour_next">Avanti</string>
+    <string name="tour_start">Inizia</string>
+    <string name="tour_lang">Lingua</string>
+    <string name="tour_choose_folder">Scegli subito la cartella</string>
+    <string name="tour_1_title">Ciao, sono PENSY</string>
+    <string name="tour_1_text">Tengo in ordine le tue carte: bollette, bollo, referti, ricette, buste paga. Le trasformo in testo, ti ricordo le scadenze e ti dico quanto ti resta a fine mese. Tutto resta sul tuo telefono: non uso internet.</string>
+    <string name="tour_2_title">Fotografa, al resto penso io</string>
+    <string name="tour_2_text">Tocca «Aggiungi» e scatta una foto, oppure importa un PDF. Leggo importo, scadenza, codice pagoPA e codici QR. Tu controlli e salvi. Di solito la foto la cancello e tengo testo e codici; se ti serve, la conservo.</string>
+    <string name="tour_3_title">Ogni cosa nel suo fascicolo</string>
+    <string name="tour_3_text">Casa, Auto, Salute, Animali, Scuola, Lavoro, Tasse. Metto da solo ogni documento al posto giusto e imparo dalle tue correzioni. Dentro puoi creare sottofascicoli: Salute › Cuore, Auto › Panda.</string>
+    <string name="tour_4_title">Nessuna scadenza dimenticata</string>
+    <string name="tour_4_text">Ti avviso 10 giorni prima, il giorno prima e il giorno stesso. Nel calendario vedi tutto, con gli importi. Allo sportello mostri il QR direttamente dal telefono.</string>
+    <string name="tour_5_title">La tua salute, pronta dal medico</string>
+    <string name="tour_5_text">Nel fascicolo Salute trovi patologie, allergie, farmaci con gli orari, visite fatte, prenotate e da prenotare. Ti ricordo quando prendere le medicine e quando ordinarle. Dal medico tocchi «Mostra al medico».</string>
+    <string name="tour_6_title">Quanto ti resta questo mese</string>
+    <string name="tour_6_text">Aggiungi la busta paga e le spese di tutti i giorni: ti dico quanto ti resta, quali mesi saranno pesanti e quanto mettere da parte nei salvadanai. Puoi tenere anche le carte dei tuoi figli o di un genitore.</string>
+    <string name="tour_7_title">I tuoi dati sono tuoi</string>
+    <string name="tour_7_text">Scegli una cartella: ci salvo una copia cifrata, PENSY_DATA. Se cambi telefono, la copi e la importi. Hai un dubbio? Tocca il punto di domanda in alto nella schermata «Oggi».</string>
+
+    <!-- Errore -->
+    <string name="crash_title">PENSY si è chiusa per un errore</string>
+    <string name="crash_explain">Tocca «Copia» e incolla il testo qui sotto nella chat con Claude: serve per correggere il problema. Il testo dice in che punto del programma è successo.</string>
+    <string name="crash_share">Condividi</string>
+    <string name="crash_reopen">Riapri PENSY</string>
+    <string name="crash_none">Nessun dettaglio disponibile.</string>
+
+    <!-- 0.4: tipi nuovi -->
+    <string name="type_abbonamento">Abbonamento / contratto</string>
+    <string name="type_ricevuta">Ricevuta</string>
+    <string name="short_abbonamento">Ab</string>
+    <string name="short_ricevuta">Rc</string>
+    <string name="share">Condividi</string>
+    <string name="no_share_app">Nessuna app per condividere</string>
+
+    <!-- 0.4: pagine e foto -->
+    <string name="pages_title">Pagine</string>
+    <string name="page_add">Aggiungi pagina</string>
+    <string name="page_added">Pagina aggiunta</string>
+    <string name="page_n">Pagina %1$d</string>
+    <string name="reading_page">Leggo la pagina %1$d di %2$d…</string>
+    <string name="keep_photo">Conserva la foto</string>
+    <string name="keep_photo_hint">Utile per carte d\'identità, garanzie e ricevute. Senza foto PENSY tiene solo il testo e i codici.</string>
+    <string name="photo_keep">Conserva una foto</string>
+    <string name="photo_kept">Foto conservata</string>
+    <string name="page_delete_title">Eliminare questa foto?</string>
+    <string name="page_delete_msg">Il testo letto resta nel documento.</string>
+    <string name="import_pages">Recupero le foto dei documenti…</string>
+
+    <!-- 0.4: ricevute -->
+    <string name="receipt_add">Allega la ricevuta</string>
+    <string name="receipt_open">Apri la ricevuta</string>
+    <string name="receipt_of">Ricevuta: %1$s</string>
+    <string name="receipt_saved">Ricevuta allegata</string>
+    <string name="receipt_saved_paid">Ricevuta allegata, segnata come pagata</string>
+    <string name="receipt_saved_next">Ricevuta allegata. Prossima scadenza: %1$s</string>
+
+    <!-- 0.4: blocco e riservatezza -->
+    <string name="privacy">Riservatezza</string>
+    <string name="lock_setting">Blocca PENSY con impronta o PIN</string>
+    <string name="lock_setting_hint">Si apre con l\'impronta, il volto o il PIN del telefono, all\'avvio e quando torni dopo un minuto. Nelle app recenti il contenuto resta nascosto.</string>
+    <string name="lock_no_screen_lock">Prima imposta un blocco schermo nelle impostazioni del telefono</string>
+    <string name="lock_disabled_no_lock">Il telefono non ha più un blocco schermo: per ora PENSY non si blocca.</string>
+    <string name="lock_on">PENSY ora è bloccata quando non la usi</string>
+    <string name="lock_prompt">Sblocca PENSY</string>
+    <string name="lock_prompt_sub">Usa l\'impronta, il volto o il PIN del telefono</string>
+    <string name="lock_locked">PENSY è bloccata</string>
+    <string name="lock_locked_sub">Le tue carte restano al sicuro.</string>
+    <string name="lock_unlock">Sblocca</string>
+    <string name="keep_photos_setting">Conserva le foto dei nuovi documenti</string>
+    <string name="keep_photos_hint">Se è spento, PENSY tiene solo testo e codici; puoi sempre scegliere documento per documento. Le foto vanno anche in PENSY_DATA, cifrate.</string>
+    <string name="send_phone">Invia a un altro telefono</string>
+    <string name="send_phone_title">Dati di PENSY</string>
+
+    <!-- 0.4: persone -->
+    <string name="profiles_title">Persone</string>
+    <string name="profiles_hint">Per ogni persona PENSY tiene fascicoli, scadenze e salute separati. Cambi persona toccando il cerchio in alto in «Oggi».</string>
+    <string name="profile_me">Io</string>
+    <string name="profile_unnamed">Senza nome</string>
+    <string name="profile_add">Aggiungi una persona</string>
+    <string name="profile_new">Nuova persona</string>
+    <string name="profile_edit">Persona</string>
+    <string name="profile_name">Nome</string>
+    <string name="profile_name_hint">Es. Luca</string>
+    <string name="profile_kind">Chi è</string>
+    <string name="kind_adult">Adulto</string>
+    <string name="kind_child">Figlio o figlia</string>
+    <string name="kind_cared">Persona che assisto</string>
+    <string name="profile_folders_hint">Preparo i fascicoli adatti: per un figlio Salute e Scuola, per una persona che assisti anche Casa e Tasse.</string>
+    <string name="profile_budget">Le sue spese contano nel bilancio di</string>
+    <string name="profile_budget_own">Suo</string>
+    <string name="profile_budget_hint">Così, nel tuo bilancio, ti resta quanto ti resta davvero.</string>
+    <string name="profile_owner_hint">Sei tu, il profilo principale. Il nome si vede nel saluto in «Oggi».</string>
+    <string name="profile_need_name">Scrivi il nome</string>
+    <string name="profile_created">Ora vedi le carte di %1$s</string>
+    <string name="profile_delete">Elimina la persona</string>
+    <string name="profile_delete_title">Eliminare la persona?</string>
+    <string name="profile_delete_msg">Spariscono tutti i fascicoli, i documenti, le scadenze e la scheda salute di %1$s. Non si può annullare.</string>
+    <string name="profile_in_budget_of">nel bilancio di %1$s</string>
+    <string name="profile_in_use">in uso</string>
+    <string name="profile_of_line">%1$s</string>
+    <string name="budget_counts_in">Le spese di %1$s contano nel bilancio di %2$s.</string>
+    <string name="dependent_month">Spese di %1$s</string>
+    <string name="deadlines_short">Scadenze</string>
+    <string name="spends_short">Spese</string>
+
+    <!-- 0.4: spese di tutti i giorni -->
+    <string name="spends_title">Spese di tutti i giorni</string>
+    <string name="spends_none">Nessuna spesa segnata. Spesa, benzina, farmacia: segnale in un attimo.</string>
+    <string name="spends_future">Le spese si segnano il giorno in cui le fai.</string>
+    <string name="spends_all">Mostra tutte (%1$d)</string>
+    <string name="spend_add">Aggiungi spesa</string>
+    <string name="spend_quick">Spesa</string>
+    <string name="spend_new">Nuova spesa</string>
+    <string name="spend_edit">Spesa</string>
+    <string name="spend_cat">Per cosa</string>
+    <string name="spend_day">Giorno</string>
+    <string name="spend_note_hint">Es. Esselunga, benzina, cena</string>
+    <string name="spend_saved">Spesa salvata</string>
+    <string name="spend_deleted">Spesa eliminata</string>
+    <string name="cat_spesa">Spesa</string>
+    <string name="cat_casa">Casa</string>
+    <string name="cat_trasporti">Trasporti</string>
+    <string name="cat_auto">Auto</string>
+    <string name="cat_salute">Salute</string>
+    <string name="cat_ristoranti">Fuori</string>
+    <string name="cat_svago">Svago</string>
+    <string name="cat_istruzione">Scuola</string>
+    <string name="cat_animali">Animali</string>
+    <string name="cat_altro">Altro</string>
+    <string name="month_deadlines">Scadenze del mese</string>
+    <string name="budget_of_which_spends">Di cui spese di tutti i giorni: %1$s</string>
+    <string name="budget_saved">Messi da parte nei salvadanai: %1$s</string>
+    <string name="budget_saved_planned">Da mettere da parte nei salvadanai: %1$s</string>
+    <string name="budget_taken">Presi dai salvadanai: %1$s</string>
+
+    <!-- 0.4: salvadanai -->
+    <string name="jars_title">Salvadanai</string>
+    <string name="jars_empty">Metti da parte per qualcosa: le vacanze, l\'auto nuova, il regalo di Natale. Se dici quanto e per quando, ti dico quanto mettere ogni mese.</string>
+    <string name="jar_new">Nuovo salvadanaio</string>
+    <string name="jar_edit">Salvadanaio</string>
+    <string name="jar_name">Nome</string>
+    <string name="jar_name_hint">Es. Vacanze in Sicilia</string>
+    <string name="jar_need_name">Dai un nome al salvadanaio</string>
+    <string name="jar_goal">Obiettivo (facoltativo)</string>
+    <string name="jar_goal_hint">Es. 1200</string>
+    <string name="jar_date">Entro quando (facoltativo)</string>
+    <string name="jar_date_none">Nessuna data</string>
+    <string name="jar_date_hint">Con obiettivo e data ti suggerisco quanto mettere da parte ogni mese, e lo tolgo da quanto ti resta.</string>
+    <string name="jar_close">Chiuso (niente più quote)</string>
+    <string name="jar_closed">Chiuso</string>
+    <string name="jar_of">di %1$s</string>
+    <string name="jar_reached">Obiettivo raggiunto</string>
+    <string name="jar_quota">%1$s al mese fino a %2$s</string>
+    <string name="jar_late">la data è passata</string>
+    <string name="jar_no_goal">Senza obiettivo</string>
+    <string name="jar_missing">Mancano %1$s</string>
+    <string name="jar_by">entro il %1$s</string>
+    <string name="jar_put">Metti dentro</string>
+    <string name="jar_take">Prendi</string>
+    <string name="jar_put_title">Metti in «%1$s»</string>
+    <string name="jar_take_title">Prendi da «%1$s»</string>
+    <string name="jar_explain">I soldi restano dove sono (conto, contanti): il salvadanaio tiene il conto di quelli che hai deciso di non spendere.</string>
+    <string name="jar_history">Movimenti</string>
+    <string name="jar_history_empty">Ancora niente.</string>
+    <string name="jar_move_delete_title">Eliminare il movimento?</string>
+    <string name="jar_move_delete_msg">Il salvadanaio torna a com\'era prima.</string>
+    <string name="jar_delete_title">Eliminare il salvadanaio?</string>
+    <string name="jar_delete_msg">«%1$s» e i suoi movimenti spariscono.</string>
+
+    <plurals name="pages_read">
+        <item quantity="one">%1$d pagina letta</item>
+        <item quantity="other">%1$d pagine lette</item>
+    </plurals>
+    <plurals name="pages_added">
+        <item quantity="one">%1$d pagina aggiunta</item>
+        <item quantity="other">%1$d pagine aggiunte</item>
+    </plurals>
+    <plurals name="import_pages_count">
+        <item quantity="one">Con %1$d foto di documenti.</item>
+        <item quantity="other">Con %1$d foto di documenti.</item>
+    </plurals>
+    <plurals name="import_pages_lost">
+        <item quantity="one">Importato. %1$d foto non è stata trovata.</item>
+        <item quantity="other">Importato. %1$d foto non sono state trovate.</item>
+    </plurals>
+    <plurals name="import_profiles">
+        <item quantity="one">%1$d persona.</item>
+        <item quantity="other">%1$d persone.</item>
+    </plurals>
+    <plurals name="others_late">
+        <item quantity="one">%1$d scaduta</item>
+        <item quantity="other">%1$d scadute</item>
+    </plurals>
+    <plurals name="others_soon">
+        <item quantity="one">%1$d nelle prossime due settimane</item>
+        <item quantity="other">%1$d nelle prossime due settimane</item>
+    </plurals>
+
+    <!-- 0.5: dosi -->
+    <string name="dose_taken">Presa</string>
+    <string name="dose_skipped">Saltata</string>
+    <string name="dose_taken_action">Presa</string>
+    <string name="dose_skip_action">Salta</string>
+    <string name="dose_snooze_action">Tra 10 minuti</string>
+    <string name="dose_snoozed">Rimandata di 10 minuti</string>
+    <string name="dose_undo">Annulla</string>
+    <string name="dose_due_now">da prendere</string>
+    <string name="dose_extra">presa al bisogno</string>
+    <string name="dose_extra_today">Prese oggi: %1$s</string>
+    <string name="dose_take_now">Presa ora</string>
+    <string name="dose_taken_at">Segnata alle %1$s</string>
+    <string name="dose_log_csv">Registro delle dosi (CSV)</string>
+    <string name="dose_log_empty">Nessuna dose segnata finora</string>
+    <string name="adherence_line">Ultimi 30 giorni: %1$d prese, %2$d saltate, %3$d non segnate</string>
+    <string name="adherence_none">Segna le dosi (presa o saltata) per vedere come va la terapia.</string>
+    <string name="dose_alarm_setting">Le medicine suonano anche in silenzioso</string>
+    <string name="dose_alarm_hint">Gli avvisi delle medicine usano il suono della sveglia: si sentono anche con il telefono in silenzioso o in «Non disturbare».</string>
+    <string name="channel_meds_alarm">Medicine (suono della sveglia)</string>
+    <string name="channel_meds_alarm_desc">Gli orari delle medicine, con il suono della sveglia</string>
+
+    <!-- 0.5: misurazioni -->
+    <string name="measures">Misurazioni</string>
+    <string name="measures_empty">Pressione, glicemia, peso, temperatura: segnale e vedi l\'andamento.</string>
+    <string name="measure_add">Aggiungi misurazione</string>
+    <string name="measure_new">Nuova misurazione</string>
+    <string name="measure_edit">Misurazione</string>
+    <string name="measures_list">Valori</string>
+    <string name="measures_none_range">Nessun valore in questo periodo.</string>
+    <string name="measures_note">PENSY mostra i valori e l\'andamento, non li giudica: cosa vogliono dire te lo dice il medico.</string>
+    <string name="m_pressure">Pressione</string>
+    <string name="m_glucose">Glicemia</string>
+    <string name="m_weight">Peso</string>
+    <string name="m_temperature">Temperatura</string>
+    <string name="m_saturation">Saturazione</string>
+    <string name="m_heart">Battito</string>
+    <string name="m_pressure_hint">Es. 125/80 72</string>
+    <string name="m_glucose_hint">Es. 95</string>
+    <string name="m_weight_hint">Es. 72,5</string>
+    <string name="m_temperature_hint">Es. 36,8</string>
+    <string name="m_saturation_hint">Es. 98</string>
+    <string name="m_heart_hint">Es. 68</string>
+    <string name="m_pressure_explain">Massima / minima, e se vuoi il battito dopo uno spazio.</string>
+    <string name="m_systolic">Massima</string>
+    <string name="m_diastolic">Minima</string>
+    <string name="m_pulse">Battito</string>
+    <string name="m_min">Minimo</string>
+    <string name="m_avg">Media</string>
+    <string name="m_max">Massimo</string>
+    <string name="m_time">Ora</string>
+    <string name="m_note_hint">Es. dopo cena, a riposo</string>
+    <string name="m_bad_pressure">Scrivi massima e minima, per esempio 125/80</string>
+    <string name="m_bad_value">Il valore non sembra giusto</string>
+    <string name="range_30">30 giorni</string>
+    <string name="range_90">3 mesi</string>
+    <string name="range_365">1 anno</string>
+    <string name="range_all">Tutto</string>
+    <string name="export_csv">Esporta CSV</string>
+    <string name="csv_date">Data</string>
+    <string name="csv_time">Ora</string>
+    <string name="csv_dose_time">Ora della dose</string>
+    <string name="csv_status">Stato</string>
+    <string name="csv_marked_at">Segnata il</string>
+
+    <!-- 0.5: PDF per il medico -->
+    <string name="doctor_pdf">Condividi come PDF</string>
+    <string name="making_pdf">Preparo il PDF…</string>
+    <string name="pdf_error">Non sono riuscito a creare il PDF</string>
+    <string name="pdf_last_90">ultimi 3 mesi</string>
+    <string name="pdf_stats">Minimo %1$s · media %2$s · massimo %3$s · %4$d misurazioni</string>
+    <string name="pdf_adherence">Come sono state prese le medicine (ultimi 30 giorni)</string>
+    <string name="pdf_disclaimer">Riepilogo preparato da PENSY con i dati inseriti dalla persona. Non sostituisce la documentazione clinica.</string>
+
+    <!-- 0.5: scheda di emergenza -->
+    <string name="ice_title">Scheda di emergenza</string>
+    <string name="ice_row_sub">Gruppo sanguigno, allergie, chi chiamare</string>
+    <string name="ice_title_card">IN CASO DI EMERGENZA</string>
+    <string name="ice_birth">Data di nascita</string>
+    <string name="ice_birth_value">%1$s (%2$d anni)</string>
+    <string name="ice_blood">Gruppo sanguigno</string>
+    <string name="ice_blood_unknown">Non so</string>
+    <string name="ice_allergies">Allergie</string>
+    <string name="ice_none_known">nessuna nota</string>
+    <string name="ice_conditions">Patologie</string>
+    <string name="ice_meds">Farmaci in uso</string>
+    <string name="ice_notes">Altre informazioni</string>
+    <string name="ice_notes_hint">Es. portatore di pacemaker, diabete in insulina, lenti a contatto</string>
+    <string name="ice_contact">Da chiamare</string>
+    <string name="ice_contact1">Prima persona da chiamare</string>
+    <string name="ice_contact2">Seconda persona da chiamare</string>
+    <string name="ice_contact_hint">Es. Giulia (moglie)</string>
+    <string name="ice_phone">Telefono</string>
+    <string name="ice_phone_hint">Es. 333 123 4567</string>
+    <string name="ice_doctor">Medico di base</string>
+    <string name="ice_doctor_hint">Es. Dott. Bianchi</string>
+    <string name="ice_donor">Donatore di organi</string>
+    <string name="ice_donor_unset">Non indicato</string>
+    <string name="ice_call">Chiama %1$s</string>
+    <string name="ice_edit">Modifica la scheda</string>
+    <string name="ice_from_record">Allergie, patologie e farmaci li prendo dalla scheda salute: aggiornali lì.</string>
+    <string name="ice_lock">Mostra sulla schermata di blocco</string>
+    <string name="ice_lock_hint">Resta come notifica silenziosa, leggibile senza sbloccare il telefono: così la vede anche un soccorritore. La vede chiunque prenda il telefono.</string>
+    <string name="ice_lock_title">In caso di emergenza · %1$s</string>
+    <string name="channel_ice">Scheda di emergenza</string>
+    <string name="channel_ice_desc">La scheda di emergenza sulla schermata di blocco, se l\'hai scelto</string>
+    <string name="yes">Sì</string>
+    <string name="no">No</string>
+
+    <!-- 0.5: vaccini e ricette -->
+    <string name="booster">Richiamo</string>
+    <string name="booster_none">Nessun richiamo</string>
+    <string name="booster_on">Richiamo: %1$s</string>
+    <string name="booster_hint">Ti avviso un mese prima, una settimana prima e il giorno stesso.</string>
+    <string name="ev_booster">Richiamo del vaccino</string>
+    <string name="notif_booster_title">Richiamo: %1$s</string>
+    <string name="notif_booster">È previsto per il %1$s, %2$s</string>
+    <string name="notif_booster_overdue">Era previsto per il %1$s</string>
+    <string name="nre_title">Ricetta elettronica</string>
+    <string name="nre_label">NRE</string>
+    <string name="nre_show">Mostra al farmacista</string>
+    <string name="nre_hint">In farmacia basta il numero (NRE) con la tessera sanitaria. Una ricetta per farmaci vale 30 giorni dalla data in cui è stata fatta.</string>
+    <string name="rem_rx">Ricetta da usare: %1$s</string>
+    <string name="rem_renew">Rinnovo: %1$s</string>
+    <string name="rem_warranty">Fine garanzia: %1$s</string>
+
+    <plurals name="measures_count">
+        <item quantity="one">%1$d valore</item>
+        <item quantity="other">%1$d valori</item>
+    </plurals>
+    <plurals name="booster_in_years">
+        <item quantity="one">tra %1$d anno</item>
+        <item quantity="other">tra %1$d anni</item>
+    </plurals>
+
+    <!-- 0.6: garanzie e abbonamenti -->
+    <string name="field_price">Prezzo pagato</string>
+    <string name="field_price_hint">Resta nel documento: non conta di nuovo come spesa.</string>
+    <string name="field_warranty_end">Fine della garanzia</string>
+    <string name="field_cancel_by">Disdici entro (facoltativo)</string>
+    <string name="field_cancel_none">Nessuna data</string>
+    <string name="field_cancel_hint">L\'ultimo giorno per disdire prima del rinnovo automatico: ti avviso 30 e 7 giorni prima.</string>
+    <string name="rem_cancel">Disdire entro: %1$s</string>
+    <string name="fixed_title">Spese fisse</string>
+    <string name="fixed_year">%1$s all\'anno</string>
+    <string name="fixed_month">In media %1$s al mese: abbonamenti, contratti, bollette, rate.</string>
+    <string name="fixed_per_year">%1$s/anno</string>
+    <string name="fixed_more">e altre %1$d</string>
+
+    <!-- 0.6: 730 -->
+    <string name="tax_title">Spese per il 730</string>
+    <string name="tax_year">Spese del %1$d</string>
+    <string name="tax_declared_in">Da indicare nella dichiarazione del %1$d</string>
+    <string name="tax_total">Spese detraibili</string>
+    <string name="tax_estimate">Ti tornano circa</string>
+    <string name="tax_estimate_hint">Stima indicativa al 19%, con i limiti più comuni. Non è la dichiarazione: controlla con il CAF o il commercialista.</string>
+    <string name="tax_empty">Nessuna spesa per il 730 in quest\'anno. Quando segni una spesa scegli «Per il 730»; ticket e tasse universitarie pagati contano da soli.</string>
+    <string name="tax_empty_short">Nessuna spesa per il 730 in quest\'anno</string>
+    <string name="tax_spent">Speso</string>
+    <string name="tax_back">Ti torna</string>
+    <string name="tax_field">Per il 730</string>
+    <string name="tax_none">No</string>
+    <string name="tax_cash">Pagata in contanti</string>
+    <string name="tax_cash_hint">Quasi tutte le detrazioni chiedono un pagamento tracciabile (carta, bonifico). In contanti valgono i farmaci e le prestazioni del Servizio sanitario.</string>
+    <string name="tax_cash_short">contanti</string>
+    <string name="tax_traceable">tracciabile</string>
+    <string name="tax_sanitarie">Spese mediche</string>
+    <string name="tax_veterinarie">Veterinario</string>
+    <string name="tax_istruzione">Scuola</string>
+    <string name="tax_universita">Università</string>
+    <string name="tax_trasporti">Abbonamento ai mezzi</string>
+    <string name="tax_sport">Sport dei figli</string>
+    <string name="tax_altro">Altre detraibili</string>
+    <string name="tax_rule_sanitarie">19% di quanto supera 129,11 €. Di solito sono già nella precompilata (Sistema Tessera Sanitaria): qui le controlli.</string>
+    <string name="tax_rule_veterinarie">19% fino a 550 €, sopra i 129,11 € di franchigia.</string>
+    <string name="tax_rule_istruzione">19% fino a 800 € per studente.</string>
+    <string name="tax_rule_universita">19%; per le università non statali ci sono limiti in più.</string>
+    <string name="tax_rule_trasporti">19% fino a 250 € a persona.</string>
+    <string name="tax_rule_sport">19% fino a 210 € per ogni figlio tra 5 e 18 anni.</string>
+    <string name="tax_rule_altro">Elencate per il CAF, senza stima.</string>
+    <string name="tax_disclaimer">Le regole cambiano spesso e dipendono dal reddito (oltre 75.000 € valgono limiti in più). PENSY raccoglie le spese e fa una stima: la dichiarazione la fai con il CAF, un commercialista o la precompilata.</string>
+    <string name="prev_year">Anno precedente</string>
+    <string name="next_year">Anno successivo</string>
+
+    <!-- 0.6: esportazioni -->
+    <string name="export_title">Esporta</string>
+    <string name="export_deadlines">Scadenze e pagamenti</string>
+    <string name="export_spends">Spese di tutti i giorni</string>
+    <string name="export_nothing">Non c\'è ancora niente da esportare</string>
+    <string name="csv_due">Scadenza</string>
+    <string name="csv_person">Persona</string>
+    <string name="csv_kind">Tipo</string>
+    <string name="csv_what">Cosa</string>
+    <string name="csv_amount">Importo</string>
+    <string name="csv_paid_on">Pagata il</string>
+    <string name="csv_to_pay">Da pagare</string>
+    <string name="csv_payment">Pagamento</string>
+
+    <!-- 0.6: fascicolo in PDF -->
+    <string name="folder_pdf">Fascicolo in PDF</string>
+    <string name="folder_pdf_empty">Nel fascicolo non ci sono ancora documenti</string>
+    <string name="folder_pdf_index">Documenti</string>
+
+    <!-- 0.6: auto -->
+    <string name="car_title">Promemoria dell\'auto</string>
+    <string name="car_card_sub">Revisione, assicurazione, bollo, tagliando, gomme</string>
+    <string name="car_intro">Dimmi le date che sai: preparo le scadenze di ogni anno. Le puoi cambiare quando vuoi.</string>
+    <string name="car_name">Auto (nome o targa)</string>
+    <string name="car_name_hint">Es. Panda AB123CD</string>
+    <string name="car_subfolder">Creo il sottofascicolo Auto › nome.</string>
+    <string name="car_registered">Prima immatricolazione</string>
+    <string name="car_last_revision">Ultima revisione (se l\'hai fatta)</string>
+    <string name="car_revision_hint">La prima revisione è a 4 anni dall\'immatricolazione, poi ogni 2 anni, entro la fine del mese.</string>
+    <string name="car_insurance">Scadenza dell\'assicurazione</string>
+    <string name="car_road_tax">Scadenza del bollo</string>
+    <string name="car_amount_hint">Importo (facoltativo)</string>
+    <string name="car_service">Ultimo tagliando</string>
+    <string name="car_tyres">Cambio gomme stagionale</string>
+    <string name="car_tyres_hint">Dove c\'è l\'obbligo, le gomme invernali vanno dal 15 novembre al 15 aprile: ti avviso un mese prima di metterle e di toglierle.</string>
+    <string name="car_create">Crea i promemoria</string>
+    <string name="car_need_something">Inserisci almeno una data</string>
+    <string name="car_t_revision">Revisione %1$s</string>
+    <string name="car_t_insurance">Assicurazione %1$s</string>
+    <string name="car_t_road_tax">Bollo %1$s</string>
+    <string name="car_t_service">Tagliando %1$s</string>
+    <string name="car_t_winter">Gomme invernali %1$s</string>
+    <string name="car_t_summer">Gomme estive %1$s</string>
+
+    <!-- 0.6: animali -->
+    <string name="pet_title">Promemoria dell\'animale</string>
+    <string name="pet_card_sub">Vaccino, antiparassitario, visita, peso</string>
+    <string name="pet_intro">Preparo vaccino con richiamo, antiparassitario, visita annuale dal veterinario e peso.</string>
+    <string name="pet_name">Nome</string>
+    <string name="pet_name_hint">Es. Fido</string>
+    <string name="pet_need_name">Scrivi il nome</string>
+    <string name="pet_species">Che animale è</string>
+    <string name="pet_dog">Cane</string>
+    <string name="pet_cat">Gatto</string>
+    <string name="pet_other">Altro</string>
+    <string name="pet_vaccine">Ultimo vaccino</string>
+    <string name="pet_vaccine_name">Vaccino</string>
+    <string name="pet_antiparasitic">Antiparassitario</string>
+    <string name="pet_antiparasitic_name">Antiparassitario</string>
+    <string name="pet_last_visit">Ultima visita dal veterinario</string>
+    <string name="pet_visit_title">Visita di controllo dal veterinario</string>
+    <string name="pet_weight">Peso di oggi (kg, facoltativo)</string>
+    <string name="pet_created">Promemoria pronti</string>
+
+    <!-- 0.6: copie, lettura, widget -->
+    <string name="copies_restore">Ripristina una copia</string>
+    <string name="copies_title">Copie degli ultimi giorni</string>
+    <string name="copies_of">Com\'era %1$s</string>
+    <string name="copies_none">Ancora nessuna copia: PENSY ne fa una al giorno nella cartella PENSY_DATA</string>
+    <string name="ocr_lang">Lingua dei documenti</string>
+    <string name="ocr_lang_it">Italiano</string>
+    <string name="ocr_lang_it_en">Italiano e inglese</string>
+    <string name="ocr_lang_hint">Per bollette, ricevute e documenti scritti in inglese. Con due lingue la lettura è un po\' più lenta.</string>
+    <string name="widget_desc">Le prossime scadenze e le medicine di oggi</string>
+    <string name="widget_nothing">Niente in scadenza nei prossimi 30 giorni</string>
+    <string name="widget_updated">Aggiornato il %1$s</string>
+
+    <plurals name="car_created">
+        <item quantity="one">Creato %1$d promemoria</item>
+        <item quantity="other">Creati %1$d promemoria</item>
+    </plurals>
+    <plurals name="tax_cash_left">
+        <item quantity="one">%1$d spesa in contanti non è nella stima</item>
+        <item quantity="other">%1$d spese in contanti non sono nella stima</item>
+    </plurals>
+    <plurals name="widget_doses">
+        <item quantity="one">%1$d medicina da prendere oggi</item>
+        <item quantity="other">%1$d medicine da prendere oggi</item>
+    </plurals>
+    <plurals name="widget_week">
+        <item quantity="one">%1$d scadenza nei prossimi 7 giorni</item>
+        <item quantity="other">%1$d scadenze nei prossimi 7 giorni</item>
+    </plurals>
+    <plurals name="widget_late">
+        <item quantity="one">%1$d scaduta</item>
+        <item quantity="other">%1$d scadute</item>
+    </plurals>
+    <string name="source_title">Come vuoi aggiungerlo?</string>
+    <string name="source_camera">Scatta una foto</string>
+    <string name="source_file">Carica un file (PDF o immagine)</string>
+    <string name="add_payslip_any">Busta paga (foto o PDF)</string>
+    <string name="add_photo_health">Fotografa un referto o una ricetta</string>
+    <string name="add_from_doc">Da un documento</string>
+    <string name="add_without_doc">Senza documento</string>
+    <string name="setup_step">Passo %1$d di %2$d</string>
+    <string name="setup_welcome">Benvenuto in PENSY</string>
+    <string name="setup_welcome_text">Tengo in ordine bollette, documenti, salute e soldi. Fai una foto o carichi un PDF: io leggo importi e scadenze e ti avviso in tempo. Tutto resta sul tuo telefono, senza internet.</string>
+    <string name="setup_name">Come ti chiami?</string>
+    <string name="setup_name_hint">Il tuo nome (facoltativo)</string>
+    <string name="setup_restore_title">Hai già usato PENSY su un altro telefono?</string>
+    <string name="setup_restore_text">Recupera tutto dalla cartella PENSY_DATA o da un file .pensy: documenti, scadenze, salute e bilancio.</string>
+    <string name="setup_restore">Recupera i miei dati</string>
+    <string name="setup_people">Per chi usi PENSY?</string>
+    <string name="setup_people_text">Puoi tenere anche le carte di chi segui. Ogni persona ha le sue scadenze, i suoi fascicoli e la sua scheda salute; passi dall\'una all\'altra toccando il cerchio in alto a destra.</string>
+    <string name="setup_child">Anche per un figlio o una figlia</string>
+    <string name="setup_child_name">Nome del figlio o della figlia</string>
+    <string name="setup_parent">Anche per un genitore o una persona che assisti</string>
+    <string name="setup_parent_name">Nome della persona</string>
+    <string name="setup_people_later">Altre persone le aggiungi quando vuoi da Impostazioni › Persone.</string>
+    <string name="setup_data_text">PENSY non usa internet: i dati stanno solo sul telefono. Scegli una cartella e ci terrò una copia cifrata, PENSY_DATA, protetta da una password che decidi tu. Se cambi telefono, la copi e non perdi niente.</string>
+    <string name="setup_data_done">Cartella scelta: %1$s</string>
+    <string name="setup_data_later">Puoi farlo anche dopo: te lo ricordo nella schermata Oggi.</string>
+    <string name="hint_close">Chiudi il suggerimento</string>
+    <string name="steps_title">Primi passi</string>
+    <string name="steps_count">%1$d di %2$d</string>
+    <string name="steps_doc">Aggiungi il primo documento</string>
+    <string name="steps_doc_sub">Una bolletta, un avviso pagoPA, un referto: fai una foto o carica il PDF che ti hanno mandato.</string>
+    <string name="steps_pay">Aggiungi la busta paga</string>
+    <string name="steps_pay_sub">Così ti dico quanto ti resta ogni mese. Va bene anche il PDF arrivato per email.</string>
+    <string name="steps_folder">Scegli dove salvare i dati</string>
+    <string name="steps_folder_sub">Una copia cifrata in una cartella del telefono: se lo cambi, non perdi niente.</string>
+    <string name="steps_notif">Attiva le notifiche</string>
+    <string name="steps_notif_sub">Senza notifiche non posso avvisarti delle scadenze e delle medicine.</string>
+    <string name="steps_health">Guarda la scheda Salute</string>
+    <string name="steps_health_sub">Farmaci con gli orari, visite, allergie: tutto pronto quando vai dal medico.</string>
+    <string name="steps_photo">Foto</string>
+    <string name="steps_file">File</string>
+    <string name="steps_add">Aggiungi</string>
+    <string name="steps_choose">Scegli</string>
+    <string name="steps_enable">Attiva</string>
+    <string name="steps_open">Apri</string>
+    <string name="steps_skip">Non mi serve</string>
+    <string name="steps_hide">Nascondi</string>
+    <string name="hint_folders">I fascicoli sono i cassetti di PENSY. Ogni documento che aggiungi finisce da solo in quello giusto, e PENSY impara dalle tue correzioni. Tocca un fascicolo per vedere cosa c\'è dentro.</string>
+    <string name="hint_calendar">Qui vedi le scadenze giorno per giorno, con gli importi e quelle che si ripetono. Tocca un giorno per vedere cosa c\'è.</string>
+    <string name="hint_budget">Il bilancio mette insieme buste paga, scadenze e spese: vedi quanto ti resta, quali mesi saranno pesanti e quanto metti da parte. Tocca una barra per vedere quel mese.</string>
+    <string name="hint_health">La scheda salute: patologie, allergie, farmaci con gli orari, visite e misurazioni. Dal medico tocca «Mostra al medico» per avere tutto in una pagina, anche in PDF.</string>
+    <string name="hint_folder">Qui trovi le cose da fare e i documenti di questo fascicolo. Nel «Riepilogo» scrivi quello che vuoi sempre a portata di mano; puoi anche creare sottofascicoli.</string>
+    <string name="saved_in">Salvato in %1$s.</string>
+    <string name="saved_remind_on">Ti avviso il %1$s.</string>
+    <string name="saved_due">Scade %1$s.</string>
+    <string name="saved_late">È già scaduto: lo trovi in Oggi.</string>
+    <string name="saved_see">Vedi</string>
+    <string name="hints_again">Rivedi i suggerimenti</string>
+    <string name="hints_again_sub">I consigli brevi e i «Primi passi» tornano visibili</string>
+    <string name="hints_again_done">I suggerimenti sono di nuovo visibili</string>
+    <string name="savings_title">Risparmi e investimenti</string>
+    <string name="savings_total">Tutto quello che hai messo da parte</string>
+    <string name="savings_line">Salvadanai %1$s · investimenti %2$s</string>
+    <string name="inv_title">Investimenti</string>
+    <string name="inv_gain">Guadagno</string>
+    <string name="inv_total_line">Hai versato %1$s · guadagno %2$s</string>
+    <string name="inv_empty_title">Nessun investimento</string>
+    <string name="inv_empty">Aggiungi un ETF, delle azioni, un fondo pensione o un conto deposito: vedrai quanto hai versato, quanto vale e dove può arrivare.</string>
+    <string name="inv_first">Aggiungi il primo investimento</string>
+    <string name="inv_new">Nuovo investimento</string>
+    <string name="inv_edit">Modifica investimento</string>
+    <string name="inv_history">Com\'è andata</string>
+    <string name="inv_future">Fra qualche anno</string>
+    <string name="inv_years">%1$d anni</string>
+    <string name="inv_invested">Versato</string>
+    <string name="inv_value">Valore</string>
+    <string name="inv_estimated">Valore stimato</string>
+    <string name="inv_interest">Interessi</string>
+    <string name="inv_today_short">Oggi</string>
+    <string name="inv_point">%1$s: versato %2$s, valore %3$s</string>
+    <string name="inv_proj_point">Fra %1$d anni: versato %2$s, valore stimato %3$s</string>
+    <string name="inv_proj_note_all">Ogni investimento cresce con il suo rendimento medio e riceve i versamenti del suo piano. È una stima, non una promessa.</string>
+    <string name="inv_proj_note">Con un rendimento medio del %1$s l\'anno e i versamenti del piano. È una stima, non una promessa.</string>
+    <string name="inv_disclaimer">Stime, non consigli: i rendimenti passati non garantiscono quelli futuri. PENSY non usa internet, quindi i valori li aggiorni tu copiandoli dall\'app della banca o del broker.</string>
+    <string name="inv_closed">chiuso</string>
+    <string name="inv_plan_short">PAC %1$s</string>
+    <string name="inv_updated">Valore aggiornato al %1$s</string>
+    <string name="inv_not_updated">Valore mai aggiornato: per ora è quanto hai versato</string>
+    <string name="inv_units_owned">Quote: %1$s</string>
+    <string name="inv_last_price">ultimo prezzo %1$s</string>
+    <string name="inv_update">Aggiorna il valore</string>
+    <string name="inv_buy">Aggiungi un acquisto</string>
+    <string name="inv_sell">Vendita o prelievo</string>
+    <string name="inv_plan">Piano di accumulo</string>
+    <string name="inv_plan_line">%1$s %2$s, il giorno %3$d</string>
+    <string name="inv_plan_from">dal %1$s</string>
+    <string name="inv_plan_until">fino al %1$s</string>
+    <string name="inv_plan_next">prossimo il %1$s</string>
+    <string name="inv_plan_auto">Ogni versamento viene registrato da solo quando arriva il giorno. Se un mese salta, toccalo nell\'elenco e cancellalo.</string>
+    <string name="inv_plan_none">Nessun piano. Se versi una cifra fissa ogni mese, impostalo: PENSY registra i versamenti da solo e li conta nel bilancio.</string>
+    <string name="inv_plan_set">Imposta un piano</string>
+    <string name="inv_moves">Versamenti e prelievi</string>
+    <string name="inv_moves_empty">Ancora niente. Tocca «Aggiungi un acquisto».</string>
+    <string name="inv_sold">Vendita</string>
+    <string name="inv_by_plan">Versamento del piano</string>
+    <string name="inv_bought">Acquisto</string>
+    <string name="inv_units_n">%1$s quote</string>
+    <string name="inv_values">Valori inseriti</string>
+    <string name="inv_price_each">%1$s a quota</string>
+    <string name="inv_value_delete_title">Cancellare questo valore?</string>
+    <string name="inv_value_delete_msg">Il valore attuale verrà calcolato dall\'aggiornamento precedente.</string>
+    <string name="inv_delete_title">Cancellare l\'investimento?</string>
+    <string name="inv_delete_msg">«%1$s» verrà cancellato con tutti i versamenti e i valori inseriti.</string>
+    <string name="inv_name">Nome</string>
+    <string name="inv_name_hint">Es. ETF Mondo, Fondo pensione, Conto deposito</string>
+    <string name="inv_kind">Tipo</string>
+    <string name="inv_code">ISIN o ticker (facoltativo)</string>
+    <string name="inv_code_hint">Es. IE00BK5BQT80</string>
+    <string name="inv_rate">Rendimento medio annuo (%)</string>
+    <string name="inv_rate_hint">Es. 6</string>
+    <string name="inv_rate_help">Serve solo per le proiezioni: quanto ti aspetti in media ogni anno. Il numero proposto è indicativo, mettine uno prudente.</string>
+    <string name="inv_start">Quanto c\'è già dentro (facoltativo)</string>
+    <string name="inv_start_hint">Es. 2.000</string>
+    <string name="inv_start_day">Versato il</string>
+    <string name="inv_start_note">Situazione iniziale</string>
+    <string name="inv_plan_toggle">Piano di accumulo (PAC)</string>
+    <string name="inv_plan_amount">Quanto versi ogni volta</string>
+    <string name="inv_plan_every">Ogni quanto</string>
+    <string name="inv_plan_day">Giorno del mese</string>
+    <string name="inv_plan_start">Dal</string>
+    <string name="inv_plan_end">Fino al</string>
+    <string name="inv_plan_no_end">Nessuna fine</string>
+    <string name="inv_plan_help">Se il piano è iniziato in passato, PENSY registra anche i versamenti già fatti.</string>
+    <string name="inv_close">Chiuso (venduto o finito): resta nello storico, fuori dai totali</string>
+    <string name="inv_need_name">Scrivi un nome</string>
+    <string name="inv_bad_rate">Il rendimento non è valido (da -50 a 50)</string>
+    <string name="inv_bad_day">Il giorno deve essere tra 1 e 31</string>
+    <string name="inv_bad_number">Il numero non è valido</string>
+    <string name="inv_buy_amount">Quanto hai versato</string>
+    <string name="inv_sell_amount">Quanto hai ritirato</string>
+    <string name="inv_day">Giorno</string>
+    <string name="inv_units">Quote (facoltativo)</string>
+    <string name="inv_units_hint">Es. 1,2345</string>
+    <string name="inv_or_price">oppure il prezzo di una quota</string>
+    <string name="inv_price_hint">Es. 105,23</string>
+    <string name="inv_units_help">Con le quote PENSY calcola il valore dal prezzo di una quota. Se non le sai, lascia vuoto e aggiorna il valore totale.</string>
+    <string name="inv_update_help">Copia il valore dall\'app della banca o del broker: il valore di tutto l\'investimento, oppure il prezzo di una quota.</string>
+    <string name="inv_by_value">Valore totale</string>
+    <string name="inv_by_price">Prezzo di una quota</string>
+    <string name="inv_price_now">Prezzo di una quota oggi</string>
+    <string name="inv_value_now">Quanto vale oggi</string>
+    <string name="inv_value_saved">Valore aggiornato</string>
+    <string name="inv_kind_etf">ETF</string>
+    <string name="inv_kind_azioni">Azioni</string>
+    <string name="inv_kind_obbligazioni">Obbligazioni</string>
+    <string name="inv_kind_fondo">Fondo</string>
+    <string name="inv_kind_pensione">Fondo pensione</string>
+    <string name="inv_kind_conto">Conto deposito</string>
+    <string name="inv_kind_buoni">Buoni postali</string>
+    <string name="inv_kind_crypto">Cripto</string>
+    <string name="inv_kind_altro">Altro</string>
+    <string name="calc_title">Calcolatore di accumulo</string>
+    <string name="calc_sub">Prova quanto può diventare un versamento mensile</string>
+    <string name="calc_help">Scegli quanto metti all\'inizio, quanto ogni mese e un rendimento medio: vedi versato, valore stimato e interessi anno per anno.</string>
+    <string name="calc_start">Capitale iniziale</string>
+    <string name="calc_start_hint">Es. 1.000 (facoltativo)</string>
+    <string name="calc_monthly">Versamento mensile</string>
+    <string name="calc_years">Per quanti anni</string>
+    <string name="calc_empty">Scrivi un capitale iniziale o un versamento mensile.</string>
+    <string name="calc_note">Con un rendimento medio del %1$s l\'anno, capitalizzato ogni mese. È una stima, non una promessa.</string>
+    <string name="budget_invested">Investiti: %1$s</string>
+    <string name="budget_invested_planned">Da investire (piani di accumulo): %1$s</string>
+    <string name="budget_disinvested">Ritirati dagli investimenti: %1$s</string>
+    <string name="hint_invest">Qui vedi tutto quello che hai messo da parte: salvadanai e investimenti. I prezzi non si scaricano da internet: li aggiorni tu quando vuoi, copiandoli dall\'app della banca.</string>
+    <string name="trend_title">Andamento</string>
+    <string name="hint_trend">L\'andamento mette insieme i mesi: entrate e uscite, medie, anni a confronto, spese per categoria e stipendio. Contano solo le cose che hai registrato.</string>
+    <string name="trend_six">6 mesi</string>
+    <string name="trend_twelve">12 mesi</string>
+    <string name="trend_year">%1$d</string>
+    <string name="trend_all">Tutto</string>
+    <string name="trend_range">Da %1$s a %2$s</string>
+    <string name="trend_empty">Ancora niente da mettere insieme: aggiungi buste paga, scadenze o spese.</string>
+    <string name="trend_saved">Messo da parte</string>
+    <string name="trend_avg">In media al mese: entrate %1$s, uscite %2$s</string>
+    <string name="trend_left_avg">Ti sono rimasti in media %1$s al mese</string>
+    <string name="trend_missing_avg">Ti sono mancati in media %1$s al mese</string>
+    <string name="trend_by_month_chart">Entrate e uscite, mese per mese</string>
+    <string name="trend_by_year_chart">Entrate e uscite, anno per anno</string>
+    <string name="trend_bucket">%1$s: entrate %2$s, uscite %3$s</string>
+    <string name="trend_bucket_saved">da parte %1$s</string>
+    <string name="trend_bucket_left">rimasti %1$s</string>
+    <string name="trend_partial">mese in corso</string>
+    <string name="trend_pay">Stipendio netto</string>
+    <string name="trend_no_pay">nessuna busta paga</string>
+    <string name="trend_pay_change">Dall\'inizio del periodo: %1$s</string>
+    <string name="trend_extras">Mensilità in più: %1$s</string>
+    <string name="trend_cats">Spese di tutti i giorni per categoria</string>
+    <string name="trend_per_month">%1$s al mese in media</string>
+    <string name="trend_years">Anno per anno</string>
+    <string name="trend_year_line">Entrate %1$s · uscite %2$s</string>
+    <string name="trend_note">Contano solo le buste paga, le scadenze e le spese che hai registrato: niente stime.</string>
+    <plurals name="inv_plan_recorded">
+        <item quantity="one">Registrato %d versamento del piano</item>
+        <item quantity="other">Registrati %d versamenti del piano</item>
+    </plurals>
+    <plurals name="trend_months">
+        <item quantity="one">%d mese</item>
+        <item quantity="other">%d mesi</item>
+    </plurals>
+    <string name="manual_title">Manuale d\'uso</string>
+    <string name="manual_sub">Ogni sezione spiegata: cosa fa, come si usa, a cosa serve, perché</string>
+    <string name="manual_intro">Tutto PENSY, capitolo per capitolo: cosa fa ogni parte, come si usa, a cosa serve, qualche consiglio e il perché delle scelte. Funziona senza internet.</string>
+    <string name="manual_search">Cerca nel manuale</string>
+    <string name="manual_pdf">Salva il manuale in PDF</string>
+    <string name="manual_pdf_sub">Versione del %1$s</string>
+    <string name="manual_contents">Indice</string>
+    <string name="manual_file">PENSY - Manuale d\'uso</string>
+    <string name="manual_chapter">Capitolo %1$d di %2$d</string>
+    <string name="manual_tip">Consiglio</string>
+    <string name="manual_why">Perché è fatto così</string>
+    <string name="manual_prev">Precedente</string>
+    <string name="manual_next">Successivo</string>
+    <string name="manual_link">Se ti serve un manuale d\'uso, toccalo qui</string>
+    <string name="med_anytime">in giornata</string>
+    <string name="dose_anytime">In giornata</string>
+    <string name="dose_due_today">da prendere oggi</string>
+    <string name="med_every_weeks">ogni %1$d settimane</string>
+    <string name="med_rule_weekdays">ogni %1$s</string>
+    <string name="med_rule_monthday">ogni mese il giorno %1$d</string>
+    <string name="med_rule_monthday_n">ogni %1$d mesi il giorno %2$d</string>
+    <string name="med_nth_m">il primo|il secondo|il terzo|il quarto|l\'ultimo</string>
+    <string name="med_nth_f">la prima|la seconda|la terza|la quarta|l\'ultima</string>
+    <string name="med_rule_monthweekday">ogni mese %1$s</string>
+    <string name="med_rule_monthweekday_n">ogni %1$d mesi %2$s</string>
+    <string name="med_rule_once">una volta, il %1$s</string>
+    <string name="med_boxes_left">Restano circa %1$s scatole</string>
+    <string name="freq_day">Ogni giorno</string>
+    <string name="freq_ndays">Ogni N giorni</string>
+    <string name="freq_nweeks">Ogni N settimane</string>
+    <string name="freq_weekdays">Alcuni giorni della settimana</string>
+    <string name="freq_month">Ogni mese</string>
+    <string name="freq_once">Una volta sola</string>
+    <string name="freq_need">Al bisogno</string>
+    <string name="freq_ndays_n">Ogni quanti giorni</string>
+    <string name="freq_nweeks_n">Ogni quante settimane</string>
+    <string name="freq_nweeks_hint">Sempre di %1$s, come il giorno di inizio: per cambiarlo cambia la data di inizio.</string>
+    <string name="freq_which_days">In quali giorni</string>
+    <string name="freq_month_day">Un giorno del mese</string>
+    <string name="freq_month_weekday">Un giorno della settimana</string>
+    <string name="freq_day_of_month">Giorno del mese (da 1 a 31)</string>
+    <string name="freq_month_every">Ogni quanto</string>
+    <string name="freq_every_month">Ogni mese</string>
+    <string name="freq_every_n_months">Ogni %1$d mesi</string>
+    <string name="med_times_optional">Orari (facoltativi)</string>
+    <string name="med_no_time_hint">Senza orario la trovi in «Oggi» come «in giornata» e ti ricordo di prenderla all\'ora dei promemoria, senza sveglia. Aggiungi un orario se vuoi la sveglia.</string>
+    <string name="med_on_day">Il giorno</string>
+    <string name="med_remind_anytime">Ricordamelo il giorno stesso</string>
+    <string name="freq_bad_number">Il numero non è valido</string>
+    <string name="freq_need_day">Scegli almeno un giorno</string>
+    <string name="freq_bad_day">Il giorno deve essere tra 1 e 31</string>
+    <string name="stock_boxes">Conto le scatole</string>
+    <string name="med_boxes_now">Scatole che hai adesso</string>
+    <string name="med_per_box">%1$s in una scatola</string>
+    <string name="med_reserve">Scatole da tenere da parte</string>
+    <string name="med_reserve_none">Senza scorta da parte: ti avviso 7 giorni prima che finiscano.</string>
+    <string name="med_need_pack">Scrivi quante ne contiene una scatola</string>
+    <string name="notif_order_boxes">Ti restano circa %1$s scatole: è ora di ordinarne altre.</string>
+    <string name="notif_today_word">oggi</string>
+    <string name="notif_dose_many_today">Medicine di oggi</string>
+    <string name="notif_surgery_title">Intervento: %1$s</string>
+    <string name="from_birth">Dalla nascita</string>
+    <string name="from_birth_short">dalla nascita</string>
+    <string name="item_date_surgery">Quando (anche se è in programma)</string>
+    <string name="item_surgery_hint">Se l\'intervento è in programma, PENSY lo mette nel calendario e te lo ricorda una settimana prima, il giorno prima e il giorno stesso.</string>
+    <string name="m_height">Altezza</string>
+    <string name="m_height_hint">Es. 178 (cm) oppure 1,78</string>
+    <string name="m_bmi">Indice di massa corporea: %1$s (con l\'altezza di %2$s cm)</string>
+    <string name="ev_surgery">Intervento</string>
+    <string name="ev_dose">Da prendere</string>
+    <string name="calendar_tap_day">Tocca un giorno per vedere solo quello che c\'è quel giorno.</string>
+    <plurals name="unit_siringa">
+        <item quantity="one">siringa</item>
+        <item quantity="other">siringhe</item>
+    </plurals>
+    <plurals name="boxes_n">
+        <item quantity="one">%d scatola</item>
+        <item quantity="other">%d scatole</item>
+    </plurals>
+    <plurals name="med_reserve_hint">
+        <item quantity="one">Quando ti resta %d scatola, PENSY ti ricorda di ordinarne altre.</item>
+        <item quantity="other">Quando ti restano %d scatole, PENSY ti ricorda di ordinarne altre.</item>
+    </plurals>
+    <string name="med_next_day">Prossima volta: %1$s</string>
+</resources>

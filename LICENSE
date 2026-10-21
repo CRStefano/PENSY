@@ -1,0 +1,44 @@
+PENSY
+Copyright (c) 2026 Stefano. Tutti i diritti riservati. All rights reserved.
+
+ITALIANO
+
+Puoi, gratuitamente:
+  - scaricare, installare e usare PENSY sui tuoi dispositivi, per te, la tua
+    famiglia o la tua attività;
+  - leggere e studiare il codice sorgente di questo repository;
+  - modificarlo e compilarlo per uso personale;
+  - proporre modifiche al progetto (segnalazioni e pull request).
+
+Senza il permesso scritto dell'autore non puoi distribuire PENSY, il suo codice
+o versioni modificate, né venderli o pubblicarli in uno store.
+
+Il logo e il nome PENSY appartengono all'autore.
+
+I componenti di terzi inclusi in PENSY restano sotto le loro licenze, elencate
+in THIRD_PARTY.txt.
+
+PENSY è fornita «così com'è», senza garanzie di alcun tipo. L'autore non
+risponde di danni derivanti dal suo uso, comprese scadenze non ricordate o
+dati persi: tieni sempre una copia di PENSY_DATA.
+
+ENGLISH
+
+You may, free of charge:
+  - download, install and use PENSY on your devices, for yourself, your family
+    or your business;
+  - read and study the source code in this repository;
+  - modify and build it for personal use;
+  - suggest changes to the project (issues and pull requests).
+
+Without the author's written permission you may not distribute PENSY, its code
+or modified versions, sell them, or publish them in an app store.
+
+The PENSY name and logo belong to the author.
+
+Third-party components included in PENSY remain under their own licenses,
+listed in THIRD_PARTY.txt.
+
+PENSY is provided "as is", without warranty of any kind. The author is not
+liable for any damage arising from its use, including missed reminders or lost
+data: always keep a copy of PENSY_DATA.

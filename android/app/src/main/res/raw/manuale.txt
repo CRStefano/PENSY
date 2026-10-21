@@ -1,0 +1,368 @@
+# Benvenuto in PENSY
+@book
+PENSY tiene in ordine le carte di tutti i giorni e ti dice cosa fare e quando. Questo manuale spiega ogni parte dell'app: cosa fa, come si usa, a cosa serve e perché è fatta così.
+
+L'idea è una sola: foto, scheda, calendario, quanto ti resta. Fotografi una bolletta o carichi il PDF che ti hanno mandato; PENSY legge importo e scadenza, la mette nel fascicolo giusto, te la ricorda in tempo e la conta nel bilancio del mese. Intorno a questa idea ci sono la salute, le spese di tutti i giorni, i risparmi e gli investimenti, le persone della tua famiglia.
+
+## Come è fatta
+In basso trovi cinque schede, sempre uguali:
+- Oggi: quanto ti resta questo mese, cosa scade, le medicine di oggi.
+- Fascicoli: i cassetti dove stanno i documenti, compresa la scheda Salute.
+- Calendario: tutte le scadenze, giorno per giorno.
+- Bilancio: entrate, uscite, spese, risparmi e investimenti.
+- Impostazioni: persone, sicurezza, promemoria, cartella dei dati, questo manuale.
+
+Il pulsante rotondo «Aggiungi», in basso a destra, è il modo più veloce per mettere dentro qualcosa: un documento, una busta paga, una spesa, un farmaco, una visita.
+
+## Come leggere questo manuale
+Ogni capitolo si legge da solo. I riquadri «Consiglio» ti danno un trucco pratico; i riquadri «Perché è fatto così» spiegano le scelte dietro una funzione, così sai cosa aspettarti. Puoi cercare una parola in alto e salvare tutto il manuale in PDF.
+
+> Consiglio: se hai solo cinque minuti, leggi «Primi passi» e «Aggiungere un documento». Il resto lo scopri usando l'app.
+
+! Perché è fatto così: PENSY è nata per chi non ha tempo di tenere un archivio. Per questo fa da sola tutto quello che può (leggere, smistare, ricordare, calcolare) e ti chiede solo di confermare.
+
+# Primi passi
+@check
+Le cinque cose che rendono PENSY utile fin dal primo giorno. In «Oggi» le trovi nella scheda «Primi passi», che si spunta da sola.
+
+## Il primo avvio
+Al primo avvio PENSY ti chiede tre cose, e ognuna si può saltare:
+1. La lingua e il tuo nome.
+2. Per chi la usi: solo per te, anche per un figlio o per un genitore. Ogni persona avrà i suoi fascicoli e la sua scheda salute.
+3. Dove salvare i dati: una cartella del telefono in cui PENSY tiene una copia cifrata, PENSY_DATA.
+
+Se hai già usato PENSY su un altro telefono, tocca «Recupera i miei dati» e scegli la cartella PENSY_DATA o il file .pensy: ritrovi tutto.
+
+## I primi passi
+- Aggiungi il primo documento: una bolletta, un avviso pagoPA, un referto. Con una foto o caricando il file.
+- Aggiungi la busta paga: da lì PENSY calcola quanto ti resta ogni mese. Va bene anche il PDF arrivato per email.
+- Scegli dove salvare i dati, con una password che decidi tu.
+- Attiva le notifiche: senza, PENSY non può avvisarti.
+- Guarda la scheda Salute: farmaci, visite, allergie.
+
+Quando hai fatto tutto la scheda sparisce. Se una cosa non ti serve (per esempio non hai una busta paga), tocca «Non mi serve»; se vuoi nasconderla subito, tocca «Nascondi».
+
+> Consiglio: la prima volta che apri Fascicoli, Calendario o Bilancio vedi un suggerimento di una riga. Chiudilo con la ✕; per rivederli tutti, Impostazioni › «Rivedi i suggerimenti».
+
+! Perché è fatto così: invece di un tour da guardare, i primi passi sono cose da fare, ognuna con il suo pulsante. Si impara facendo, e dopo una settimana l'app è già piena di cose tue.
+
+# Aggiungere un documento
+@camera
+Tocca «Aggiungi» e scegli una foto o un file. PENSY legge il testo, ti mostra cosa ha capito e tu confermi.
+
+## Foto o file
+Dappertutto in PENSY, quando aggiungi un documento, puoi scegliere:
+- Scatta una foto: per i fogli di carta.
+- Carica un file (PDF o immagine): per quello che ti arriva per email, da un sito o da una chat. Puoi scegliere più immagini insieme: diventano le pagine di un solo documento. Un PDF viene letto fino a 12 pagine.
+
+Vale anche per la busta paga, il referto di una visita, la ricevuta di un pagamento e le pagine aggiunte dopo.
+
+## Dalla posta o da WhatsApp
+Non serve salvare prima l'allegato. Nell'app della posta tocca l'allegato e scegli «Condividi» › PENSY, oppure «Apri con» › PENSY per i PDF. Da WhatsApp o dalla galleria puoi condividere anche più foto insieme.
+
+## Cosa legge PENSY
+Il tipo di documento, chi lo manda, l'importo, la scadenza, il codice avviso pagoPA, il codice fiscale dell'ente e il contenuto esatto dei codici QR e a barre. Nei referti trova i controlli da fare («controllo tra 12 mesi»); nelle ricette il numero NRE; nei documenti d'identità la scadenza.
+
+## Controllare e salvare
+Prima di salvare vedi una scheda con tutto quello che PENSY ha capito. Puoi correggere tipo, ente, importo, scadenza, ogni quanto si ripete, quando avvisarti e il fascicolo. Il testo letto resta sotto, in «Testo del documento». Se il documento ha più pagine, tocca «Aggiungi pagina» prima di salvare.
+
+Dopo il salvataggio, in basso compare una riga che ti dice dove è finito e quando arriverà l'avviso, con «Vedi» per aprire il fascicolo.
+
+## Inserire a mano
+Per una cosa senza carta (una rata, un promemoria) scegli «Aggiungi» › «Inserisci a mano».
+
+> Consiglio: per una buona foto appoggia il foglio su un piano scuro, con molta luce e senza ombre, e tieni il telefono parallelo. Se c'è un QR, fai in modo che si veda bene.
+
+> Consiglio: per carta d'identità, garanzie e ricevute attiva «Conserva la foto» prima di salvare.
+
+! Perché è fatto così: di solito la foto viene cancellata dopo la lettura e restano il testo e i codici, che PENSY ridisegna identici. Così l'app resta leggera e veloce, e una foto del tuo documento non resta in giro sul telefono se non la vuoi.
+
+# Oggi
+@home
+La prima schermata: quanto ti resta questo mese e cosa c'è da fare adesso.
+
+## Cosa trovi
+- In alto il saluto, la ricerca in tutti i documenti, il punto di domanda per l'aiuto e il cerchio della persona in uso.
+- La scheda colorata: quanto ti resta questo mese, con entrate, uscite e quanto resta da pagare. Da qui aggiungi la busta paga o una spesa al volo.
+- «Mese pesante»: un avviso quando una spesa grossa si somma ad altre, anche nei prossimi due mesi.
+- Le scadenze delle altre persone che segui, se ce ne sono.
+- La salute di oggi: le dosi delle medicine da segnare, i farmaci da ordinare, le visite vicine.
+- Scadute, in arrivo nei prossimi 45 giorni e da pagare senza scadenza.
+
+> Consiglio: tocca una scadenza per vedere il QR da mostrare allo sportello o per segnarla come pagata.
+
+! Perché è fatto così: la domanda che ci si fa davvero è «quanto mi resta?», non «quanto ho speso?». Per questo il numero grande è quello che resta, già tolti scadenze, spese, risparmi e investimenti del mese.
+
+# Fascicoli
+@folder
+I cassetti di PENSY: Casa, Auto, Salute, Animali, Scuola e università, Lavoro, Tasse e documenti, Altro. Ogni documento finisce da solo in quello giusto.
+
+## Come funzionano
+Apri un fascicolo per vedere le cose da fare, i sottofascicoli e i documenti. Puoi creare sottofascicoli a qualsiasi profondità: Salute › Cuore, Auto › Panda, Casa › Mutuo.
+
+PENSY sceglie il fascicolo guardando il tipo di documento e le parole che contiene. Se lo correggi, se lo ricorda: i documenti successivi dello stesso ente andranno dove li hai messi tu.
+
+## Il riepilogo
+In cima a ogni fascicolo c'è un appunto sempre in vista: la targa e il numero di polizza in Auto, il microchip in Animali, il medico di base in Salute.
+
+## Strumenti
+- Fascicolo in PDF: l'icona in alto prepara un PDF con le cose da fare e tutti i documenti, da mandare o stampare.
+- Promemoria dell'auto: in Auto inserisci le date che sai e PENSY crea revisione, assicurazione, bollo, tagliando e cambio gomme.
+- Promemoria dell'animale: in Animali, vaccino, antiparassitario, visita annuale e peso.
+- Cerca in tutti i documenti: cerca nel testo, nei titoli, negli enti e nelle note.
+
+> Consiglio: se elimini un fascicolo non perdi niente: documenti e scadenze passano nel fascicolo superiore o in «Altro».
+
+! Perché è fatto così: le persone non pensano per tipi di documento ma per argomenti della vita (la casa, l'auto, la salute). I fascicoli seguono quel modo di pensare.
+
+# Scadenze e promemoria
+@notify
+Ogni cosa da pagare o da fare entro una data diventa una scadenza, con i suoi avvisi.
+
+## Quando arrivano gli avvisi
+Per ogni scadenza non pagata PENSY ti avvisa qualche giorno prima (10 giorni, se non scegli diversamente), il giorno prima e il giorno stesso, all'ora che scegli in Impostazioni. Se scegli un anticipo lungo, aggiunge un avviso una settimana prima (oltre le due settimane) e un mese prima (oltre il mese). Se resta da pagare, arriva un ultimo avviso quando è scaduta.
+
+Alcuni documenti hanno già il loro avviso: documenti d'identità 90 giorni prima, garanzie, polizze e abbonamenti 30 giorni, ricette 7 giorni.
+
+## Cose che si ripetono
+Imposta «Ogni quanto» (ogni mese, ogni 2 mesi, ogni anno…). PENSY prevede le prossime con l'ultimo importo e, quando arriva quella vera, aggiorna la previsione invece di creare un doppione. Quando segni una scadenza come pagata, crea subito la prossima.
+
+## Pagare e tenere la ricevuta
+Apri la scadenza: il QR o il codice a barre è disegnato identico, toccalo per vederlo grande. Poi «Segna come pagata». Con «Allega la ricevuta» fotografi o carichi la ricevuta della banca: resta collegata al pagamento.
+
+## Documenti, garanzie, abbonamenti
+- Carta d'identità, patente, passaporto: PENSY legge la scadenza o la calcola dalla data di rilascio.
+- Garanzie: la fine della garanzia è a due anni dall'acquisto, o quanto c'è scritto.
+- Abbonamenti e contratti: compila «Disdici entro» e PENSY ti avvisa in tempo per disdire.
+
+## Senza data
+Se una cosa non ha scadenza attiva «Nessuna data di scadenza»: la trovi in «Oggi», tra le cose da pagare senza scadenza.
+
+> Consiglio: se un avviso non arriva, controlla nelle impostazioni del telefono che le notifiche di PENSY siano attive e che PENSY non sia tra le app ottimizzate per la batteria.
+
+! Perché è fatto così: un solo avviso si dimentica. Avvisi a più riprese, sempre alla stessa ora, ti danno il tempo di organizzarti senza riempirti di notifiche.
+
+# Calendario
+@calendar
+Tutte le scadenze del mese, giorno per giorno, con gli importi.
+
+## Come si legge
+Ogni giorno con qualcosa da fare ha un pallino: viola da pagare, verde pagato, rosso scaduto, grigio previsto. Un secondo pallino segna la salute: visite, interventi in programma, farmaci da ordinare e i farmaci che non prendi ogni giorno. Tocca un giorno, anche rosso: subito sotto il calendario vedi solo quello che c'è quel giorno; «Tutto il mese» torna all'elenco completo. Ci sono anche le visite e gli interventi delle altre persone che segui, con il loro nome davanti.
+
+> Consiglio: usa le frecce per guardare i mesi che vengono: le spese che si ripetono sono già lì, previste.
+
+! Perché è fatto così: il calendario non è un'agenda da riempire: si riempie da solo con quello che aggiungi altrove.
+
+# Bilancio
+@chart
+Entrate, uscite e quanto resta, mese per mese, passato e previsto.
+
+## La busta paga
+Aggiungila con una foto o con il PDF arrivato per email: PENSY legge il netto e il mese. Se un mese manca, usa come stima l'ultima busta paga normale (senza tredicesima). Puoi segnare una mensilità in più come tale.
+
+## Il grafico
+Dodici barre: cinque mesi indietro, quello in corso e sei avanti. Le barre sono le uscite, la linea verde le entrate, i mesi futuri sono più chiari. Tocca una barra per vedere quel mese.
+
+## Cosa conta nelle uscite
+Le scadenze del mese, le spese di tutti i giorni, quello che metti nei salvadanai e quello che versi negli investimenti (anche i piani di accumulo futuri). Così il numero che resta è davvero spendibile.
+
+## Le spese di tutti i giorni
+«Spesa» in Oggi, o «Aggiungi» › «Nuova spesa»: importo, categoria, salva. Nel bilancio le vedi per categoria.
+
+## Altro
+- Spese fisse: quanto ti costano in un anno abbonamenti, contratti, bollette e rate.
+- Confronto con il mese prima, in percentuale.
+- Esporta: scadenze e spese in CSV per Excel.
+- Andamento: i mesi messi insieme (capitolo seguente).
+
+> Consiglio: segna le spese piccole appena le fai: sono tre tocchi, e a fine mese non ti chiedi dove sono finiti i soldi.
+
+! Perché è fatto così: un bilancio utile guarda avanti. Sapere a ottobre che dicembre sarà pesante ti lascia due mesi per prepararti.
+
+# Andamento
+@trending
+I mesi messi insieme: come sono andate entrate e uscite in sei mesi, un anno o da sempre.
+
+## Cosa mostra
+- Il periodo: 6 mesi, 12 mesi, l'anno in corso o tutto.
+- I totali del periodo e le medie al mese: entrate, uscite, messo da parte, quanto ti è rimasto in media.
+- Il grafico di entrate e uscite, mese per mese (o anno per anno sui periodi lunghi). Tocca una colonna per vedere i numeri.
+- Lo stipendio netto nel tempo: gli aumenti, la tredicesima, di quanto è cambiato dall'inizio del periodo.
+- Le spese di tutti i giorni per categoria, sommate su tutto il periodo, con la media al mese.
+- Anno per anno: entrate, uscite e quanto è rimasto.
+
+Lo apri dal Bilancio, con il pulsante «Andamento» sotto il grafico.
+
+> Consiglio: guarda le categorie su 12 mesi: le spese piccole e frequenti (bar, consegne) sommate fanno spesso sorpresa.
+
+! Perché è fatto così: qui contano solo le cose registrate davvero, senza stime né previsioni. È uno specchio di com'è andata, non un'ipotesi.
+
+# Risparmi e investimenti
+@jar
+Tutto quello che hai messo da parte: i salvadanai e gli investimenti, con i grafici e le proiezioni.
+
+## I salvadanai
+Per mettere da parte per qualcosa: le vacanze, l'auto, i regali. Scrivi quanto e per quando: PENSY ti dice quanto mettere da parte ogni mese e lo toglie da quanto ti resta. I soldi restano dove sono: il salvadanaio ne tiene il conto.
+
+## Gli investimenti
+Un ETF, delle azioni, un fondo pensione, un conto deposito, dei buoni postali. Per ognuno:
+1. Dai un nome e scegli il tipo; se vuoi, aggiungi ISIN o ticker.
+2. Scrivi il rendimento medio annuo che ti aspetti: serve solo per le proiezioni.
+3. Se versi una cifra fissa (per esempio 100 € ogni mese il 5), imposta il piano di accumulo: PENSY registra da solo ogni versamento quando arriva il giorno e lo conta nel bilancio. Se il piano è iniziato in passato, registra anche i versamenti già fatti.
+4. Aggiungi gli acquisti fatti a mano, con le quote se le conosci.
+5. Ogni tanto tocca «Aggiorna il valore» e copia dall'app della banca o del broker il valore totale, oppure il prezzo di una quota.
+
+## Cosa vedi
+- Quanto hai versato, quanto vale, il guadagno in euro e in percentuale.
+- Com'è andata: versato e valore, mese per mese.
+- Fra qualche anno: a 5, 10, 20 o 30 anni, versato contro valore stimato, con gli interessi.
+- Come è diviso il totale tra i tuoi investimenti.
+
+## Il calcolatore di accumulo
+Prova prima di iniziare: capitale iniziale, versamento mensile, rendimento medio e anni. Vedi subito quanto avrai versato e quanto potrebbe valere.
+
+> Consiglio: per le proiezioni usa un rendimento prudente. Meglio una bella sorpresa che una delusione.
+
+! Perché è fatto così: PENSY non usa internet, quindi non scarica i prezzi. Li aggiorni tu quando vuoi: bastano pochi secondi al mese e nessuno sa cosa possiedi. Le proiezioni sono stime, non consigli: i rendimenti passati non garantiscono quelli futuri.
+
+# Il 730 ed esportazioni
+@bank
+Le spese dell'anno che possono abbassare le tasse, pronte per il CAF.
+
+## Come funziona
+Quando segni una spesa scegli «Per il 730»: spese mediche, veterinario, scuola, università, mezzi pubblici, sport dei figli. Ticket e tasse universitarie contano da soli. In Bilancio › «Spese per il 730» vedi il totale dell'anno per tipo, una stima di quanto ti torna e un CSV da dare al CAF.
+
+Per molte detrazioni serve il pagamento tracciabile: segna se hai pagato in contanti e PENSY te lo ricorda.
+
+## Esportare in CSV
+In Bilancio, l'icona di condivisione in alto prepara un CSV delle scadenze o delle spese, che si apre con Excel, Fogli Google o LibreOffice.
+
+> Consiglio: conserva lo scontrino «parlante» con il codice fiscale: fotografalo e attiva «Conserva la foto».
+
+! Perché è fatto così: è una stima per non arrivare impreparati, non la dichiarazione. La dichiarazione la fai con il CAF o con la precompilata.
+
+# Salute
+@health
+Nel fascicolo Salute: patologie, allergie, farmaci, visite, misurazioni, referti. Tutto pronto quando vai dal medico.
+
+## Farmaci
+Aggiungi il farmaco con la dose (compresse, gocce, bustine, siringhe…), quando lo prendi e, se vuoi, una data di fine. «Quando» può essere:
+- ogni giorno, ogni N giorni o ogni N settimane (per esempio ogni 4 settimane);
+- alcuni giorni della settimana (per esempio lunedì e giovedì);
+- ogni mese in un giorno preciso (il 15) oppure in un giorno della settimana (il primo lunedì), anche ogni 2, 3 o 6 mesi;
+- una volta sola, in un giorno preciso;
+- al bisogno.
+
+L'orario è facoltativo. Con un orario, a quell'ora suona l'avviso; senza orario la dose compare in «Oggi» come «in giornata» e PENSY te la ricorda all'ora dei promemoria. Segna la dose come presa o saltata, anche dalla notifica («Presa», «Salta», «Tra 10 minuti»). Nel farmaco vedi la prossima volta e come è andata negli ultimi 30 giorni. I farmaci che non prendi ogni giorno compaiono anche nel calendario.
+
+In Impostazioni puoi far suonare gli avvisi delle medicine come una sveglia, anche in silenzioso.
+
+## Le scorte
+- Conto le scatole: scrivi quante scatole hai, quante dosi ci sono in una scatola e quante scatole vuoi tenere da parte. Quando ti restano solo quelle, PENSY ti ricorda di ordinarne altre. Quando compri, tocca «Ho comprato una confezione».
+- Conto una per una: scrivi quante compresse (o gocce, siringhe…) hai; PENSY calcola quando finiscono e ti avvisa qualche giorno prima.
+- Ordino a intervalli fissi: se lo ordini sempre dopo lo stesso numero di giorni.
+
+## Visite
+Da prenotare (magari entro una data, con la priorità della ricetta), prenotate (con giorno, ora e luogo) e fatte (con il referto). PENSY ti avvisa prima. I controlli trovati nei referti diventano visite da prenotare.
+
+## Misurazioni
+Pressione, glicemia, peso, altezza, temperatura, saturazione, battito, con il grafico, il minimo, la media e il massimo, ed esportazione in CSV. Con peso e altezza PENSY mostra anche l'indice di massa corporea, come numero: cosa significa lo dice il medico.
+
+## Dal medico
+«Mostra al medico» prepara una pagina pulita con patologie, allergie, farmaci con dosi e orari, vaccini e visite. Con «Condividi come PDF» aggiungi i grafici delle misurazioni e come sono state prese le medicine.
+
+## Emergenza, vaccini, ricette
+- Patologie e allergie: «Da quando», oppure «Dalla nascita».
+- Interventi: se uno è in programma, mettilo con la sua data: va nel calendario e PENSY te lo ricorda una settimana prima, il giorno prima e il giorno stesso.
+- Scheda di emergenza: gruppo sanguigno, allergie, farmaci e chi chiamare, anche sulla schermata di blocco se vuoi.
+- Vaccini con richiamo: PENSY ti avvisa un mese prima.
+- Ricetta elettronica: PENSY legge l'NRE e ti ricorda che la ricetta dei farmaci vale 30 giorni; «Mostra al farmacista» lo fa vedere grande.
+
+> Consiglio: per un animale crea un sottofascicolo in Animali (Animali › Fido): farmaci, visite e peso funzionano allo stesso modo.
+
+! Perché è fatto così: dal medico si dimentica sempre qualcosa. Una pagina con tutto, scritta grande, fa risparmiare tempo a te e a lui.
+
+# Persone e famiglia
+@person
+Puoi tenere anche le carte dei tuoi figli o di un genitore, ognuno con le sue cose.
+
+## Come funziona
+Tocca il cerchio con l'iniziale in alto in «Oggi» per passare da una persona all'altra o per aggiungerne una. Ogni persona ha i suoi fascicoli, documenti, scadenze, scheda salute, salvadanai e investimenti. Gli avvisi arrivano per tutti, con il nome davanti.
+
+Per un figlio puoi scegliere che le sue spese contino nel tuo bilancio: nel tuo vedi anche le sue, nel suo solo le sue. In «Oggi» una riga ti ricorda le scadenze vicine delle altre persone.
+
+> Consiglio: quando un figlio diventa grande, la sua persona può avere un bilancio tutto suo: lo cambi in Impostazioni › Persone.
+
+! Perché è fatto così: in una famiglia di solito è una persona sola a tenere le carte di tutti. Con le persone separate non si mescola niente, ma tutto è in un posto.
+
+# I tuoi dati
+@folder
+I dati stanno solo sul tuo telefono. La cartella PENSY_DATA è la tua copia di sicurezza.
+
+## La cartella PENSY_DATA
+Scegli una cartella del telefono: ogni volta che cambi qualcosa PENSY ci salva una copia cifrata di tutto, con una password che decidi tu. Se conservi le foto dei documenti, anche quelle vanno lì, cifrate. Ogni giorno PENSY tiene una copia di com'erano i dati, per gli ultimi 7 giorni.
+
+## Cambiare telefono
+1. Copia la cartella PENSY_DATA sul nuovo telefono (cavo, chiavetta o il servizio che preferisci).
+2. Installa PENSY e al primo avvio tocca «Recupera i miei dati», oppure Impostazioni › «Importa dati da un altro telefono».
+3. Scegli la cartella e scrivi la password.
+
+Senza cavi: Impostazioni › «Invia a un altro telefono» prepara un unico file cifrato e apre la condivisione di Android (Quick Share, Bluetooth).
+
+## Tornare indietro
+Hai cancellato qualcosa per sbaglio? Impostazioni › «Ripristina una copia», scegli il giorno e scrivi la password.
+
+> Consiglio: scrivi la password in un posto sicuro. Se la perdi, nessuno può recuperare i dati della cartella, nemmeno noi.
+
+! Perché è fatto così: niente server e niente account vuol dire che nessuno, a parte te, può vedere le tue carte. La copia cifrata in una cartella tua ti dà la sicurezza di un backup senza dare i dati a qualcun altro.
+
+# Sicurezza e riservatezza
+@lock
+Le tue carte sono personali: PENSY le protegge anche sul telefono.
+
+## Il blocco
+Impostazioni › Riservatezza › «Blocca PENSY con impronta o PIN». PENSY si apre con l'impronta, il volto o il PIN del telefono, all'avvio e quando torni dopo un minuto. Nelle app recenti il contenuto resta nascosto. PENSY non conosce la tua impronta: chiede ad Android.
+
+## Altre protezioni
+- Le notifiche sulla schermata di blocco non mostrano importi né nomi.
+- Con il blocco attivo, il widget mostra solo quante scadenze ci sono.
+- PENSY non ha il permesso di usare internet: Android stesso glielo impedisce.
+
+> Consiglio: per il blocco serve un blocco schermo sul telefono. Se non lo hai, impostalo prima nelle impostazioni del telefono.
+
+! Perché è fatto così: un'app con documenti d'identità, referti e conti deve essere sicura anche se presti il telefono a qualcuno per un minuto.
+
+# Widget, notifiche e lingue
+@star
+Le comodità di tutti i giorni.
+
+## Il widget
+Tieni premuto sulla schermata Home, scegli «Widget» e cerca PENSY. Mostra le prossime tre scadenze e le medicine di oggi; il pulsante con la fotocamera ti fa aggiungere subito un documento, con una foto o un file.
+
+## Le notifiche
+In Impostazioni › Promemoria scegli quanti giorni prima avvisarti e a che ora. Per le medicine all'ora esatta serve il permesso «Sveglie e promemoria», che PENSY ti chiede quando serve.
+
+## Le lingue
+L'app è in italiano e in inglese: Impostazioni › Lingua. In «Lingua dei documenti» scegli «Italiano e inglese» se ti arrivano bollette o fatture in inglese; la lettura diventa un po' più lenta.
+
+> Consiglio: se il telefono chiude le app per risparmiare batteria, togli PENSY dalle ottimizzazioni: gli avvisi arriveranno puntuali.
+
+! Perché è fatto così: le notifiche sono poche e sempre alla stessa ora. Un'app che disturba spesso finisce per essere ignorata.
+
+# Perché PENSY è fatta così
+@book
+Le scelte che stanno dietro a tutta l'app.
+
+## Offline per davvero
+PENSY non ha il permesso di collegarsi a internet. Non è una promessa: è Android stesso che glielo impedisce. Nessun server, nessun account, nessuna pubblicità, nessun dato venduto.
+
+## Leggera e veloce
+PENSY è scritta senza librerie pesanti e legge il testo dei documenti direttamente sul telefono. Si apre in un attimo e occupa poco spazio.
+
+## Tua
+I dati sono in una cartella tua, cifrati con la tua password. Puoi portarli su un altro telefono, salvarne una copia dove vuoi, esportare quello che ti serve in CSV o PDF.
+
+## Fa lei, tu confermi
+Leggere, smistare, ricordare, calcolare: PENSY prova a fare tutto da sola e ti chiede solo di controllare. Quando sbaglia, impara dalle tue correzioni.
+
+> Consiglio: se hai un dubbio che il manuale non chiarisce, guarda le domande frequenti: il punto di domanda in «Oggi», o Impostazioni › Aiuto.

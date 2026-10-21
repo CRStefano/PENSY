@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#F4F3EF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface2">#EFEDE7</color>
+    <color name="ink">#18171C</color>
+    <color name="ink2">#66646C</color>
+    <color name="ink3">#9C9AA3</color>
+    <color name="line">#E4E2DB</color>
+    <color name="accent">#4F46E5</color>
+    <color name="accent_soft">#E9E7FD</color>
+    <color name="accent_ink">#3F37C9</color>
+    <color name="accent_mid">#8B85F0</color>
+    <color name="accent_soft_ink">#CFCBF8</color>
+    <color name="on_accent">#FFFFFF</color>
+    <color name="on_accent_soft">#DCDAFF</color>
+    <color name="warn">#B45309</color>
+    <color name="warn_soft">#FCF0DC</color>
+    <color name="bad">#C0362C</color>
+    <color name="bad_soft">#FBE5E2</color>
+    <color name="good">#15803D</color>
+    <color name="good_soft">#E0F3E7</color>
+    <color name="ripple">#1F000000</color>
+    <color name="icon_bg">#5A52E0</color>
+</resources>

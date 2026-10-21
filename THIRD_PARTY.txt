@@ -1,0 +1,32 @@
+PENSY includes these third-party components, all used offline on the phone.
+
+ZXing core 3.5 (QR codes and barcodes)
+  https://github.com/zxing/zxing
+  Apache License 2.0
+
+Tesseract OCR 5.5.1 (text recognition), compiled into libpensyocr.so
+  https://github.com/tesseract-ocr/tesseract
+  Apache License 2.0
+
+Leptonica 1.85.0 (image processing used by Tesseract), compiled into libpensyocr.so
+  https://github.com/DanBloomberg/leptonica
+  BSD 2-Clause style license (leptonica-license.txt in its sources)
+
+tessdata_fast, Italian and English models ita.traineddata and eng.traineddata
+(android/app/src/main/assets/tessdata)
+  https://github.com/tesseract-ocr/tessdata_fast
+  Apache License 2.0
+
+Material Icons (vector paths in android/app/src/main/res/drawable/ic_*.xml)
+  https://github.com/google/material-design-icons
+  Apache License 2.0
+
+Kotlin standard library
+  https://github.com/JetBrains/kotlin
+  Apache License 2.0
+
+The PENSY name and logo (ic_launcher_*, docs/logo.png) are original and belong
+to the author; see LICENSE.
+
+The full text of the Apache License 2.0 is at
+https://www.apache.org/licenses/LICENSE-2.0

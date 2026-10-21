@@ -1,0 +1,284 @@
+# Frequently asked questions
+
+The same questions and answers as the help inside the app (the question mark in «Today»).
+
+*Versione italiana: [domande.md](domande.md)*
+
+## Getting started
+
+### What is PENSY?
+PENSY keeps your everyday paperwork in order: utility bills, pagoPA notices, car tax, fines, medical reports, prescriptions, payslips, warranties. It turns them into text, files them in the right folder, reminds you of deadlines and tells you how much is left at the end of the month. In the Health folder it also keeps your conditions, medicines and visits.
+
+### Does PENSY use the internet? Where does my data go?
+No. PENSY doesn't even have permission to connect to the internet: Android itself stops it. Everything stays on the phone. If you choose a PENSY_DATA folder, PENSY saves an encrypted copy there, which you use to move to a new phone. No servers, no accounts.
+
+### How do I add a document?
+Tap «Add» at the bottom right and choose «Take a photo of a document» or «Upload a file (PDF or image)». Wherever PENSY asks for a photo you can also upload a file: handy for what reaches you by email, like a payslip. You can also share a PDF or photos from WhatsApp, email or your files and pick PENSY, or open a PDF with «Open with» › PENSY. PENSY reads the text, shows you what it understood and you confirm with «Save».
+
+### How do I take a good photo?
+Lay the sheet on a dark surface, with plenty of light and no shadows. Frame the whole sheet, keep the phone parallel to it and wait for it to focus. If the document has a QR code or a barcode, make sure it is clearly visible.
+
+### PENSY read the amount or the date wrong: what do I do?
+Before saving you can correct everything: type, issuer, amount, due date, folder. The text it read stays available below, under «Document text». If something is wrong later, open the document or the deadline and tap the pencil.
+
+### What happens to the photo?
+Usually it is deleted as soon as PENSY has read the text: the text and the exact content of the QR codes and barcodes remain, and PENSY redraws the codes identically when you need them. If you need the photo (an ID card, a warranty, a receipt), turn on «Keep the photo» before saving. To always do it: Settings › Privacy › «Keep photos of new documents».
+
+### The document has several pages: what do I do?
+Take a photo of the first page and, before saving, tap «Add a page» for each of the others. A PDF is read in full, up to 12 pages. You can add pages later too: open the document and tap «Add a page».
+
+### Where do I find this guide and the tour?
+The question mark is at the top of the «Today» screen. The guide, the tour and the user manual are also in «Settings», under «Help»; the manual also opens with the book icon at the top. The manual explains every section: what it does, how to use it, what it is for and why it works that way, and it can be saved as a PDF.
+
+## Folders and documents
+
+### How does PENSY decide which folder a document goes in?
+It looks at the kind of document and the words in it: a cardiology report goes to Health, and if you created a Heart subfolder it goes there. If you correct the folder, PENSY remembers: later documents from the same issuer will go where you put them.
+
+### How do I create a subfolder?
+Open a folder and tap «New subfolder». You can create as many as you like, as deep as you like: Health › Leg, Car › Panda, Home › Mortgage.
+
+### How do I move a document?
+Open the document and tap «Move» (or the arrow icon at the top). Its deadline moves with it.
+
+### What is a folder's summary for?
+It's a note always in sight: plate and policy number in the Car folder, microchip and vet in Pets, blood type and GP in Health. Tap it to edit it.
+
+### How do I find a document?
+Tap «Search all documents». PENSY searches the text of every document, titles, issuers, notes, medicines and visits: «leg», «cardiolog», a plate, a contract number.
+
+### If I delete a folder, do I lose its documents?
+No. Its documents, deadlines and subfolders move to the folder above (or to «Other»).
+
+## Deadlines and reminders
+
+### When do reminders arrive?
+For every unpaid deadline: 10 days before (you can change this for each deadline or in Settings), the day before and on the day, at the time you choose in Settings. If it's still unpaid, a last reminder when it is overdue.
+
+### I don't get notifications: what should I check?
+In the phone settings, under Apps › PENSY: notifications must be on. Some phones close apps to save battery: under «Battery», remove PENSY from optimisation. For medicines at the exact time you also need the «Alarms & reminders» permission.
+
+### Something has no due date: how do I enter it?
+In the form turn on «No due date». If it's already paid, tap «Already paid»: «No due date» turns on by itself (you can turn it off if you still want to enter the due date). The expense counts in the budget on the day you paid it. Things to pay with no date are in «Today», under «To pay, no due date».
+
+### What do «expected» and «estimated amount» mean?
+For expenses that repeat (a bill every two months, a monthly instalment) PENSY predicts the next ones with the last amount. When the real one arrives and you photograph it, PENSY updates the prediction instead of creating a duplicate.
+
+### How do I show the code at the counter?
+Open the deadline: the QR code or barcode is drawn exactly like the original. Tap it to see it full screen at maximum brightness, ready to be scanned at the post office, at the tobacconist or by your banking app.
+
+### I paid: what now?
+Open the deadline and tap «Mark as paid». If it repeats, PENSY creates the next one straight away.
+
+### How do I keep the receipt of a payment?
+Open the deadline and tap «Attach the receipt»: photograph the receipt or pick the bank's PDF. PENSY keeps it, with its photo, in the same folder, links it to the deadline and, if you hadn't yet, marks it as paid.
+
+## Health
+
+### Where are my conditions, medicines and visits?
+In the Health folder, at the top: conditions and allergies, medicines (with today's doses), visits booked, to book and done, together with the reports. It works the same for a pet: create a subfolder in Pets (e.g. Pets › Fido) and add medicines and visits there.
+
+### What do I show the doctor?
+In the Health folder tap «Show to the doctor»: a clean page in large print with conditions, allergies, current medicines with doses and times, operations, vaccines, booked visits and latest visits. With «Share as text» you can print it or send it with the app you choose.
+
+### How do I add a medicine?
+In the Health folder tap «Add a medicine». Write the name, how much you take each time (syringes too), when and, if you like, at what time: the time is optional. If you only take it when needed choose «When needed». If the therapy has an end (e.g. an antibiotic for 7 days) set «Until».
+
+### How does PENSY know when to order a medicine?
+The simplest way is «Count the boxes»: write how many boxes you have, how many doses are in a box and how many boxes you want to keep aside. When only those are left, PENSY reminds you to order more. With «Count one by one» you write how many tablets (or drops, syringes…) you have: PENSY works out when they run out and warns you a few days before. When you buy, tap «I bought a pack». If you always order it after the same number of days, choose «I order at fixed intervals».
+
+### How do I add a monthly medicine or one to take just once?
+In «When» choose «Every month» (on the 15th, or «the first Monday», also every 2, 3 or 6 months), «Every N weeks» (for example every 4), «Some days of the week» or «Just once» with its day. With a time the reminder rings; without a time I remind you at the reminder time. It also shows in the calendar, and with the stock PENSY reminds you when to order it.
+
+### How do I say a condition has been there since birth?
+In the condition (or allergy) turn on «Since birth» instead of the date. The doctor's page shows «since birth».
+
+### Does a planned operation show in the calendar?
+Yes: add it in the Health folder as an operation, with its date. It goes in the calendar and PENSY reminds you a week before, the day before and on the day. In the calendar tap a day to see only what is on that day.
+
+### Will I be reminded to take medicines at the right time?
+Yes, if you leave «Remind me when to take it» on. From Android 13 on, the «Alarms & reminders» permission is needed: PENSY shows an «Allow» button in the medicine form. Without it the reminder may arrive up to an hour late.
+
+### I stopped a medicine: should I delete it?
+Better not: tap «I stopped taking it». It stays in the history, under «Stopped medicines», and the doctor can see it.
+
+### What's the difference between a visit «to book», «booked» and «done»?
+To book: you still have to call or book, maybe by a date (PENSY warns you before). Booked: it has a day, time and place; I remind you before and on the day. Done: it stays in the history, and you can photograph its report.
+
+### What do the letters U, B, D, P on the prescription mean?
+They say how soon the visit or test must be done: U (urgent) within 72 hours, B (short) within 10 days, D (deferrable) within 30 days for visits and 60 for tests, P (scheduled) within 120 days. In the visit form choose the letter and PENSY works out the date to book by.
+
+### PENSY found a check-up in a report: where is it?
+If the report says for example «check-up in 12 months», PENSY suggests it among the visits to book, with the date. You'll find it in the Health folder and in the calendar.
+
+### How do I note that I took a medicine?
+On «Today» and in the Health folder each dose of the day has two buttons: ✓ (taken) and ✕ (skipped). You can do it from the notification too, with «Taken», «Skip» or «In 10 minutes». Skipped doses don't use up the stock; in the medicine you see how the last 30 days went. For a medicine taken when needed tap «Taken now».
+
+### Can medicine reminders ring in silent mode?
+Yes: Settings › Reminders › «Medicines ring even in silent mode». The reminders use the alarm sound, which you hear even with the phone on silent or in «Do not disturb».
+
+### How do I note blood pressure, glucose or weight?
+In the Health folder, under «Measurements», tap «Add a measurement»: blood pressure, glucose, weight, height, temperature, saturation or heart rate. For blood pressure write systolic and diastolic (e.g. 125/80) and, if you like, the heart rate; with weight and height you also see the body mass index. For each kind you see the chart of the last 30 days, 3 months or a year, with minimum, average and maximum, and you can export the values to CSV. It works the same for a pet (e.g. its weight).
+
+### Can I give my doctor a PDF?
+Yes: «Show to the doctor» › «Share as PDF». The PDF has the health record, charts of the last three months of measurements and, if you mark doses, how the medicines were taken. Send or print it with the app you choose.
+
+### What is the emergency card?
+In the Health folder tap «Emergency card»: blood group, allergies, conditions, medicines in use and who to call, in big letters. If you want, turn on «Show on the lock screen»: it stays as a silent notification, readable without unlocking, so a rescuer can see it. Note: anyone holding the phone can see it.
+
+### How do I remember vaccine boosters?
+Add the vaccine (Health › «Add a condition, allergy…» › Vaccine) and set «Booster», also with the buttons «in 1, 5, 10 years». PENSY reminds you a month before, a week before and on the day.
+
+### Electronic prescriptions: what does PENSY do?
+It reads the prescription number (NRE) and, for medicines, remembers that a prescription is valid for 30 days: it reminds you a week before it expires. In the document tap «Show to the pharmacist» to see the NRE in big letters.
+
+## Payments: where and how
+
+### How do I pay a pagoPA notice?
+You need the notice code (18 digits) and the issuer's tax code, or the QR code printed on the notice. You can pay from your bank's app or website (look for «pagoPA» or «CBILL»), from the IO app, from the Poste app or at a post office, at affiliated tobacconists and betting shops, at enabled ATMs and with some payment apps. In PENSY the notice code and the issuer's tax code are ready to copy, and the QR code is ready to show.
+
+### Where do I pay the car tax, and when is it due?
+Usually by the last day of the month after the expiry month (for a car tax expiring in December, by 31 January). You pay with pagoPA: bank, Poste, tobacconists, ACI offices, vehicle paperwork agencies, and in many regions also from the IO app. You can check the date and amount on your Region's or ACI's website. The exact rules depend on the Region.
+
+### How do I pay an F24?
+From online banking, at the post office or at the bank. If you have a VAT number you must pay it online. If you offset tax credits special rules apply: ask a CAF or your accountant.
+
+### I got a fine: are there discounts?
+For many Highway Code violations, if you pay within 5 days of being notified you get a 30% reduction; the normal deadline is 60 days. The discount doesn't apply to the most serious violations (for example those that suspend the licence). The ticket shows the amounts and deadlines.
+
+### The bill is too high or wrong: what do I do?
+Send a complaint to the supplier (the contacts are on the bill). If they don't answer within 30 days or you're not satisfied, you can request a free online conciliation from ARERA, the energy authority, or contact a consumer association.
+
+### How do I pay university fees?
+Usually from your university's student portal, with pagoPA. For reductions you need the ISEE for university benefits, to request from a CAF or on the INPS website before the university's deadlines.
+
+## Health: where and how
+
+### How do I book a visit with the National Health Service?
+You need the referral (prescription) from your GP or a specialist. Then you book with your Region's CUP: online, by phone, at a pharmacy or at the desk. Keep your health card and the prescription number (NRE) at hand.
+
+### What if the waiting time is longer than the prescription allows?
+Many regions have a «guarantee path»: if the CUP can't find a slot within the priority's time, you can ask for the service to be provided on time anyway, paying only the ticket. Ask the CUP or your ASL's public relations office (URP).
+
+### Where do I find my medical reports?
+In your Region's Electronic Health Record (Fascicolo Sanitario Elettronico), with SPID or CIE. Download the PDF and import it into PENSY with «Upload a file (PDF or image)», or share it with PENSY: it reads it and files it in Health.
+
+### How long is a prescription for medicines valid?
+A prescription for medicines covered by the Health Service is normally valid for 30 days, not counting the day it was written. Many GPs also send the reminder with the NRE code by text message or email.
+
+### How do exemptions from the ticket work?
+There are exemptions based on income (codes E01 to E04, with thresholds set by law) and for conditions or disabilities. For income, your GP or the ASL can tell you; for a condition, you apply to the ASL with the specialist's certificate.
+
+### Can I deduct medical expenses?
+Yes: in the tax return you deduct 19% of health expenses above 129.11 euro. Many expenses are already in the pre-filled 730. Keep receipts with your tax code; for many expenses the payment must be traceable (card), except medicines and medical devices.
+
+### How do I change GP?
+Online from the Electronic Health Record or your ASL's website, or at the ASL desk with your health card.
+
+## Car and documents
+
+### When is the car inspection (revisione) due?
+The first time 4 years after registration, then every 2 years, by the end of the month it's due. It's done at the Motorizzazione or at an authorised garage. You'll find the dates on the Portale dell'Automobilista.
+
+### Does car insurance renew by itself?
+No: third-party car insurance lasts one year and doesn't renew by itself. After it expires, cover stays valid for 15 days, then the car can't be driven.
+
+### How do I renew my driving licence?
+With a medical check by an authorised doctor (also at ACI offices and agencies): the new licence arrives by post. A B licence lasts 10 years up to age 50, 5 years from 50 to 70, 3 years from 70 to 80, 2 years after 80.
+
+### How do I renew my identity card?
+At your Comune, usually by appointment. The electronic identity card can be renewed from 180 days before it expires, which is on your birthday. For adults it lasts 10 years.
+
+### How do I apply for a passport?
+Book an appointment online on the State Police passport agenda (with SPID or CIE) and go to the Questura with the required documents. In some small towns you can also apply at enabled post offices.
+
+### When does the ISEE expire?
+The ISEE is valid until 31 December of the year you request it. It's done on the INPS website or at a CAF.
+
+## Your data
+
+### What is the PENSY_DATA folder?
+It's a folder on the phone, chosen by you, where PENSY saves an encrypted copy of all your data every time something changes. It contains pensy.dat (the encrypted data), versione.txt and LEGGIMI.txt.
+
+### How do I move my data to a new phone?
+Copy the PENSY_DATA folder to the new phone (with a cable, a USB stick or the service you prefer), install PENSY, go to Settings › «Import data from another phone» and choose the folder. You'll need the password. Otherwise use «Export to a single file» and import that file.
+
+### How do I send everything to another phone without internet?
+Settings › «Send to another phone»: PENSY prepares a single encrypted file (with the photos of documents, if you keep any) and opens Android's share sheet. Choose Quick Share, Bluetooth or a cable. On the other phone: Settings › «Import data from another phone» › «From a file», and the password.
+
+### How do I lock PENSY with my fingerprint?
+Settings › Privacy › «Lock PENSY with fingerprint or PIN». PENSY opens with the phone's fingerprint, face or PIN, at start and when you come back after a minute. The phone needs a screen lock. PENSY never sees your fingerprint: it asks Android.
+
+### I forgot the password: can I recover the data?
+No, nobody can: that's exactly what protects it. The data on the phone stays readable by PENSY; in Settings you can choose a new password for future copies.
+
+### Can I change the language?
+Yes, in Settings › Language: same as the phone, Italian or English. The names of the default folders change language; your documents stay as they are.
+
+## People, spending and savings jars
+
+### Can I keep my child's or a parent's papers?
+Yes. Tap the circle with the initial at the top of «Today» and choose «Add a person». Each person has their own folders, documents, deadlines and health record. To switch, tap the circle again. Reminders come for everyone, with the name in front.
+
+### Do my child's expenses count in my balance?
+If you want: when you add the person (or in Settings › People) choose «Their expenses count in the balance of» and your name. Your «Balance» then includes their deadlines and spending; theirs shows only their own.
+
+### How do I note everyday spending?
+On «Today» tap «Spending» (or «Add» › «New spending»): amount, what for, save. In «Balance» you see the month's spending by category and what you have left with it.
+
+### What are savings jars for?
+To put money aside for something: holidays, a car, presents. In «Balance» › «New jar» write how much and by when: PENSY tells you how much to put aside each month and takes it off what you have left, so you don't spend it twice. The money stays where it is: the jar keeps count of it.
+
+## Documents, warranties, subscriptions
+
+### Does PENSY remind me when my ID card expires?
+Yes. Photograph the ID card, driving licence or passport: PENSY reads the expiry (on the Italian licence it's field 4b) or, if it's not there, works it out from the issue date (10 years). It reminds you 90 days before, then at 30 and 7 days. Turn on «Keep the photo».
+
+### And the warranty of a purchase?
+Photograph the receipt or the warranty certificate: PENSY sets the end of the warranty two years after the purchase (or what it says) and reminds you a month before. The price stays in the document and doesn't count as an expense again.
+
+### How do I not forget to cancel a subscription?
+When you save a subscription or a contract, fill in «Cancel by»: PENSY reminds you 30 and 7 days before. In «Balance» you find «Fixed costs»: what subscriptions, contracts, bills and instalments cost you in a year.
+
+### Can I have a whole folder as a PDF?
+Yes: open the folder and tap the document icon at the top. The PDF has what is to be done, the list of documents and every document with its photos (or the text read). Send or print it with the app you choose.
+
+### How do I set up the car's deadlines?
+Open the Car folder and tap «Car reminders». Enter the dates you know (registration, last MOT, insurance, road tax, service) and PENSY creates the yearly deadlines. The first MOT is 4 years after registration, then every 2.
+
+### And for the dog or the cat?
+Open the Pets folder and tap «Pet reminders»: vaccine with booster, monthly antiparasitic, yearly check-up and weight, in a folder with its name.
+
+## Balance, 730 and other conveniences
+
+### Which expenses can I deduct in the 730?
+When you note an expense choose «For the 730» (medical, vet, school, university, public transport pass, children's sport). Paid tickets and university fees count by themselves. In «Balance» › «Expenses for the tax return» you see the year's total, an estimate of what you get back and a CSV for the CAF. It's an estimate: you file the return with a CAF or the pre-filled 730.
+
+### Can I open my data in Excel?
+Yes: in «Balance» tap the share icon at the top and choose «Deadlines and payments» or «Everyday spending». PENSY prepares a CSV file that opens in Excel, Google Sheets or LibreOffice.
+
+### Is there a home screen widget?
+Yes: long-press the home screen, choose «Widgets» and look for PENSY. It shows the next deadlines and today's medicines; the camera button lets you add a document straight away, with a photo or a file. If PENSY is locked, the widget shows only how many there are.
+
+### I deleted something by mistake: can I go back?
+If you use the PENSY_DATA folder, yes: every day PENSY keeps a copy of how the data was, for the last 7 days. Settings › «Restore a copy», pick the day and enter the password.
+
+### Does PENSY read documents in English?
+Yes: Settings › «Language of documents» › «Italian and English». Reading gets a little slower, so leave it on «Italian» if you don't need it.
+
+## Investments and trends
+
+### Can I keep my investments in PENSY?
+Yes: in «Budget» › «Savings and investments» tap «New investment». Give it a name (e.g. World ETF), pick the kind (ETF, shares, bonds, fund, pension fund, deposit account, postal savings bonds…) and, if you like, the ISIN. PENSY shows how much you put in, what it is worth, the gain, a chart of how it went and a projection over the years. The same page has your jars and the total of everything you have put aside.
+
+### Does PENSY update the value of my ETFs by itself?
+No: PENSY does not use the internet, so it does not download prices. Open the investment, tap «Update the value» and copy the total value or the price of one unit from your bank or broker app. A few seconds now and then is enough; until you update it, the value is what you put in.
+
+### How does the savings plan work?
+In the investment turn on «Savings plan» and write how much, how often and on which day (e.g. 100 € every month on the 5th). PENSY records each contribution by itself when its day comes and counts it in the month's budget, so «how much is left» takes it into account. If the plan started in the past, it also records the contributions already made. If a month is skipped, open that contribution and delete it.
+
+### What are the projection and the calculator?
+The projection shows where an investment could get to in 5, 10, 20 or 30 years, with the average yearly return you chose and the plan's contributions: put in against estimated value, with the returns. The savings calculator lets you try before starting: starting amount, monthly amount, return and years. They are estimates, not advice: past returns do not guarantee future ones.
+
+### Where do I see several months together?
+In «Budget» tap «Trends» under the chart. Choose 6 months, 12 months, the current year or all: you see income and expenses with monthly averages, year by year, everyday spending by category over the whole period and net pay over time. Only what you recorded counts, with no estimates.
