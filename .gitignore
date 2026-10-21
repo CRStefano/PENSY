@@ -1,0 +1,28 @@
+# Build output
+build/
+android/app/build/
+android/build/
+android/app/release/
+*.apk
+*.aab
+
+# Gradle and IDE
+.gradle/
+.kotlin/
+.idea/
+*.iml
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Signing keys: NEVER on GitHub. Whoever has the key can sign updates as PENSY.
+*.keystore
+*.jks
+keystore.properties
+*.keystore.base64.txt
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini

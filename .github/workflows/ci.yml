@@ -1,0 +1,63 @@
+# Runs on every change uploaded to GitHub: the core tests and a full build of the app.
+# A green tick in the "Actions" tab means both passed.
+name: Controlli
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    name: Test del nucleo
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Kotlin 2.0.21
+        run: |
+          curl -sSfL -o "$RUNNER_TEMP/kotlinc.zip" \
+            https://github.com/JetBrains/kotlin/releases/download/v2.0.21/kotlin-compiler-2.0.21.zip
+          unzip -q "$RUNNER_TEMP/kotlinc.zip" -d "$RUNNER_TEMP"
+          echo "KOTLINC=$RUNNER_TEMP/kotlinc/bin/kotlinc" >> "$GITHUB_ENV"
+
+      - name: Test
+        run: sh tools/test-core.sh
+
+  app:
+    name: App Android
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # Gradle is installed by this action (the build calls `gradle`, not the wrapper jar).
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+          validate-wrappers: false
+
+      - name: Build (debug)
+        working-directory: android
+        run: gradle assembleDebug --no-daemon --stacktrace
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PENSY-debug
+          path: android/app/build/outputs/apk/debug/*.apk
+          retention-days: 14
