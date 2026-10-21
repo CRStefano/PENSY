@@ -1,177 +1,267 @@
 <p align="center">
-  <img src="docs/logo.png" width="112" alt="PENSY">
+  <img src="docs/logo.png" width="120" alt="PENSY">
 </p>
 
 <h1 align="center">PENSY</h1>
 
 <p align="center">
-  Le carte di tutti i giorni, in ordine. Scadenze, salute e conti sul telefono, <b>senza internet</b>.<br>
-  <a href="#english">English below</a>
+  <b>Your paperwork, deadlines, money and health, in one app that has never seen the internet.</b>
+</p>
+
+<p align="center">
+  <a href="#offline-by-construction"><img src="https://img.shields.io/badge/internet%20permission-none-5A52E0" alt="No internet permission"></a>
+  <a href="../../releases/latest"><img src="https://img.shields.io/badge/Android-8.0%2B-3DDC84?logo=android&logoColor=white" alt="Android 8.0+"></a>
+  <a href="#under-the-hood"><img src="https://img.shields.io/badge/dependencies-1-informational" alt="One dependency"></a>
+  <a href="core/test"><img src="https://img.shields.io/badge/core%20tests-448-success" alt="448 core tests"></a>
+</p>
+
+<p align="center">
+  <a href="../../releases/latest"><b>Download the APK</b></a> ·
+  <a href="docs/manual.md">Manual</a> ·
+  <a href="docs/faq.md">FAQ</a> ·
+  <a href="README.it.md">Italiano</a>
+</p>
+
+
+<p align="center">
+  <img src="docs/screenshots/today.png" width="24%">
+  <img src="docs/screenshots/saving.png" width="24%">
+  <img src="docs/screenshots/calendar.png" width="24%">
+  <img src="docs/screenshots/health.png" width="24%">
+  <img src="docs/screenshots/budget.png" width="24%">
+  <img src="docs/screenshots/home.png" width="24%">
 </p>
 
 ---
 
-PENSY trasforma le carte di tutti i giorni in testo, scadenze e conti chiari e le tiene in ordine in
-fascicoli. Fotografi una bolletta, un referto, il bollo, un ticket (o carichi il PDF che ti hanno mandato
-per email): PENSY legge il testo, capisce di cosa si tratta, lo mette nel fascicolo giusto
-(Casa › Acqua, Salute › Cuore, Auto…), salva il QR o il codice a barre e, se c'è da pagare o da fare
-qualcosa, ti avvisa per tempo.
+Every home has a drawer.
 
-App Android in italiano e inglese. Gratuita, senza pubblicità, senza account.
+Bills. A medical report. The car tax notice. A warranty you will need exactly
+once, three days after it expires. The payslip that arrived as a PDF and now
+lives somewhere between your inbox and your Downloads folder. The drawer is not
+an archive. The drawer is a promise you make to yourself that one day you will
+sort it out.
 
-## Cosa fa
+PENSY is what happens when you stop making that promise.
 
-- **Documenti** – foto o file (PDF, immagini, anche più pagine). Lettura del testo sul telefono, tipo
-  riconosciuto da solo (bollette, pagoPA, bollo, multe, F24, ticket, referti, ricette, buste paga,
-  garanzie, carta d'identità, patente, passaporto…), smistamento nei fascicoli, ricerca nel testo.
-- **Scadenze** – calendario, ricorrenze, avvisi a più tappe, QR e codici a barre ridisegnati da mostrare
-  allo sportello, ricevute allegate.
-- **Bilancio** – dalla busta paga «ti restano X € questo mese», spese di tutti i giorni in tre tocchi,
-  spese fisse, andamento di mesi e anni, spese per il 730, CSV per Excel.
-- **Risparmi e investimenti** – salvadanai con obiettivo, investimenti (ETF, azioni, fondi, fondo
-  pensione, conto deposito…) con piano di accumulo, guadagno e proiezione. I valori li inserisci tu:
-  nessun prezzo scaricato da internet.
-- **Salute** – patologie, allergie, interventi, vaccini e richiami; farmaci ogni giorno, alcuni giorni
-  della settimana, ogni mese o una volta sola, con o senza orario; scorte a scatole con promemoria per
-  ordinare; visite da prenotare e prenotate; misurazioni (pressione, glicemia, peso, altezza…) con
-  grafici; PDF «Mostra al medico» e scheda di emergenza.
-- **Famiglia** – un profilo per ogni persona (figli, un genitore) e per gli animali, ognuno con i suoi
-  fascicoli, scadenze e salute.
-- **E poi** – widget, blocco con impronta o PIN, manuale d'uso nell'app, primo avvio guidato.
+You take a photo of the paper, or share the PDF. PENSY reads it, works out what
+it is, files it in the right folder, keeps the QR code so you can pay at the
+counter, and reminds you before the deadline. Then it counts the amount in this
+month's budget, so you know how much money is *actually* left.
 
-Il [manuale completo](docs/manuale.md) e le [domande frequenti](docs/domande.md) sono anche qui, in
-una pagina sola.
+All of this happens on your phone. Not "on your phone and also, encrypted, on
+our servers". On your phone. PENSY doesn't have Android's internet permission,
+so it could not send your data anywhere even if it wanted to. There is no
+account to create, no server to trust, and no company that can go bankrupt with
+your medical history inside.
 
-## Privacy: tutto resta sul telefono
+## Thirty seconds with PENSY
 
-- PENSY **non ha il permesso di accedere a internet**: è Android stesso a impedirle di collegarsi.
-  Niente server, niente account, niente statistiche. Anche la lettura del testo avviene sul telefono.
-- I dati stanno nel telefono e, cifrati, nella cartella **`PENSY_DATA`** che scegli tu.
-  Per cambiare telefono basta copiare quella cartella (o il file unico creato con «Esporta») e,
-  sul nuovo, toccare «Recupera i miei dati».
-- Senza la tua password i dati non si possono leggere né recuperare.
+1. **Snap** a utility bill (or share the PDF from your email).
+2. PENSY **reads** it on the phone: issuer, amount, due date, payment code.
+   It sees the QR code too.
+3. You **check** and tap Save. Nothing is ever stored without you seeing it first.
+4. It lands in **Home › Electricity**. Ten days before the due date you get a
+   reminder, then again the day before, then on the day.
+5. You pay, attach the receipt, and the amount shows up in this month's
+   **budget**.
 
-Permessi usati: notifiche, riavvio (per rimettere gli avvisi dopo l'accensione), «Sveglie e promemoria»
-(per le medicine all'ora esatta) e impronta (per «Blocca PENSY», tramite la richiesta di sistema:
-PENSY non vede l'impronta).
+The bill went into the drawer anyway. But now you never need to open it.
 
-## Scaricare e installare
+## Built for the final boss: Italian bureaucracy
 
-1. Apri la pagina **[Releases](../../releases)** e scarica l'ultimo `PENSY-x.y.apk` dal telefono.
-2. Aprilo. La prima volta Android chiede di permettere l'installazione di app da quella sorgente
-   (il browser o l'app dei file): consenti e torna indietro.
-3. Le nuove versioni si installano sopra la precedente: i dati restano.
+PENSY was born in Turin, Italy, and if you want to stress-test a document
+reader, Italy is a good place to start. In a single month you can get a
+*pagoPA* notice (the national system for paying the public administration), the
+*bollo* (yearly car tax), an *F24* (tax payment form), a hospital *ticket*
+(healthcare co-pay), an electronic prescription whose *NRE* code you need at the
+pharmacy, a utility bill with a QR code and a payslip, each with its own idea of
+where the amount and the due date should go.
 
-Serve Android 8.0 o più recente. Accanto a ogni APK c'è il file `.sha256` per chi vuole controllarlo.
+PENSY recognizes all of them, plus fines, medical reports, university fees,
+insurance, warranties, receipts, subscriptions, ID cards, driving licences and
+passports. Medical reports get a special treatment: if the doctor wrote "check
+again in 12 months", PENSY proposes the reminder for you.
 
-**iPhone**: non ancora. È il prossimo passo, separato dall'app Android.
+It reads English documents too, and the whole app is in Italian and English.
 
-## Costruire l'app dal codice
+## What it does
 
-**Android Studio** – apri la cartella `android/` e premi Run. Il lettore di testo (Tesseract) è già
-compilato nel progetto: non serve installare altro.
+**Paperwork**
+- Photo or file wherever you add something. Multi-page documents, PDFs up to 12
+  pages, sharing from WhatsApp or email.
+- Automatic filing into folders and sub-folders (*Health › Heart*, *Car › Panda*)
+  that learns from you: move one document from an issuer, and the next ones go
+  there.
+- The exact QR code or barcode is kept and redrawn, identical, to show at the
+  counter.
+- Full-text search across everything you've ever scanned.
+- Text first: the photo is deleted after reading unless you choose to keep it.
 
-**Da terminale, con Gradle**
+**Deadlines**
+- Calendar, recurrences, multi-stage reminders (90, 30 and 7 days before your ID
+  card expires).
+- Expiry dates read or computed for ID cards, licences and passports; warranties
+  end two years after purchase; "cancel by" dates for subscriptions.
 
-```sh
-cd android
-./gradlew assembleDebug      # app/build/outputs/apk/debug/app-debug.apk
-./gradlew assembleRelease    # firmata con la tua chiave, vedi «Firma» sotto
-```
+**Money**
+- From your payslip: *"you have €X left this month"*.
+- Everyday expenses in three taps, fixed costs with yearly totals, trends over
+  months and years.
+- A tracker for the *730* (the Italian tax return): medical, vet, school,
+  transport and kids' sports expenses, with the 19% estimate and a CSV for your
+  accountant.
+- Savings jars with a goal and a date: PENSY tells you how much to set aside each
+  month.
+- Investments (ETFs, stocks, bonds, funds, pension funds, deposit accounts,
+  crypto) with units, recurring plans that log themselves, gains in € and %, and
+  projections up to 30 years. You type the values from your broker. PENSY
+  downloads no prices, because PENSY downloads nothing.
 
-**Senza Gradle** – `tools/build-apk.sh` costruisce l'APK con aapt2, kotlinc, dx, zipalign e apksigner
-(le variabili da impostare sono scritte in cima allo script).
+**Health**
+- Conditions (also "since birth"), allergies, planned surgeries in the calendar,
+  vaccines with booster reminders.
+- Medicines on real-life schedules: every day, every N days or weeks, some
+  weekdays, monthly ("the 15th", "the first Monday", every 3 months), once, or as
+  needed. With or without a set time. Syringes included.
+- *Taken / Skip / In 10 minutes* straight from the notification; alarms that ring
+  even in silent mode; 30-day adherence.
+- Stock counted the way people actually count it, **in boxes**: "remind me to
+  order when I'm down to 2".
+- Visits to book (with the deadline set by the prescription's priority class),
+  booked and done, each with its report attached.
+- Blood pressure, glucose, weight, height and BMI, temperature, SpO₂, heart rate,
+  with charts.
+- *Show to doctor*: a clean PDF with your record, three months of charts and
+  adherence. An emergency card, optionally on the lock screen.
 
-**Test del nucleo** (serve `kotlinc` e un JDK 17):
+**Family**
+- A profile for each person (a child, an elderly parent) and for each pet, each
+  with their own folders, deadlines and health. Reminders arrive for everyone,
+  with the name.
 
-```sh
-KOTLINC=/percorso/kotlinc/bin/kotlinc ./tools/test-core.sh
-```
+**And also** a home-screen widget, fingerprint or PIN lock, a guided first launch,
+and a 17-chapter manual inside the app ([also here](docs/manual.md)).
 
-Ogni modifica caricata su GitHub fa partire da sola i test e la costruzione dell'app
-(`.github/workflows/ci.yml`). Le versioni da pubblicare si costruiscono e si firmano con
-`.github/workflows/release.yml`: istruzioni in [docs/PUBBLICARE.md](docs/PUBBLICARE.md).
+## Offline by construction
 
-## Struttura
+Most apps *promise* not to misuse your data. PENSY *can't*, and that difference
+matters.
 
-```
-core/          il nucleo in Kotlin puro, senza Android: modello, importi, ricorrenze, promemoria,
-               bilancio, investimenti, lettore dei documenti, smistamento, cifratura, salute
-  test/        test eseguibili da terminale, anche sull'uscita reale dell'OCR
-android/       l'app (Kotlin + framework Android, nessuna libreria AndroidX)
-  app/src/main/java/        schermate, database, notifiche, widget, PDF
-  app/src/main/jniLibs/     il lettore di testo compilato per i telefoni (arm64, armv7, x86_64)
-  app/src/main/assets/      i modelli italiano e inglese di Tesseract
-  app/src/main/res/raw/     manuale, guida e LEGGIMI di PENSY_DATA (raw-en/ in inglese)
-tools/
-  test-core.sh   test del nucleo
-  build-apk.sh   costruisce l'APK senza Gradle
-  check-indy.py  ferma la build senza Gradle se il codice può arrivare a una funzione che su
-                 Android si chiuderebbe (invokedynamic)
-  build-ocr.sh   ricompila il lettore di testo (Tesseract + Leptonica) per Android
-  ocr/           il ponte C++ tra Tesseract e l'app
-docs/          manuale, domande frequenti, come pubblicare una versione
-```
+The manifest doesn't just leave out the `INTERNET` permission: it explicitly
+removes it, so not even a library can sneak it back in. Without it, Android
+itself refuses every network connection. PENSY asks for four permissions in total:
+notifications, start at boot (to set the reminders again after a restart), exact
+alarms (your medicine at 8:00, not "around 8"), and biometrics (the system dialog
+only: PENSY never sees your fingerprint).
 
-## Principi
-
-- **Offline, sempre.** Nessun permesso di rete. Quello che serve (lettura del testo, codici, PDF,
-  grafici) è dentro l'app.
-- **Testo prima delle foto.** Di base si conservano il testo e il contenuto esatto dei codici; la foto
-  solo se la scegli.
-- **Quasi zero dipendenze.** Interfaccia scritta con il framework Android; solo ZXing (codici) e
-  Tesseract (testo), entrambi offline.
-- **Il nucleo è separato.** Tutta la logica sta in `core/`, testabile senza telefono.
-- **Dati semplici.** Un file SQLite, date ISO, importi in centesimi.
-- **Conferma umana.** Niente viene salvato senza che tu l'abbia visto.
-
-## PENSY_DATA
+Your data lives on the phone and, if you want, in a folder called `PENSY_DATA`:
 
 ```
 PENSY_DATA/
-  pensy.dat      il database, cifrato con AES-256-GCM (chiave da PBKDF2-SHA256, 200.000 iterazioni)
-  pagine/        le foto conservate, una per file, cifrate allo stesso modo
-  copie/         com'era pensy.dat negli ultimi 7 giorni
-  versione.txt   formato, schema e data dell'ultimo salvataggio
-  LEGGIMI.txt    come ripristinare i dati su un nuovo telefono
+  pensy.dat      the database, AES-256-GCM, key from PBKDF2-SHA256 (200,000 iterations)
+  pagine/        kept photos, one encrypted file each
+  copie/         the last 7 days of backups
+  versione.txt   format, schema, date of the last save
+  LEGGIMI.txt    how to restore on a new phone
 ```
 
-Il formato è descritto in `core/src/app/pensy/core/Vault.kt`; il file unico con le foto («Esporta» e
-«Invia a un altro telefono») in `core/src/app/pensy/core/Pack.kt`.
+Changing phone? Copy that folder (or the single export file) to the new one and
+tap *Restore my data*. That's the whole sync protocol.
 
-## Firma
+Forget your password and the data is gone. Not because we are strict, but
+because there is no "we" to ask. The safest server for your medical reports is
+the one that doesn't exist.
 
-Le chiavi di firma **non sono nel repository** (`.gitignore` esclude `*.keystore`, `*.jks` e
-`keystore.properties`): chi ha la chiave può firmare aggiornamenti a nome di PENSY. La build di rilascio
-prende la chiave dalle variabili d'ambiente `PENSY_KEYSTORE`, `PENSY_KEYSTORE_PASSWORD`,
-`PENSY_KEY_ALIAS`, `PENSY_KEY_PASSWORD`, oppure da `android/keystore.properties`
-(modello in `android/keystore.properties.example`). Senza chiave usa quella di debug.
+## Under the hood
 
-## Novità e licenza
+PENSY is about 16,000 lines of Kotlin, written in a slightly old-fashioned way on
+purpose.
 
-- Cosa cambia in ogni versione: [CHANGELOG.md](CHANGELOG.md).
-- Licenza: [LICENSE](LICENSE). Componenti di terzi e loro licenze: [THIRD_PARTY.txt](THIRD_PARTY.txt).
-- Hai trovato un errore? Apri una segnalazione nella scheda *Issues*.
+- **No AndroidX, no Compose, no frameworks.** The UI is plain Android views, built
+  in code. The app has exactly one library dependency: ZXing, for QR codes and
+  barcodes.
+- **OCR is Tesseract 5**, compiled from source together with Leptonica into a
+  ~2 MB native library per CPU architecture, behind a 116-line C++ bridge. No ML
+  Kit, no Google Play Services, no cloud OCR. The Italian and English models ship
+  inside the APK, and the whole thing is about 8 MB.
+- **PDFs and charts are drawn by hand** on a Canvas: the doctor's report, a whole
+  folder exported to PDF, the manual itself.
+- **The brain is a pure Kotlin core** with zero Android imports: the document
+  parser, recurrences, reminders, the budget, investment math, medicine schedules
+  and stock. Its 448 tests run on a laptop, including tests on real OCR output.
+  No phone, no emulator.
+- **Gradle is optional.** `tools/build-apk.sh` builds the complete, signed APK
+  with aapt2, kotlinc, dx and apksigner in 73 lines of shell. Android Studio and
+  Gradle work too, and that's what the CI uses.
+
+A small war story. Version 0.3 crashed at launch. The culprit was an innocent
+sort that used a comparator from the Kotlin standard library. That function is
+compiled with `invokedynamic`, the dexer copies `invokedynamic` as it is, and
+Android doesn't ship the `LambdaMetafactory` it needs, so the first call blows up.
+The fix was small. The cure was `tools/check-indy.py`: 136 lines of Python that
+build the call graph of the app plus its libraries, and fail the build if any
+path can reach an `invokedynamic`. I like this kind of fix: you pay once, and a
+whole class of bugs disappears.
+
+## What PENSY is not
+
+- **Not a cloud service.** There's no sync. Two phones mean two copies (you can
+  send everything to another phone as one encrypted file).
+- **Not connected to your bank.** No balances, no prices, no logins. That's the
+  point.
+- **Not a medical device.** Reminders help; your doctor and pharmacist decide.
+- **Not (yet) on iPhone.** That's the next step.
+- **Strongest with Italian paperwork.** It reads English documents, but the
+  classifier knows Italy best. If you'd like it to understand your country's
+  forms, open an issue: that's exactly the kind of help this project needs.
+
+## Install
+
+1. Open **[Releases](../../releases/latest)** on your phone and download
+   `PENSY-x.y.apk`.
+2. Open it. The first time, Android asks you to allow installs from that app
+   (your browser or file manager): allow it and go back.
+3. New versions install over the old one. Your data stays.
+
+Android 8.0 or newer. Each APK comes with a `.sha256` file.
+
+## Build it yourself
+
+```sh
+# Android Studio: open the android/ folder and press Run.
+
+# Command line
+cd android
+./gradlew assembleDebug
+
+# Core tests (needs kotlinc and JDK 17)
+KOTLINC=/path/to/kotlinc ./tools/test-core.sh
+```
+
+Release builds are signed in CI with a key that never touches the repository
+(see [docs/PUBBLICARE.md](docs/PUBBLICARE.md)).
+
+```
+core/      pure Kotlin: parser, reminders, budget, investments, health, crypto
+  test/    448 tests, runnable without Android
+android/   the app: plain Android framework, Tesseract in jniLibs/, models in assets/
+tools/     build-apk.sh, test-core.sh, check-indy.py, build-ocr.sh
+docs/      manual and FAQ (English and Italian)
+```
+
+## Contributing
+
+Bug reports and ideas are welcome in [Issues](../../issues). Please **never attach
+photos of real documents**: issues are public, and PENSY exists precisely so that
+your papers stay private.
+
+Changelog: [CHANGELOG.md](CHANGELOG.md) · License: [LICENSE](LICENSE) · Third-party
+components: [THIRD_PARTY.txt](THIRD_PARTY.txt)
 
 ---
 
-## English
-
-**PENSY** turns everyday paperwork into text, deadlines and clear numbers, and keeps it filed in
-folders. Take a photo of a bill, a medical report or a ticket, or load the PDF you got by email: PENSY
-reads it on the phone, works out what it is, files it, keeps the QR or barcode and reminds you in time.
-It also handles a monthly budget from your payslip, everyday spending, savings jars and investments,
-a health record (conditions, medicines with schedules and stock, visits, measurements) and separate
-profiles for family members and pets.
-
-**Fully offline.** The app has no internet permission at all: no server, no account, no analytics.
-Your data stays on the phone and, encrypted, in a `PENSY_DATA` folder you choose; to move to a new
-phone, copy that folder and tap «Restore my data».
-
-- **Download:** get the latest `PENSY-x.y.apk` from [Releases](../../releases) (Android 8.0+).
-  New versions install over the old one and keep your data. iPhone: not yet.
-- **Docs:** [user manual](docs/manual.md) and [FAQ](docs/faq.md). The app is in Italian and English.
-- **Build:** open `android/` in Android Studio, or `cd android && ./gradlew assembleDebug`.
-  Core tests: `KOTLINC=… ./tools/test-core.sh`.
-- **Publishing a release:** see [docs/PUBBLICARE.md](docs/PUBBLICARE.md) (in Italian).
-- **License:** see [LICENSE](LICENSE); third-party components in [THIRD_PARTY.txt](THIRD_PARTY.txt).
+<p align="center">
+  If PENSY saves you a late fee, or just one dig through the drawer,<br>
+  leave a ⭐. It's the only analytics this project has.
+</p>
