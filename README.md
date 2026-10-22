@@ -24,12 +24,12 @@
 
 
 <p align="center">
-  <img src="docs/screenshots/today.jpg" width="24%">
-  <img src="docs/screenshots/saving.jpg" width="24%">
-  <img src="docs/screenshots/calendar.jpg" width="24%">
-  <img src="docs/screenshots/health.jpg" width="24%">
-  <img src="docs/screenshots/budget.jpg" width="24%">
-  <img src="docs/screenshots/home.jpg" width="24%">
+  <img src="docs/today.jpg" width="24%">
+  <img src="docs/saving.jpg" width="24%">
+  <img src="docs/calendar.jpg" width="24%">
+  <img src="docs/health.jpg" width="24%">
+  <img src="docs/budget.jpg" width="24%">
+  <img src="docs/home.jpg" width="24%">
 </p>
 
 ---
