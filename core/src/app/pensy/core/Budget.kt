@@ -9,8 +9,10 @@ import java.time.temporal.ChronoUnit
  *
  *   remaining = income - everything due - everyday spending - money put aside - money invested
  *
- * Income is the payslip of that month; when it is missing, the most
- * recent earlier payslip is used as an estimate. Recurring deadlines
+ * Income is the payslip of that month (when it is missing, the most
+ * recent earlier payslip is used as an estimate) plus the other money
+ * that came in that month: a gift, a refund, something sold. That money
+ * never replaces the payslip nor its estimate. Recurring deadlines
  * are expanded into the future as virtual occurrences, so the next
  * months can be projected without creating rows in the database.
  */
@@ -40,8 +42,13 @@ data class MonthSummary(
     /** Money put aside in the jars (for the coming months: the suggested quotas). */
     val savedCents: Long = 0,
     /** Money put into investments (for the coming months: the plans). */
-    val investedCents: Long = 0
+    val investedCents: Long = 0,
+    /** Money that came in outside the payslip (already included in incomeCents). */
+    val inflows: List<Inflow> = emptyList(),
+    /** A payslip, recorded or estimated: false when the income is only other money. */
+    val salaryKnown: Boolean = hasIncome
 ) {
+    val otherIncomeCents: Long = inflows.sumOf { it.amountCents }
     val spendCents: Long = spends.sumOf { it.amountCents }
     val outCents: Long = lines.sumOf { it.amountCents } + spendCents
     val remainingCents: Long get() = incomeCents - outCents - savedCents - investedCents
@@ -117,23 +124,26 @@ object Budget {
     fun month(
         month: YearMonth, deadlines: List<Deadline>, incomes: List<Income>,
         spends: List<Spend> = emptyList(), jars: List<Jar> = emptyList(), moves: List<JarMove> = emptyList(),
-        today: LocalDate = LocalDate.now(), invest: List<InvestFlow> = emptyList()
+        today: LocalDate = LocalDate.now(), invest: List<InvestFlow> = emptyList(), inflows: List<Inflow> = emptyList()
     ): MonthSummary {
         val (inc, has, est) = income(month, incomes)
         val mine = spends.filter { YearMonth.from(it.day) == month }.sortedByDescending { it.day }
+        val came = inflows.filter { YearMonth.from(it.day) == month }.sortedByDescending { it.day }
+        val other = came.sumOf { it.amountCents }
         return MonthSummary(
-            month, inc, has, est, lines(deadlines, month.atDay(1), month.atEndOfMonth()),
+            month, inc + other, has || came.isNotEmpty(), est, lines(deadlines, month.atDay(1), month.atEndOfMonth()),
             mine, Jars.setAside(month, jars, moves, today),
-            invest.filter { YearMonth.from(it.day) == month }.sumOf { it.amountCents }
+            invest.filter { YearMonth.from(it.day) == month }.sumOf { it.amountCents },
+            came, has
         )
     }
 
     fun range(
         first: YearMonth, count: Int, deadlines: List<Deadline>, incomes: List<Income>,
         spends: List<Spend> = emptyList(), jars: List<Jar> = emptyList(), moves: List<JarMove> = emptyList(),
-        today: LocalDate = LocalDate.now(), invest: List<InvestFlow> = emptyList()
+        today: LocalDate = LocalDate.now(), invest: List<InvestFlow> = emptyList(), inflows: List<Inflow> = emptyList()
     ): List<MonthSummary> =
-        (0 until count).map { month(first.plusMonths(it.toLong()), deadlines, incomes, spends, jars, moves, today, invest) }
+        (0 until count).map { month(first.plusMonths(it.toLong()), deadlines, incomes, spends, jars, moves, today, invest, inflows) }
 
     /**
      * Fixed costs: each recurring series once (its next unpaid occurrence),
@@ -145,6 +155,21 @@ object Budget {
             .groupBy { Triple(it.type, it.issuer.trim().lowercase(), it.title.trim().lowercase()) }
             .values.map { series -> series.minByOrNull { it.due }!! }
         return heads.map { it to it.amountCents * 12 / it.everyMonths }.sortedByDescending { it.second }
+    }
+
+    /** How money moved in a period: cash, or card and account; out (everyday spending) and in (other income). */
+    data class CashSplit(val cashOut: Long, val cardOut: Long, val cashIn: Long, val cardIn: Long) {
+        val any: Boolean get() = cashOut != 0L || cashIn != 0L
+    }
+
+    fun cashSplit(spends: List<Spend>, inflows: List<Inflow> = emptyList()): CashSplit {
+        var co = 0L
+        var ko = 0L
+        var ci = 0L
+        var ki = 0L
+        for (s in spends) if (s.cash) co += s.amountCents else ko += s.amountCents
+        for (i in inflows) if (i.cash) ci += i.amountCents else ki += i.amountCents
+        return CashSplit(co, ko, ci, ki)
     }
 
     /** Everyday spending of a month by category, biggest first. */

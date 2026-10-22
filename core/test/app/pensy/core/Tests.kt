@@ -958,6 +958,59 @@ fun testMedRules() {
     eq("bmi", Measures.bmi(72.0, 178.0), 22.7)
 }
 
+fun testInflows() {
+    val sep = YearMonth.of(2026, 9)
+    val oct = YearMonth.of(2026, 10)
+    val nov = YearMonth.of(2026, 11)
+    val pay = listOf(Income(month = sep, amountCents = 150000))
+    val gift = Inflow(day = d("2026-10-05"), amountCents = 5000, cat = InflowCat.REGALO)
+    val sale = Inflow(day = d("2026-10-20"), amountCents = 2000, cat = InflowCat.VENDITA, cash = true)
+
+    // October, no payslip yet: September's estimate plus the other money
+    val o = Budget.month(oct, emptyList(), pay, inflows = listOf(gift, sale), today = TODAY)
+    eq("inflow adds to estimate", o.incomeCents, 157000L)
+    eq("inflow keeps estimate flag", o.incomeEstimated, true)
+    eq("inflow other", o.otherIncomeCents, 7000L)
+    eq("inflow salary known", o.salaryKnown, true)
+    eq("inflow newest first", o.inflows.map { it.amountCents }, listOf(2000L, 5000L))
+
+    // The payslip arrives: the estimate goes, the other money stays
+    val o2 = Budget.month(oct, emptyList(), pay + Income(month = oct, amountCents = 152000), inflows = listOf(gift, sale), today = TODAY)
+    eq("inflow with payslip", o2.incomeCents, 159000L)
+    eq("inflow with payslip exact", o2.incomeEstimated, false)
+
+    // Only other money, never a payslip
+    val only = Budget.month(oct, emptyList(), emptyList(), inflows = listOf(gift), today = TODAY)
+    eq("inflow only has income", only.hasIncome, true)
+    eq("inflow only no salary", only.salaryKnown, false)
+    eq("inflow only remaining", only.remainingCents, 5000L)
+    eq("no income at all", Budget.month(oct, emptyList(), emptyList(), today = TODAY).hasIncome, false)
+
+    // Other months
+    eq("inflow other month", Budget.month(nov, emptyList(), pay, inflows = listOf(gift), today = TODAY).otherIncomeCents, 0L)
+    eq("inflow range", Budget.range(sep, 3, emptyList(), pay, inflows = listOf(gift), today = TODAY).map { it.otherIncomeCents },
+        listOf(0L, 5000L, 0L))
+
+    // Cash, or card and account
+    val spends = listOf(Spend(day = d("2026-10-03"), amountCents = 1200, cash = true), Spend(day = d("2026-10-04"), amountCents = 3000))
+    val split = Budget.cashSplit(spends, listOf(gift, sale))
+    eq("cash out", split.cashOut, 1200L)
+    eq("card out", split.cardOut, 3000L)
+    eq("cash in", split.cashIn, 2000L)
+    eq("card in", split.cardIn, 5000L)
+    eq("cash any", split.any, true)
+    eq("no cash", Budget.cashSplit(listOf(spends[1])).any, false)
+
+    // Andamento: other money is income, told apart
+    val t = Trend.month(oct, emptyList(), pay, emptyList(), inflows = listOf(gift, sale))
+    eq("trend inflow income", t.incomeCents, 7000L)
+    eq("trend inflow other", t.otherCents, 7000L)
+    eq("trend sum other", Trend.sum(listOf(t, t))?.otherCents, 14000L)
+    eq("trend first month inflow", Trend.firstMonth(nov, emptyList(), emptyList(), emptyList(), inflows = listOf(gift)), oct)
+    eq("inflow cat code", InflowCat.of("vendita"), InflowCat.VENDITA)
+    eq("inflow cat unknown", InflowCat.of("x"), InflowCat.ALTRO)
+}
+
 fun main() {
     testMoney(); testDates(); testAmounts(); testRecurrence(); testReminders(); testBudget()
     testPagoPa(); testParseBill(); testParseBollo(); testParsePayslip(); testParseTicket()
@@ -966,7 +1019,7 @@ fun main() {
     testNoDue(); testMeds(); testVisits(); testStages(); testSpendsJars(); testPack()
     testDoseLog(); testBoostersMeasures(); testPrescription(); testCsv()
     testDocuments(); testWarranty(); testEnglishBill(); testReceiptSubscription(); testTax(); testFixedAndCar()
-    testInvest(); testTrend(); testMedRules()
+    testInvest(); testTrend(); testMedRules(); testInflows()
     println("$passed passed, $failed failed")
     if (failed > 0) exitProcess(1)
 }

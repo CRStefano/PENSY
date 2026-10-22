@@ -226,6 +226,12 @@ Se vuoi sì: quando aggiungi la persona (o in Impostazioni › Persone) scegli �
 ### Come segno la spesa di tutti i giorni?
 In «Oggi» tocca «Spesa» (oppure «Aggiungi» › «Nuova spesa»): importo, per cosa, salva. Nel «Bilancio» trovi le spese del mese per categoria e quanto ti resta tenendone conto.
 
+### Mi sono arrivati soldi che non sono lo stipendio: come li aggiungo?
+In «Bilancio» tocca «Aggiungi un'entrata» (oppure «Aggiungi» › «Nuova entrata»): importo, da dove arriva (regalo, rimborso, vendita, lavoro extra, altro), salva. Va bene per un amico che ti restituisce dei soldi, un regalo, qualcosa venduto online. Si somma alle entrate del mese e non tocca la stima dello stipendio.
+
+### Posso tenere separati contanti e carta?
+Ogni spesa ed entrata dice se è passata con «Carta o conto» o in «Contanti», e PENSY ricorda l'ultima scelta. Nel «Bilancio» vedi quanto è passato in contanti e quanto con la carta. Non tiene invece due saldi separati: per farli tornare servirebbe segnare anche ogni prelievo, e il saldo vero della carta lo sa già l'app della banca.
+
 ### A cosa servono i salvadanai?
 A mettere da parte per qualcosa: le vacanze, l'auto, i regali. In «Bilancio» › «Nuovo salvadanaio» scrivi quanto e per quando: PENSY ti dice quanto mettere da parte ogni mese e lo toglie da quanto ti resta, così non lo spendi due volte. I soldi restano dove sono: il salvadanaio ne tiene il conto.
 
@@ -255,7 +261,7 @@ Apri il fascicolo Animali e tocca «Promemoria dell'animale»: vaccino con richi
 Quando segni una spesa scegli «Per il 730» (spese mediche, veterinario, scuola, università, abbonamento ai mezzi, sport dei figli). Ticket e tasse universitarie pagati contano da soli. In «Bilancio» › «Spese per il 730» vedi il totale dell'anno, una stima di quanto ti torna e un CSV da dare al CAF. È una stima: la dichiarazione la fai con il CAF o la precompilata.
 
 ### Posso aprire i miei dati in Excel?
-Sì: in «Bilancio» tocca l'icona di condivisione in alto e scegli «Scadenze e pagamenti» o «Spese di tutti i giorni». PENSY prepara un file CSV che si apre con Excel, Fogli Google o LibreOffice.
+Sì: in «Bilancio» tocca l'icona di condivisione in alto e scegli «Scadenze e pagamenti», «Spese di tutti i giorni» o «Entrate». PENSY prepara un file CSV che si apre con Excel, Fogli Google o LibreOffice.
 
 ### C'è un widget per la schermata Home?
 Sì: tieni premuto sulla schermata Home, scegli «Widget» e cerca PENSY. Mostra le prossime scadenze e le medicine di oggi; il pulsante con la fotocamera ti fa aggiungere subito un documento, con una foto o un file. Se PENSY è bloccata, il widget mostra solo quante sono.

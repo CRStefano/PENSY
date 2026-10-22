@@ -160,6 +160,9 @@ Entrate, uscite e quanto resta, mese per mese, passato e previsto.
 ## La busta paga
 Aggiungila con una foto o con il PDF arrivato per email: PENSY legge il netto e il mese. Se un mese manca, usa come stima l'ultima busta paga normale (senza tredicesima). Puoi segnare una mensilità in più come tale.
 
+## Le altre entrate
+I soldi che arrivano fuori dalla busta paga: un amico che ti restituisce una cena, un regalo, qualcosa che hai venduto, un lavoretto, un rimborso. In «Bilancio» › «Aggiungi un'entrata», oppure «Aggiungi» › «Nuova entrata»: importo, da dove arriva, salva. Si sommano alle entrate del mese e non cambiano la stima dello stipendio: se la busta paga di questo mese non c'è ancora, PENSY continua a usare l'ultima come stima e ci aggiunge queste.
+
 ## Il grafico
 Dodici barre: cinque mesi indietro, quello in corso e sei avanti. Le barre sono le uscite, la linea verde le entrate, i mesi futuri sono più chiari. Tocca una barra per vedere quel mese.
 
@@ -169,15 +172,20 @@ Le scadenze del mese, le spese di tutti i giorni, quello che metti nei salvadana
 ## Le spese di tutti i giorni
 «Spesa» in Oggi, o «Aggiungi» › «Nuova spesa»: importo, categoria, salva. Nel bilancio le vedi per categoria.
 
+## Carta o contanti
+Ogni spesa e ogni entrata dice come si sono mossi i soldi: «Carta o conto» oppure «Contanti». PENSY ricorda l'ultima scelta, quindi di solito non devi toccare niente. Nel bilancio del mese vedi quanto è passato con la carta e quanto in contanti. Per il 730 conta anche questo: quasi tutte le detrazioni chiedono un pagamento tracciabile, e PENSY lascia fuori da sola le spese in contanti che non valgono.
+
 ## Altro
 - Spese fisse: quanto ti costano in un anno abbonamenti, contratti, bollette e rate.
 - Confronto con il mese prima, in percentuale.
-- Esporta: scadenze e spese in CSV per Excel.
+- Esporta: scadenze, spese ed entrate in CSV per Excel.
 - Andamento: i mesi messi insieme (capitolo seguente).
 
 > Consiglio: segna le spese piccole appena le fai: sono tre tocchi, e a fine mese non ti chiedi dove sono finiti i soldi.
 
 ! Perché è fatto così: un bilancio utile guarda avanti. Sapere a ottobre che dicembre sarà pesante ti lascia due mesi per prepararti.
+
+! Perché non ci sono due portafogli: tenere due saldi separati, contanti e carta, vorrebbe dire segnare anche ogni prelievo e partire da un saldo iniziale; basta una spesa dimenticata e i numeri non tornano più né con il portafoglio né con l'app della banca, che il saldo vero ce l'ha già. Il bilancio di PENSY risponde a un'altra domanda: quanto ti resta da spendere questo mese.
 
 # Andamento
 @trending

@@ -5,8 +5,9 @@ import java.time.YearMonth
 
 /*
  * "Andamento": months put together. Only what really happened counts
- * here: the payslips recorded (no estimate), the expenses that exist
- * (no projected occurrence), the money really put aside or invested.
+ * here: the payslips recorded (no estimate) and the other money that came
+ * in, the expenses that exist (no projected occurrence), the money really
+ * put aside or invested.
  */
 
 /** A month, or several months added up (a year). */
@@ -18,7 +19,9 @@ data class TrendBucket(
     val spendCents: Long,
     /** Put into jars and investments (minus what was taken out). */
     val savedCents: Long,
-    val months: Int
+    val months: Int,
+    /** Other income (gifts, refunds, sales), already included in incomeCents. */
+    val otherCents: Long = 0
 ) {
     val leftCents: Long get() = incomeCents - outCents - savedCents
 }
@@ -33,7 +36,8 @@ object Trend {
     /** The first month with something in it, not after `now` (now when there is nothing). */
     fun firstMonth(
         now: YearMonth, deadlines: List<Deadline>, incomes: List<Income>, spends: List<Spend>,
-        jarMoves: List<JarMove> = emptyList(), investMoves: List<InvestMove> = emptyList()
+        jarMoves: List<JarMove> = emptyList(), investMoves: List<InvestMove> = emptyList(),
+        inflows: List<Inflow> = emptyList()
     ): YearMonth {
         var first = now
         fun see(m: YearMonth) { if (m.isBefore(first)) first = m }
@@ -42,6 +46,7 @@ object Trend {
         for (d in deadlines) d.day?.let { see(YearMonth.from(it)) }
         for (m in jarMoves) see(YearMonth.from(m.day))
         for (m in investMoves) see(YearMonth.from(m.day))
+        for (i in inflows) see(YearMonth.from(i.day))
         val limit = now.minusMonths((MAX_MONTHS - 1).toLong())
         return if (first.isBefore(limit)) limit else first
     }
@@ -57,24 +62,25 @@ object Trend {
     /** What really happened in a month. */
     fun month(
         m: YearMonth, deadlines: List<Deadline>, incomes: List<Income>, spends: List<Spend>,
-        jarMoves: List<JarMove> = emptyList(), invest: List<InvestFlow> = emptyList()
+        jarMoves: List<JarMove> = emptyList(), invest: List<InvestFlow> = emptyList(), inflows: List<Inflow> = emptyList()
     ): TrendBucket {
-        val income = incomes.filter { it.month == m }.sumOf { it.amountCents }
+        val other = inflows.filter { YearMonth.from(it.day) == m }.sumOf { it.amountCents }
+        val income = incomes.filter { it.month == m }.sumOf { it.amountCents } + other
         val due = Budget.lines(deadlines, m.atDay(1), m.atEndOfMonth()).filter { !it.projected }.sumOf { it.amountCents }
         val spent = spends.filter { YearMonth.from(it.day) == m }.sumOf { it.amountCents }
         val saved = jarMoves.filter { YearMonth.from(it.day) == m }.sumOf { it.amountCents } +
             invest.filter { !it.planned && YearMonth.from(it.day) == m }.sumOf { it.amountCents }
-        return TrendBucket(m, m, income, due + spent, spent, saved, 1)
+        return TrendBucket(m, m, income, due + spent, spent, saved, 1, other)
     }
 
     fun months(
         from: YearMonth, to: YearMonth, deadlines: List<Deadline>, incomes: List<Income>, spends: List<Spend>,
-        jarMoves: List<JarMove> = emptyList(), invest: List<InvestFlow> = emptyList()
+        jarMoves: List<JarMove> = emptyList(), invest: List<InvestFlow> = emptyList(), inflows: List<Inflow> = emptyList()
     ): List<TrendBucket> {
         val out = ArrayList<TrendBucket>()
         var m = from
         while (!m.isAfter(to)) {
-            out += month(m, deadlines, incomes, spends, jarMoves, invest)
+            out += month(m, deadlines, incomes, spends, jarMoves, invest, inflows)
             m = m.plusMonths(1)
         }
         return out
@@ -86,7 +92,7 @@ object Trend {
         return TrendBucket(
             buckets.first().first, buckets.last().last,
             buckets.sumOf { it.incomeCents }, buckets.sumOf { it.outCents }, buckets.sumOf { it.spendCents },
-            buckets.sumOf { it.savedCents }, buckets.sumOf { it.months }
+            buckets.sumOf { it.savedCents }, buckets.sumOf { it.months }, buckets.sumOf { it.otherCents }
         )
     }
 

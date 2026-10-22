@@ -15,6 +15,8 @@ import app.pensy.core.FolderKind
 import app.pensy.core.HealthItem
 import app.pensy.core.HealthKind
 import app.pensy.core.Income
+import app.pensy.core.Inflow
+import app.pensy.core.InflowCat
 import app.pensy.core.Invest
 import app.pensy.core.InvestKind
 import app.pensy.core.InvestMove
@@ -47,7 +49,8 @@ import java.time.YearMonth
  *   code      QR codes and barcodes of a document, exact content
  *   deadline  what must be paid or done by a date
  *   income    payslips
- *   rule      what PENSY learned: "documents from X go in folder Y"
+ *   inflow    other money that came in: a gift, a refund, something sold
+ *   rule     what PENSY learned: "documents from X go in folder Y"
  *   medicine  therapies: doses, times, stock
  *   visit     visits and tests: to book, booked, done
  *   health_item  conditions, allergies, operations, vaccines
@@ -70,7 +73,7 @@ class Db(private val ctx: Context) : SQLiteOpenHelper(ctx, NAME, null, VERSION) 
 
     companion object {
         const val NAME = "pensy.db"
-        const val VERSION = 6
+        const val VERSION = 7
 
         private val SCHEMA_V1 = listOf(
             """CREATE TABLE profile(
@@ -320,6 +323,20 @@ class Db(private val ctx: Context) : SQLiteOpenHelper(ctx, NAME, null, VERSION) 
             """ALTER TABLE health_item ADD COLUMN from_birth INTEGER NOT NULL DEFAULT 0"""
         )
 
+        /** Version 7 (PENSY 0.9): money that came in outside the payslip. */
+        private val UPGRADE_V7 = listOf(
+            """CREATE TABLE inflow(
+                id INTEGER PRIMARY KEY,
+                profile_id INTEGER NOT NULL,
+                day TEXT NOT NULL,
+                amount INTEGER NOT NULL,
+                cat TEXT NOT NULL DEFAULT 'altro',
+                note TEXT NOT NULL DEFAULT '',
+                cash INTEGER NOT NULL DEFAULT 0,
+                created TEXT NOT NULL)""",
+            """CREATE INDEX inflow_day ON inflow(profile_id, day)"""
+        )
+
         /** The Salute summary template of version 2, replaced when untouched. */
         private const val OLD_NOTE_SALUTE = "Patologie:\nAllergie:\nFarmaci in uso:\nGruppo sanguigno:\nMedico di base:"
 
@@ -334,6 +351,7 @@ class Db(private val ctx: Context) : SQLiteOpenHelper(ctx, NAME, null, VERSION) 
         private const val MEASURE_COLS = "id, profile_id, folder_id, kind, at, v1, v2, v3, note"
         private const val DOC_COLS = "id, type, issuer, title, text, fields, created, folder_id, date, note"
         private const val SPEND_COLS = "id, profile_id, day, amount, cat, note, tax, cash, doc_id"
+        private const val INFLOW_COLS = "id, profile_id, day, amount, cat, note, cash"
         private const val JAR_COLS = "id, profile_id, name, goal, by_date, note, closed"
         private const val INV_COLS =
             "id, profile_id, name, kind, code, rate, plan_amount, plan_every, plan_day, plan_from, plan_until, plan_last, note, closed"
@@ -358,6 +376,7 @@ class Db(private val ctx: Context) : SQLiteOpenHelper(ctx, NAME, null, VERSION) 
         upgradeTo4(db)
         upgradeTo5(db)
         upgradeTo6(db)
+        upgradeTo7(db)
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -366,6 +385,11 @@ class Db(private val ctx: Context) : SQLiteOpenHelper(ctx, NAME, null, VERSION) 
         if (oldVersion < 4) upgradeTo4(db)
         if (oldVersion < 5) upgradeTo5(db)
         if (oldVersion < 6) upgradeTo6(db)
+        if (oldVersion < 7) upgradeTo7(db)
+    }
+
+    private fun upgradeTo7(db: SQLiteDatabase) {
+        for (s in UPGRADE_V7) db.execSQL(s)
     }
 
     private fun upgradeTo6(db: SQLiteDatabase) {
@@ -560,7 +584,7 @@ class Db(private val ctx: Context) : SQLiteOpenHelper(ctx, NAME, null, VERSION) 
             w.execSQL("DELETE FROM invest_move WHERE investment_id IN (SELECT id FROM investment WHERE profile_id = ?)", p)
             w.execSQL("DELETE FROM invest_value WHERE investment_id IN (SELECT id FROM investment WHERE profile_id = ?)", p)
             w.execSQL("DELETE FROM rule WHERE folder_id IN (SELECT id FROM folder WHERE profile_id = ?)", p)
-            for (t in listOf("doc", "deadline", "income", "folder", "medicine", "visit", "health_item", "spend", "jar", "investment", "measure", "profile_info")) {
+            for (t in listOf("doc", "deadline", "income", "inflow", "folder", "medicine", "visit", "health_item", "spend", "jar", "investment", "measure", "profile_info")) {
                 w.execSQL("DELETE FROM $t WHERE profile_id = ?", p)
             }
             w.execSQL("UPDATE profile SET budget_of = NULL WHERE budget_of = ?", p)
@@ -1573,6 +1597,40 @@ class Db(private val ctx: Context) : SQLiteOpenHelper(ctx, NAME, null, VERSION) 
     /** Delete a payslip entry. Its document stays in the archive. */
     fun deleteIncome(id: Long) {
         w.delete("income", "id = ?", arrayOf(id.toString()))
+    }
+
+    // --------------------------------------------------------------- inflows
+
+    private fun inflowsWhere(where: String, args: Array<String>?): List<Inflow> =
+        w.rawQuery("SELECT $INFLOW_COLS FROM inflow $where ORDER BY day DESC, id DESC", args).use { c ->
+            val out = ArrayList<Inflow>()
+            while (c.moveToNext()) out += Inflow(
+                id = c.getLong(0), profileId = c.getLong(1), day = LocalDate.parse(c.getString(2)), amountCents = c.getLong(3),
+                cat = InflowCat.of(c.getString(4)), note = c.getString(5), cash = c.getInt(6) != 0
+            )
+            out
+        }
+
+    /** Other money that came in, for the profile in use (like the payslips). */
+    fun inflows(): List<Inflow> = inflowsWhere("WHERE profile_id = ?", arrayOf(profile.toString()))
+
+    fun inflow(id: Long): Inflow? = inflowsWhere("WHERE id = ?", arrayOf(id.toString())).firstOrNull()
+
+    fun saveInflow(x: Inflow): Long {
+        val v = ContentValues().apply {
+            put("profile_id", pid(x.profileId))
+            put("day", x.day.toString())
+            put("amount", x.amountCents)
+            put("cat", x.cat.code)
+            put("note", x.note)
+            put("cash", if (x.cash) 1 else 0)
+        }
+        return if (x.id == 0L) { v.put("created", LocalDate.now().toString()); w.insertOrThrow("inflow", null, v) }
+        else { w.update("inflow", v, "id = ?", arrayOf(x.id.toString())); x.id }
+    }
+
+    fun deleteInflow(id: Long) {
+        w.delete("inflow", "id = ?", arrayOf(id.toString()))
     }
 
     // -------------------------------------------------------- whole-file ops

@@ -125,6 +125,7 @@ fun MainActivity.exportSheet() {
     Dialogs.sheet(this, getString(R.string.export_title), listOf(
         Triple(R.drawable.ic_calendar, getString(R.string.export_deadlines)) { exportDeadlines() },
         Triple(R.drawable.ic_receipt, getString(R.string.export_spends)) { exportSpends() },
+        Triple(R.drawable.ic_wallet, getString(R.string.export_incomes)) { exportIncomes() },
         Triple(R.drawable.ic_bank, getString(R.string.tax_title)) { push(TaxScreen(this)) }
     ))
 }
@@ -153,14 +154,30 @@ private fun MainActivity.exportSpends() {
     val names = db.profiles().associateBy({ it.id }, { profileLabel(it) })
     val rows = db.spends().sortedBy { it.day }.map { s ->
         listOf(s.day.toString(), names[s.profileId] ?: "", spendLabel(s.cat), s.note, Csv.money(s.amountCents),
-            TaxCat.of(s.tax)?.let { taxLabel(it) } ?: "")
+            getString(if (s.cash) R.string.pay_cash else R.string.pay_card), TaxCat.of(s.tax)?.let { taxLabel(it) } ?: "")
     }
     if (rows.isEmpty()) { toast(R.string.export_nothing); return }
     val csv = Csv.table(listOf(getString(R.string.csv_date), getString(R.string.csv_person), getString(R.string.spend_cat),
-        getString(R.string.field_note), getString(R.string.csv_amount), getString(R.string.tax_field)), rows)
+        getString(R.string.field_note), getString(R.string.csv_amount), getString(R.string.csv_how), getString(R.string.tax_field)), rows)
     val f = Share.newFile(this, "PENSY " + getString(R.string.export_spends) + " " + LocalDate.now() + ".csv")
     f.writeText(csv)
     Share.send(this, f, "text/csv", getString(R.string.export_spends))
+}
+
+/** Payslips (by month) and the other money that came in (by day), oldest first. */
+private fun MainActivity.exportIncomes() {
+    val rows = ArrayList<Pair<String, List<String>>>()
+    for (i in db.incomes()) rows += i.month.toString() to listOf(i.month.toString(),
+        getString(if (i.extra) R.string.payslip_extra else R.string.payslip_regular), i.note, Csv.money(i.amountCents), "")
+    for (x in db.inflows()) rows += x.day.toString() to listOf(x.day.toString(), inflowLabel(x.cat), x.note, Csv.money(x.amountCents),
+        getString(if (x.cash) R.string.pay_cash else R.string.pay_card))
+    if (rows.isEmpty()) { toast(R.string.export_nothing); return }
+    rows.sortBy { it.first }
+    val csv = Csv.table(listOf(getString(R.string.csv_date), getString(R.string.csv_kind), getString(R.string.field_note),
+        getString(R.string.csv_amount), getString(R.string.csv_how)), rows.map { it.second })
+    val f = Share.newFile(this, "PENSY " + getString(R.string.export_incomes) + " " + LocalDate.now() + ".csv")
+    f.writeText(csv)
+    Share.send(this, f, "text/csv", getString(R.string.export_incomes))
 }
 
 /** "Spese fisse": every recurring cost once, what it costs in a year. */

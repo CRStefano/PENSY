@@ -89,6 +89,7 @@ fun MainActivity.addSheet(folderId: Long? = null) {
         ),
         getString(R.string.add_without_doc) to listOf(
             Triple(R.drawable.ic_receipt, getString(R.string.spend_new)) { push(SpendScreen(this)) },
+            Triple(R.drawable.ic_wallet, getString(R.string.inflow_new)) { push(InflowScreen(this)) },
             Triple(R.drawable.ic_pill, getString(R.string.meds_add)) { push(MedicineScreen(this)) },
             Triple(R.drawable.ic_visit, getString(R.string.visits_add)) { push(VisitScreen(this)) },
             Triple(R.drawable.ic_edit, getString(R.string.add_manual)) { push(CardScreen(this, folderHint = folderId)) }

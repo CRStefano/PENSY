@@ -4,6 +4,21 @@ Cosa cambia in ogni versione di PENSY. Le versioni pubblicate si scaricano dalla
 
 *English: the changes of each version, written in Italian. The app itself is fully translated.*
 
+## 0.9
+
+**Altre entrate**: i soldi arrivati fuori dalla busta paga (un amico che restituisce, un regalo, una vendita, un
+lavoretto, un rimborso) si aggiungono in «Bilancio» › «Aggiungi un'entrata» o da «Aggiungi» › «Nuova entrata».
+Si sommano alle entrate del mese senza toccare la busta paga né la sua stima; compaiono nel bilancio, in
+«Andamento» e nell'esportazione «Entrate» in CSV.
+
+**Carta o contanti**: ogni spesa ed entrata dice come si sono mossi i soldi («Carta o conto» o «Contanti»,
+ricordando l'ultima scelta). Il bilancio del mese mostra quanto è passato con la carta e quanto in contanti; il 730
+usa la stessa informazione per lasciare fuori le spese in contanti che non si detraggono. Niente due portafogli con
+due saldi: il perché è nel manuale.
+
+Database versione 7 (tabella `inflow`). Nel nucleo `Inflow`, `InflowCat`, `Budget.cashSplit`; `Budget` e
+`Trend` contano le altre entrate (473 test).
+
 ## 0.8
 
 **Farmaci**

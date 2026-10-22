@@ -31,6 +31,7 @@ class BudgetScreen(act: MainActivity) : Screen(act) {
         val dependent = me.budgetOf != null
         val all = c.db.budgetDeadlines()
         val incomes = if (dependent) emptyList() else c.db.incomes()
+        val inflows = if (dependent) emptyList() else c.db.inflows()
         val spends = c.db.spends()
         val jars = c.db.jars()
         val moves = c.db.jarMoves()
@@ -40,8 +41,8 @@ class BudgetScreen(act: MainActivity) : Screen(act) {
         // Twelve months: five behind, the current one, six ahead.
         val first = now.minusMonths(5)
         val flows = Invest.flows(investments, investMoves, minOf(first, month).atDay(1), maxOf(first.plusMonths(11), month.plusMonths(1)).atEndOfMonth(), today)
-        val series = Budget.range(first, 12, all, incomes, spends, jars, moves, today, flows)
-        val s = Budget.month(month, all, incomes, spends, jars, moves, today, flows)
+        val series = Budget.range(first, 12, all, incomes, spends, jars, moves, today, flows, inflows)
+        val s = Budget.month(month, all, incomes, spends, jars, moves, today, flows, inflows)
         val body = c.vbox()
         c.hintCard("budget", R.string.hint_budget)?.let { body.add(it, top = 4, bottom = 8) }
 
@@ -86,6 +87,7 @@ class BudgetScreen(act: MainActivity) : Screen(act) {
             if (s.incomeEstimated) box.add(c.text(c.getString(R.string.income_estimated), 13f, c.col(R.color.ink2)), top = 2)
         }
         val detail = ArrayList<String>()
+        if (s.otherIncomeCents > 0) detail += c.getString(R.string.budget_of_which_other, Money.format(s.otherIncomeCents))
         if (s.spendCents > 0) detail += c.getString(R.string.budget_of_which_spends, Money.format(s.spendCents))
         if (s.savedCents > 0) detail += c.getString(if (month.isAfter(now)) R.string.budget_saved_planned else R.string.budget_saved, Money.format(s.savedCents))
         if (s.savedCents < 0) detail += c.getString(R.string.budget_taken, Money.format(-s.savedCents))
@@ -94,7 +96,7 @@ class BudgetScreen(act: MainActivity) : Screen(act) {
         if (detail.isNotEmpty()) box.add(c.text(detail.joinToString("\n"), 13f, c.col(R.color.ink2)), top = 10)
         if (s.heavy) box.add(c.text(c.getString(R.string.heavy_badge), 14f, c.col(R.color.warn), MEDIUM), top = 10)
         // Compared with the previous month
-        val prev = Budget.month(month.minusMonths(1), all, incomes, spends, jars, moves, today, flows)
+        val prev = Budget.month(month.minusMonths(1), all, incomes, spends, jars, moves, today, flows, inflows)
         if (prev.outCents > 0 && s.outCents > 0) {
             val pct = ((s.outCents - prev.outCents) * 100 / prev.outCents).toInt()
             val word = Fmt.monthName(prev.month)
@@ -107,9 +109,12 @@ class BudgetScreen(act: MainActivity) : Screen(act) {
         }
         body.add(box, top = 8)
 
-        // Payslips of the month
+        // Income of the month: payslips, then the other money that came in
         if (!dependent) {
-            body.add(c.section(R.string.payslips), top = 24)
+            val incomeHead = c.hbox()
+            incomeHead.add(c.section(R.string.income), w = 0, weight = 1f)
+            if (s.hasIncome) incomeHead.add(c.text(Money.format(s.incomeCents), 14f, c.col(R.color.ink2), MEDIUM), w = WRAP, end = 4)
+            body.add(incomeHead, top = 24)
             val mine = incomes.filter { it.month == month }
             val pay = c.listCard()
             for (i in mine) {
@@ -128,13 +133,22 @@ class BudgetScreen(act: MainActivity) : Screen(act) {
                 r.add(c.text(c.getString(if (s.incomeEstimated) R.string.no_payslip_estimate else R.string.no_payslip), 14f, c.col(R.color.ink2)))
                 pay.add(r)
             }
+            for (x in s.inflows) pay.add(c.inflowRow(x))
             body.add(pay, top = 10)
+            val split = Budget.cashSplit(emptyList(), s.inflows)
+            if (split.any) body.add(c.text(c.getString(R.string.inflows_cash_line, Money.format(split.cardIn), Money.format(split.cashIn)),
+                13f, c.col(R.color.ink2)), top = 8, start = 4)
             body.add(c.hbox().apply {
                 add(c.button(c.getString(R.string.add_payslip), Btn.SECONDARY, R.drawable.ic_payslip) { c.addPayslip() }, w = 0, weight = 1f)
                 add(c.button(c.getString(R.string.by_hand), Btn.GHOST, R.drawable.ic_edit) {
                     c.push(CardScreen(c, card = Card(type = DocType.BUSTA_PAGA, payMonth = month)))
                 }, w = 0, weight = 1f, start = 10)
             }, top = 10)
+            if (!month.isAfter(now)) {
+                val day0 = if (month == now) today else month.atEndOfMonth()
+                body.add(c.button(c.getString(R.string.inflow_add), Btn.SECONDARY, R.drawable.ic_wallet) { c.push(InflowScreen(c, day0 = day0)) },
+                    w = WRAP, top = 10)
+            }
         }
 
         // Everyday spending
@@ -145,6 +159,9 @@ class BudgetScreen(act: MainActivity) : Screen(act) {
         if (s.spends.isEmpty()) {
             body.add(c.text(c.getString(if (month.isAfter(now)) R.string.spends_future else R.string.spends_none), 14f, c.col(R.color.ink2)), top = 8, start = 4)
         } else {
+            val split = Budget.cashSplit(s.spends)
+            if (split.any) body.add(c.text(c.getString(R.string.spends_cash_line, Money.format(split.cardOut), Money.format(split.cashOut)),
+                13f, c.col(R.color.ink2)), top = 6, start = 4)
             body.add(categoryCard(s.spends), top = 10)
             val list = c.listCard()
             val shown = if (allSpends) s.spends else s.spends.take(6)

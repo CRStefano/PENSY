@@ -88,6 +88,7 @@ fun MainActivity.spendRow(s: Spend, who: String?): View {
     val mid = vbox()
     mid.add(text(s.note.ifBlank { spendLabel(s.cat) }, 16f, face = MEDIUM, lines = 1))
     var sub = Fmt.dateShort(s.day) + " · " + spendLabel(s.cat)
+    if (s.cash) sub += " · " + getString(R.string.tax_cash_short)
     if (who != null) sub += " · $who"
     mid.add(text(sub, 13f, col(R.color.ink2), lines = 1), top = 2)
     row.add(mid, w = 0, weight = 1f, start = 14)
@@ -176,7 +177,7 @@ class SpendScreen(act: MainActivity, private val id: Long = 0, private val day0:
     /** 730: the kind of deduction ("" none); suggested from the category until the user picks. */
     private var tax: String = original?.tax ?: (Tax.suggest(cat)?.code ?: "")
     private var taxTouched = original != null
-    private var cash = original?.cash ?: false
+    private var cash = original?.cash ?: PayPref.lastCash(act, "spend")
 
     override fun build(): View {
         val c = act
@@ -219,15 +220,15 @@ class SpendScreen(act: MainActivity, private val id: Long = 0, private val day0:
             row!!.add(tile, w = 0, weight = 1f)
         }
 
-        body.add(c.labeled(c.getString(R.string.spend_day), c.dateButton(day, "") { day = it }), top = 18)
+        body.add(c.labeled(c.getString(R.string.pay_with), c.payChips(cash) { cash = it; if (tax.isNotEmpty()) refresh() }), top = 18)
+        body.add(c.labeled(c.getString(R.string.spend_day), c.dateButton(day, "") { day = it }), top = 14)
         body.add(c.labeled(c.getString(R.string.field_note), c.field(c.getString(R.string.spend_note_hint), note) { note = it }), top = 14)
 
-        // For the 730
+        // For the 730: cash payments count only for some deductions
         val taxOptions = listOf("" to c.getString(R.string.tax_none)) + TaxCat.entries.map { it.code to c.taxLabel(it) }
         body.add(c.labeled(c.getString(R.string.tax_field), c.chips(taxOptions, tax) { tax = it; taxTouched = true; refresh() }), top = 14)
-        if (tax.isNotEmpty()) {
-            body.add(c.toggleRow(c.getString(R.string.tax_cash), cash) { cash = it }, top = 6)
-            body.add(c.text(c.getString(R.string.tax_cash_hint), 13f, c.col(R.color.ink2)), top = 2, start = 4)
+        if (tax.isNotEmpty() && cash) {
+            body.add(c.text(c.getString(R.string.tax_cash_hint), 13f, c.col(R.color.ink2)), top = 6, start = 4)
         }
 
         val buttons = c.hbox()
@@ -247,9 +248,10 @@ class SpendScreen(act: MainActivity, private val id: Long = 0, private val day0:
         val v = Money.parse(amountText)
         if (v == null || v <= 0) { c.toast(R.string.bad_amount); return }
         val s = (original ?: Spend(day = day, amountCents = v)).copy(
-            day = day, amountCents = v, cat = cat, note = note.trim(), tax = tax, cash = tax.isNotEmpty() && cash
+            day = day, amountCents = v, cat = cat, note = note.trim(), tax = tax, cash = cash
         )
         c.db.saveSpend(s)
+        if (original == null) PayPref.setLastCash(c, "spend", cash)
         c.changed()
         c.toast(R.string.spend_saved)
         c.pop()

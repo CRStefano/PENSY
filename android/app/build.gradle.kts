@@ -36,8 +36,8 @@ android {
         applicationId = "app.pensy"
         minSdk = 26          // Android 8.0: java.time, PBKDF2-SHA256, notification channels
         targetSdk = 35
-        versionCode = 11
-        versionName = "0.8"
+        versionCode = 12
+        versionName = "0.9"
     }
 
     signingConfigs {

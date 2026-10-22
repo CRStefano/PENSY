@@ -26,6 +26,7 @@ class HomeScreen(act: MainActivity) : Screen(act) {
         val all = c.db.deadlines()
         val budget = c.db.budgetDeadlines()
         val incomes = if (dependent) emptyList() else c.db.incomes()
+        val inflows = if (dependent) emptyList() else c.db.inflows()
         val spends = c.db.spends()
         val jars = c.db.jars()
         val moves = c.db.jarMoves()
@@ -56,10 +57,10 @@ class HomeScreen(act: MainActivity) : Screen(act) {
         val steps = c.firstStepsCard()
         if (steps != null) body.add(steps, top = 16)
 
-        val s0 = Budget.month(month, budget, incomes, spends, jars, moves, today, flows)
+        val s0 = Budget.month(month, budget, incomes, spends, jars, moves, today, flows, inflows)
         body.add(if (dependent) dependentCard(s0, me) else balanceCard(s0, today), top = 20)
 
-        if (!dependent) for (s in Budget.range(month, 3, budget, incomes, spends, jars, moves, today, flows)) {
+        if (!dependent) for (s in Budget.range(month, 3, budget, incomes, spends, jars, moves, today, flows, inflows)) {
             if (s.heavy) body.add(heavyCard(s, month), top = 12)
         }
 
@@ -155,7 +156,7 @@ class HomeScreen(act: MainActivity) : Screen(act) {
         if (s.savedCents > 0) box.add(c.text(c.getString(R.string.budget_saved, Money.format(s.savedCents)), 13f, soft), top = 10)
         if (s.investedCents > 0) box.add(c.text(c.getString(R.string.budget_invested, Money.format(s.investedCents)), 13f, soft), top = if (s.savedCents > 0) 2 else 10)
         val actions = c.hbox()
-        if (!s.hasIncome) {
+        if (!s.salaryKnown) {
             actions.add(c.button(c.getString(R.string.add_payslip), Btn.ON_ACCENT, R.drawable.ic_payslip) { c.addPayslip() }, w = WRAP, end = 10)
         }
         actions.add(c.button(c.getString(R.string.spend_quick), Btn.ON_ACCENT, R.drawable.ic_add) { c.push(SpendScreen(c)) }, w = WRAP)

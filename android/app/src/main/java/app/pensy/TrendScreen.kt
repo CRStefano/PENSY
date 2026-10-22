@@ -25,13 +25,14 @@ class TrendScreen(act: MainActivity) : Screen(act) {
         val me = c.db.current()
         val deadlines = c.db.budgetDeadlines()
         val incomes = if (me.budgetOf != null) emptyList() else c.db.incomes()
+        val inflows = if (me.budgetOf != null) emptyList() else c.db.inflows()
         val spends = c.db.spends()
         val jarMoves = c.db.jarMoves()
         val investMoves = c.db.investMoves()
         val flows = Invest.flows(c.db.investments(), investMoves, LocalDate.of(1970, 1, 1), today, today)
-        val first = Trend.firstMonth(now, deadlines, incomes, spends, jarMoves, investMoves)
+        val first = Trend.firstMonth(now, deadlines, incomes, spends, jarMoves, investMoves, inflows)
         val (from, to) = Trend.range(period, now, first)
-        val months = Trend.months(from, to, deadlines, incomes, spends, jarMoves, flows)
+        val months = Trend.months(from, to, deadlines, incomes, spends, jarMoves, flows, inflows)
         val total = Trend.sum(months)
         val body = c.vbox()
 
@@ -57,6 +58,7 @@ class TrendScreen(act: MainActivity) : Screen(act) {
         row.add(c.stat(c.getString(R.string.expenses), Money.format(total.outCents), c.col(R.color.ink2), c.col(R.color.ink)), w = 0, weight = 1f)
         row.add(c.stat(c.getString(R.string.trend_saved), Money.format(total.savedCents), c.col(R.color.ink2), c.col(R.color.accent_ink)), w = 0, weight = 1f)
         box.add(row)
+        if (total.otherCents > 0) box.add(c.text(c.getString(R.string.budget_of_which_other, Money.format(total.otherCents)), 13f, c.col(R.color.ink2)), top = 10)
         box.add(c.text(c.getString(R.string.trend_avg, Money.format(total.incomeCents / n), Money.format(total.outCents / n)), 13.5f, c.col(R.color.ink2)), top = 12)
         if (total.incomeCents > 0) {
             val left = total.leftCents / n

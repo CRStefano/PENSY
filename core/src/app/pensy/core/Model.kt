@@ -220,9 +220,37 @@ data class Spend(
     val note: String = "",
     /** Kind of 730 deduction it may give ("" = none). See Tax. */
     val tax: String = "",
-    /** Paid in cash: most deductions need a traceable payment. */
+    /** Paid in cash (false: card or account). Most 730 deductions need a traceable payment. */
     val cash: Boolean = false,
     val docId: Long? = null
+)
+
+/** Where money that is not salary comes from. */
+enum class InflowCat(val code: String) {
+    REGALO("regalo"),
+    RIMBORSO("rimborso"),
+    VENDITA("vendita"),
+    LAVORO("lavoro"),
+    ALTRO("altro");
+
+    companion object {
+        fun of(code: String?): InflowCat = entries.firstOrNull { it.code == code } ?: ALTRO
+    }
+}
+
+/**
+ * Money that came in outside the payslip (a friend paid you back, a gift,
+ * something sold, a small job), counted on its day on top of the salary.
+ */
+data class Inflow(
+    val id: Long = 0,
+    val profileId: Long = 0,
+    val day: LocalDate,
+    val amountCents: Long,
+    val cat: InflowCat = InflowCat.ALTRO,
+    val note: String = "",
+    /** Received in cash (false: on the account or a card). */
+    val cash: Boolean = false
 )
 
 /** A savings jar ("salvadanaio"): money put aside for something, maybe by a date. */

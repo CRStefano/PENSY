@@ -1314,4 +1314,27 @@
         <item quantity="other">When %d boxes are left, PENSY reminds you to order more.</item>
     </plurals>
     <string name="med_next_day">Next time: %1$s</string>
+    <!-- 0.9: other income, cash or card -->
+    <string name="inflow_add">Add income</string>
+    <string name="inflow_new">New income</string>
+    <string name="inflow_edit">Income</string>
+    <string name="inflow_cat">Where it comes from</string>
+    <string name="inflow_note_hint">E.g. from Mark, tax refund, eBay</string>
+    <string name="inflow_saved">Income saved</string>
+    <string name="inflow_deleted">Income deleted</string>
+    <string name="inflow_explain">Money that came in outside your payslip. It adds to the month\'s income and does not change the salary estimate.</string>
+    <string name="icat_regalo">Gift</string>
+    <string name="icat_rimborso">Refund</string>
+    <string name="icat_vendita">Sale</string>
+    <string name="icat_lavoro">Side work</string>
+    <string name="icat_altro">Other</string>
+    <string name="pay_with">Paid with</string>
+    <string name="pay_received">Received</string>
+    <string name="pay_card">Card or account</string>
+    <string name="pay_cash">Cash</string>
+    <string name="spends_cash_line">By card or account %1$s · in cash %2$s</string>
+    <string name="inflows_cash_line">On the account %1$s · in cash %2$s</string>
+    <string name="budget_of_which_other">Of which other income: %1$s</string>
+    <string name="export_incomes">Income</string>
+    <string name="csv_how">Card or cash</string>
 </resources>

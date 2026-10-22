@@ -221,13 +221,19 @@ Yes, in Settings › Language: same as the phone, Italian or English. The names 
 Yes. Tap the circle with the initial at the top of «Today» and choose «Add a person». Each person has their own folders, documents, deadlines and health record. To switch, tap the circle again. Reminders come for everyone, with the name in front.
 
 ### Do my child's expenses count in my balance?
-If you want: when you add the person (or in Settings › People) choose «Their expenses count in the balance of» and your name. Your «Balance» then includes their deadlines and spending; theirs shows only their own.
+If you want: when you add the person (or in Settings › People) choose «Their expenses count in the balance of» and your name. Your «Budget» then includes their deadlines and spending; theirs shows only their own.
 
 ### How do I note everyday spending?
-On «Today» tap «Spending» (or «Add» › «New spending»): amount, what for, save. In «Balance» you see the month's spending by category and what you have left with it.
+On «Today» tap «Spending» (or «Add» › «New spending»): amount, what for, save. In «Budget» you see the month's spending by category and what you have left with it.
+
+### I received money that isn't my salary: how do I add it?
+In «Budget» tap «Add income» (or «Add» › «New income»): amount, where it comes from (gift, refund, sale, side work, other), save. It works for a friend paying you back, a gift, something sold online. It adds to the month's income and doesn't touch the salary estimate.
+
+### Can I keep cash and card apart?
+Every expense and income says whether it went by «Card or account» or in «Cash», and PENSY remembers your last choice. In «Budget» you see how much went in cash and how much by card. It does not keep two separate balances: to make them add up you would have to record every cash withdrawal too, and your bank app already knows the real card balance.
 
 ### What are savings jars for?
-To put money aside for something: holidays, a car, presents. In «Balance» › «New jar» write how much and by when: PENSY tells you how much to put aside each month and takes it off what you have left, so you don't spend it twice. The money stays where it is: the jar keeps count of it.
+To put money aside for something: holidays, a car, presents. In «Budget» › «New jar» write how much and by when: PENSY tells you how much to put aside each month and takes it off what you have left, so you don't spend it twice. The money stays where it is: the jar keeps count of it.
 
 ## Documents, warranties, subscriptions
 
@@ -238,7 +244,7 @@ Yes. Photograph the ID card, driving licence or passport: PENSY reads the expiry
 Photograph the receipt or the warranty certificate: PENSY sets the end of the warranty two years after the purchase (or what it says) and reminds you a month before. The price stays in the document and doesn't count as an expense again.
 
 ### How do I not forget to cancel a subscription?
-When you save a subscription or a contract, fill in «Cancel by»: PENSY reminds you 30 and 7 days before. In «Balance» you find «Fixed costs»: what subscriptions, contracts, bills and instalments cost you in a year.
+When you save a subscription or a contract, fill in «Cancel by»: PENSY reminds you 30 and 7 days before. In «Budget» you find «Fixed costs»: what subscriptions, contracts, bills and instalments cost you in a year.
 
 ### Can I have a whole folder as a PDF?
 Yes: open the folder and tap the document icon at the top. The PDF has what is to be done, the list of documents and every document with its photos (or the text read). Send or print it with the app you choose.
@@ -249,13 +255,13 @@ Open the Car folder and tap «Car reminders». Enter the dates you know (registr
 ### And for the dog or the cat?
 Open the Pets folder and tap «Pet reminders»: vaccine with booster, monthly antiparasitic, yearly check-up and weight, in a folder with its name.
 
-## Balance, 730 and other conveniences
+## Budget, 730 and other conveniences
 
 ### Which expenses can I deduct in the 730?
-When you note an expense choose «For the 730» (medical, vet, school, university, public transport pass, children's sport). Paid tickets and university fees count by themselves. In «Balance» › «Expenses for the tax return» you see the year's total, an estimate of what you get back and a CSV for the CAF. It's an estimate: you file the return with a CAF or the pre-filled 730.
+When you note an expense choose «For the 730» (medical, vet, school, university, public transport pass, children's sport). Paid tickets and university fees count by themselves. In «Budget» › «Expenses for the tax return» you see the year's total, an estimate of what you get back and a CSV for the CAF. It's an estimate: you file the return with a CAF or the pre-filled 730.
 
 ### Can I open my data in Excel?
-Yes: in «Balance» tap the share icon at the top and choose «Deadlines and payments» or «Everyday spending». PENSY prepares a CSV file that opens in Excel, Google Sheets or LibreOffice.
+Yes: in «Budget» tap the share icon at the top and choose «Deadlines and payments», «Everyday spending» or «Income». PENSY prepares a CSV file that opens in Excel, Google Sheets or LibreOffice.
 
 ### Is there a home screen widget?
 Yes: long-press the home screen, choose «Widgets» and look for PENSY. It shows the next deadlines and today's medicines; the camera button lets you add a document straight away, with a photo or a file. If PENSY is locked, the widget shows only how many there are.

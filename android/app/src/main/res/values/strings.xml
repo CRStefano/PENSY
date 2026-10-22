@@ -1315,4 +1315,27 @@
         <item quantity="other">Quando ti restano %d scatole, PENSY ti ricorda di ordinarne altre.</item>
     </plurals>
     <string name="med_next_day">Prossima volta: %1$s</string>
+    <!-- 0.9: other income, cash or card -->
+    <string name="inflow_add">Aggiungi un\'entrata</string>
+    <string name="inflow_new">Nuova entrata</string>
+    <string name="inflow_edit">Entrata</string>
+    <string name="inflow_cat">Da dove arriva</string>
+    <string name="inflow_note_hint">Es. da Marco, rimborso 730, Vinted</string>
+    <string name="inflow_saved">Entrata salvata</string>
+    <string name="inflow_deleted">Entrata eliminata</string>
+    <string name="inflow_explain">Soldi arrivati fuori dalla busta paga. Si aggiungono alle entrate del mese e non cambiano la stima dello stipendio.</string>
+    <string name="icat_regalo">Regalo</string>
+    <string name="icat_rimborso">Rimborso</string>
+    <string name="icat_vendita">Vendita</string>
+    <string name="icat_lavoro">Lavoro extra</string>
+    <string name="icat_altro">Altro</string>
+    <string name="pay_with">Pagato con</string>
+    <string name="pay_received">Arrivati</string>
+    <string name="pay_card">Carta o conto</string>
+    <string name="pay_cash">Contanti</string>
+    <string name="spends_cash_line">Con carta o conto %1$s · in contanti %2$s</string>
+    <string name="inflows_cash_line">Arrivati sul conto %1$s · in contanti %2$s</string>
+    <string name="budget_of_which_other">Di cui altre entrate: %1$s</string>
+    <string name="export_incomes">Entrate</string>
+    <string name="csv_how">Carta o contanti</string>
 </resources>

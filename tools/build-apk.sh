@@ -36,7 +36,7 @@ rm -rf "$OUT" && mkdir -p "$OUT/classes" "$OUT/gen"
 
 # 1. Manifest for a plain aapt2 build: add the package, drop the Gradle-only
 #    "tools:node=remove" lines (there is no library to remove anything from).
-sed -e 's|<manifest |<manifest package="app.pensy" android:versionCode="11" android:versionName="0.8" |' \
+sed -e 's|<manifest |<manifest package="app.pensy" android:versionCode="12" android:versionName="0.9" |' \
     -e '/tools:node="remove"/d' "$APP/AndroidManifest.xml" > "$OUT/AndroidManifest.xml"
 
 # 2. Resources

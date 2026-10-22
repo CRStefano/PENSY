@@ -194,6 +194,9 @@ Income, expenses and what is left, month by month, past and forecast.
 ### The payslip
 Add it with a photo or with the PDF that came by email: PENSY reads the net pay and the month. If a month is missing, it uses the last regular payslip as an estimate (without the extra months). You can mark an extra month as such.
 
+### Other income
+Money that comes in outside the payslip: a friend paying you back for dinner, a gift, something you sold, a small job, a refund. In «Budget» › «Add income», or «Add» › «New income»: amount, where it comes from, save. It adds to the month's income and does not change the salary estimate: if this month's payslip is not there yet, PENSY keeps using the last one as an estimate and adds this on top.
+
 ### The chart
 Twelve bars: five months back, the current one and six ahead. The bars are the expenses, the green line the income, future months are lighter. Tap a bar to see that month.
 
@@ -203,15 +206,20 @@ The month's deadlines, everyday spending, what you put in the jars and what you 
 ### Everyday spending
 «Spending» on Today, or «Add» › «New spending»: amount, category, save. In the budget you see them by category.
 
+### Card or cash
+Every expense and every income says how the money moved: «Card or account» or «Cash». PENSY remembers your last choice, so usually you don't have to touch anything. In the month's budget you see how much went by card and how much in cash. It matters for the 730 too: most deductions need a traceable payment, and PENSY leaves out by itself the cash expenses that don't count.
+
 ### More
 - Fixed costs: what subscriptions, contracts, bills and instalments cost you in a year.
 - Comparison with the previous month, in percent.
-- Export: deadlines and spending as CSV for Excel.
+- Export: deadlines, spending and income as CSV for Excel.
 - Trends: the months put together (next chapter).
 
 > 💡 **Tip:** record small expenses as soon as you make them: it takes three taps, and at the end of the month you will not wonder where the money went.
 
 > 🧭 **Why it works this way:** a useful budget looks ahead. Knowing in October that December will be heavy gives you two months to prepare.
+
+> 🧭 **Why there are no two wallets:** keeping two separate balances, cash and card, would mean recording every cash withdrawal too and starting from an initial balance; one forgotten expense and the numbers no longer match your wallet nor your bank app, which already has the real balance. PENSY's budget answers a different question: how much you have left to spend this month.
 
 ---
 
